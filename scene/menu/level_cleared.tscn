@@ -1,0 +1,785 @@
+[gd_scene load_steps=29 format=3 uid="uid://b5sjrqgtkjqt8"]
+
+[ext_resource type="FontFile" uid="uid://bys4fsq5x5ci6" path="res://style/BULKYPIX.TTF" id="1_ahvtj"]
+[ext_resource type="Script" path="res://script/menu/level_cleared.gd" id="1_vx2oe"]
+[ext_resource type="Texture2D" uid="uid://5e1tastgl85p" path="res://asset/tiles/bintang.png" id="1_yj6u1"]
+[ext_resource type="Shader" path="res://scene/menu/level_cleared.gdshader" id="2_t8g3d"]
+[ext_resource type="Texture2D" uid="uid://kv2rfxxbwein" path="res://asset/btn/btn_sheet.png" id="4_fij4s"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a2brh"]
+shader = ExtResource("2_t8g3d")
+shader_parameter/amount = 2.0
+
+[sub_resource type="Animation" id="Animation_0o2x6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBox/cons/con2/less_than1/b2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBox/cons/con3/less_than2/b3:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBox/HBoxContainer/Control2/back_to_lvl_select/Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VBox/HBoxContainer/Control/restart_lvl/Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("VBox/HBoxContainer/Control3/next_lvl/Sprite2D:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("VBox/CenterContainer/Control/info/Sprite2D:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("VBox/cons/con1/clear/b1:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("VBox/HBoxContainer/Control3/resume/Sprite2D:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_q6d4w"]
+resource_name = "b0"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBox/cons/con3/less_than2/b3:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBox/cons/con2/less_than1/b2:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBox/cons/con1/clear/b1:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_oi2br"]
+resource_name = "b1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBox/cons/con3/less_than2/b3:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBox/cons/con2/less_than1/b2:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_p8udj"]
+resource_name = "b2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBox/cons/con3/less_than2/b3:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_q1h45"]
+resource_name = "info"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBox/CenterContainer/Control/info/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_gtyr3"]
+resource_name = "info_hover"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBox/CenterContainer/Control/info/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_cyc3d"]
+resource_name = "level"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBox/HBoxContainer/Control2/back_to_lvl_select/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_pgsvb"]
+resource_name = "level_hover"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBox/HBoxContainer/Control2/back_to_lvl_select/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_frsb4"]
+resource_name = "next"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBox/HBoxContainer/Control3/next_lvl/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_f3qu5"]
+resource_name = "next_hover"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBox/HBoxContainer/Control3/next_lvl/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_3qscy"]
+resource_name = "restart"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBox/HBoxContainer/Control/restart_lvl/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_wpdrl"]
+resource_name = "restart_hover"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBox/HBoxContainer/Control/restart_lvl/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_ic7i6"]
+resource_name = "resume"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBox/HBoxContainer/Control3/resume/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_5utua"]
+resource_name = "resume_hover"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBox/HBoxContainer/Control3/resume/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c3v5o"]
+_data = {
+"RESET": SubResource("Animation_0o2x6"),
+"b0": SubResource("Animation_q6d4w"),
+"b1": SubResource("Animation_oi2br"),
+"b2": SubResource("Animation_p8udj"),
+"info": SubResource("Animation_q1h45"),
+"info_hover": SubResource("Animation_gtyr3"),
+"level": SubResource("Animation_cyc3d"),
+"level_hover": SubResource("Animation_pgsvb"),
+"next": SubResource("Animation_frsb4"),
+"next_hover": SubResource("Animation_f3qu5"),
+"restart": SubResource("Animation_3qscy"),
+"restart_hover": SubResource("Animation_wpdrl"),
+"resume": SubResource("Animation_ic7i6"),
+"resume_hover": SubResource("Animation_5utua")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbofb"]
+atlas = ExtResource("1_yj6u1")
+region = Rect2(0, 0, 128, 64)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ixcg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pkl66"]
+atlas = ExtResource("4_fij4s")
+region = Rect2(192, 32, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4set0"]
+atlas = ExtResource("4_fij4s")
+region = Rect2(64, 96, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mn7q0"]
+atlas = ExtResource("4_fij4s")
+region = Rect2(128, 32, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cibpn"]
+atlas = ExtResource("4_fij4s")
+region = Rect2(64, 32, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lg3w"]
+atlas = ExtResource("4_fij4s")
+region = Rect2(0, 128, 64, 32)
+
+[node name="level_selesai" type="Control" groups=["scoreboard"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vx2oe")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_a2brh")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -224.5
+offset_right = 224.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel"]
+libraries = {
+"": SubResource("AnimationLibrary_c3v5o")
+}
+
+[node name="VBox" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="title" type="Label" parent="Panel/VBox"]
+custom_minimum_size = Vector2(448, 89)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("1_ahvtj")
+theme_override_font_sizes/font_size = 31
+text = "- LEVEL SELESAI -"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="space" type="HBoxContainer" parent="Panel/VBox"]
+custom_minimum_size = Vector2(448, 112)
+layout_mode = 2
+
+[node name="cons" type="HBoxContainer" parent="Panel/VBox"]
+custom_minimum_size = Vector2(0, 95)
+layout_mode = 2
+
+[node name="con1" type="Control" parent="Panel/VBox/cons"]
+custom_minimum_size = Vector2(147, 95)
+layout_mode = 2
+
+[node name="clear" type="Label" parent="Panel/VBox/cons/con1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -84.5
+offset_right = 94.0
+offset_bottom = -12.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_ahvtj")
+theme_override_font_sizes/font_size = 23
+text = "LEVEL
+SELESAI"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="b1" type="Sprite2D" parent="Panel/VBox/cons/con1/clear"]
+position = Vector2(62.5, -35)
+texture = SubResource("AtlasTexture_jbofb")
+hframes = 2
+
+[node name="con2" type="Control" parent="Panel/VBox/cons"]
+custom_minimum_size = Vector2(147, 95)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="less_than1" type="Label" parent="Panel/VBox/cons/con2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -52.5
+offset_top = -12.0
+offset_right = 60.5
+offset_bottom = 42.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_ahvtj")
+theme_override_font_sizes/font_size = 16
+text = "JUMLAH
+GERAK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="b2" type="Sprite2D" parent="Panel/VBox/cons/con2/less_than1"]
+position = Vector2(54, -32)
+texture = SubResource("AtlasTexture_jbofb")
+hframes = 2
+
+[node name="less2" type="Label" parent="Panel/VBox/cons/con2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.0
+offset_top = 27.0
+offset_right = 61.0
+offset_bottom = 74.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_ahvtj")
+theme_override_font_sizes/font_size = 28
+text = "<0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="con3" type="Control" parent="Panel/VBox/cons"]
+custom_minimum_size = Vector2(147, 95)
+layout_mode = 2
+
+[node name="less_than2" type="Label" parent="Panel/VBox/cons/con3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.5
+offset_top = -82.5
+offset_right = 40.5
+offset_bottom = -28.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_ahvtj")
+theme_override_font_sizes/font_size = 16
+text = "JUMLAH
+GERAK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="b3" type="Sprite2D" parent="Panel/VBox/cons/con3/less_than2"]
+position = Vector2(50, -37)
+texture = SubResource("AtlasTexture_jbofb")
+hframes = 2
+
+[node name="less1" type="Label" parent="Panel/VBox/cons/con3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -77.5
+offset_top = -44.5
+offset_right = 40.5
+offset_bottom = 2.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_ahvtj")
+theme_override_font_sizes/font_size = 28
+text = "<0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBox"]
+custom_minimum_size = Vector2(449, 76)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="Panel/VBox/HBoxContainer"]
+custom_minimum_size = Vector2(147, 0)
+layout_mode = 2
+
+[node name="restart_lvl" type="Button" parent="Panel/VBox/HBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.5
+offset_top = -38.0
+offset_right = 62.5
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("1_ahvtj")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5ixcg")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/VBox/HBoxContainer/Control/restart_lvl"]
+position = Vector2(38, 38)
+scale = Vector2(2.5, 2.5)
+texture = SubResource("AtlasTexture_pkl66")
+hframes = 2
+
+[node name="Control2" type="Control" parent="Panel/VBox/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="back_to_lvl_select" type="Button" parent="Panel/VBox/HBoxContainer/Control2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.5
+offset_top = -38.0
+offset_right = 40.5
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("1_ahvtj")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5ixcg")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/VBox/HBoxContainer/Control2/back_to_lvl_select"]
+position = Vector2(38, 38)
+scale = Vector2(2.5, 2.5)
+texture = SubResource("AtlasTexture_4set0")
+hframes = 2
+
+[node name="Control3" type="Control" parent="Panel/VBox/HBoxContainer"]
+custom_minimum_size = Vector2(147, 0)
+layout_mode = 2
+
+[node name="next_lvl" type="Button" parent="Panel/VBox/HBoxContainer/Control3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.5
+offset_top = -38.0
+offset_right = 17.5
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("1_ahvtj")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5ixcg")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/VBox/HBoxContainer/Control3/next_lvl"]
+position = Vector2(38, 38)
+scale = Vector2(2.5, 2.5)
+texture = SubResource("AtlasTexture_mn7q0")
+hframes = 2
+
+[node name="resume" type="Button" parent="Panel/VBox/HBoxContainer/Control3"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.5
+offset_top = -38.0
+offset_right = 17.5
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("1_ahvtj")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5ixcg")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/VBox/HBoxContainer/Control3/resume"]
+position = Vector2(38, 38)
+scale = Vector2(2.5, 2.5)
+texture = SubResource("AtlasTexture_cibpn")
+hframes = 2
+
+[node name="CenterContainer" type="BoxContainer" parent="Panel/VBox"]
+custom_minimum_size = Vector2(449, 168)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="Panel/VBox/CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="info" type="Button" parent="Panel/VBox/CenterContainer/Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -21.5
+offset_top = 4.0
+offset_right = 25.5
+offset_bottom = 78.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("1_ahvtj")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5ixcg")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/VBox/CenterContainer/Control/info"]
+position = Vector2(23, 35)
+scale = Vector2(2.5, 2.5)
+texture = SubResource("AtlasTexture_8lg3w")
+hframes = 2
+
+[connection signal="mouse_entered" from="Panel/VBox/HBoxContainer/Control/restart_lvl" to="." method="_on_restart_lvl_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/VBox/HBoxContainer/Control/restart_lvl" to="." method="_on_restart_lvl_mouse_exited"]
+[connection signal="pressed" from="Panel/VBox/HBoxContainer/Control/restart_lvl" to="." method="_on_restart_lvl_pressed"]
+[connection signal="mouse_entered" from="Panel/VBox/HBoxContainer/Control2/back_to_lvl_select" to="." method="_on_back_to_lvl_select_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/VBox/HBoxContainer/Control2/back_to_lvl_select" to="." method="_on_back_to_lvl_select_mouse_exited"]
+[connection signal="pressed" from="Panel/VBox/HBoxContainer/Control2/back_to_lvl_select" to="." method="_on_back_to_lvl_select_pressed"]
+[connection signal="mouse_entered" from="Panel/VBox/HBoxContainer/Control3/next_lvl" to="." method="_on_next_lvl_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/VBox/HBoxContainer/Control3/next_lvl" to="." method="_on_next_lvl_mouse_exited"]
+[connection signal="pressed" from="Panel/VBox/HBoxContainer/Control3/next_lvl" to="." method="_on_next_lvl_pressed"]
+[connection signal="mouse_entered" from="Panel/VBox/HBoxContainer/Control3/resume" to="." method="_on_resume_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/VBox/HBoxContainer/Control3/resume" to="." method="_on_resume_mouse_exited"]
+[connection signal="pressed" from="Panel/VBox/HBoxContainer/Control3/resume" to="." method="_on_resume_pressed"]
+[connection signal="mouse_entered" from="Panel/VBox/CenterContainer/Control/info" to="." method="_on_info_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/VBox/CenterContainer/Control/info" to="." method="_on_info_mouse_exited"]

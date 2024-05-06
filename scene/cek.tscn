@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://cqe1c836cwb6j"]
+
+[ext_resource type="Texture2D" uid="uid://j440e2jubrrg" path="res://asset/tiles/score-Sheet.png" id="1_cvnfd"]
+[ext_resource type="Script" path="res://script/cek.gd" id="1_keb4q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bw56f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hk6nm"]
+atlas = ExtResource("1_cvnfd")
+region = Rect2(0, 0, 288, 32)
+
+[sub_resource type="Animation" id="Animation_hahka"]
+length = 1.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dhi5v"]
+_data = {
+"standby": SubResource("Animation_hahka")
+}
+
+[node name="cek" type="Area2D"]
+script = ExtResource("1_keb4q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 16)
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_bw56f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(16, 16)
+texture = SubResource("AtlasTexture_hk6nm")
+hframes = 9
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_dhi5v")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

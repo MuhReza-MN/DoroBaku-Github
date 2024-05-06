@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpsnaxpvlbrh5"]
+
+[ext_resource type="Texture2D" uid="uid://lqxph0syc7ac" path="res://asset/tiles/bricks.png" id="1_sueip"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yraec"]
+size = Vector2(32, 32)
+
+[node name="dinding" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_yraec")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(16, 16)
+texture = ExtResource("1_sueip")
