@@ -17,6 +17,7 @@ func unlock_check():
 			ch.get_child(x).disabled = true
 		elif y == 1 : # UNLOCKED
 			ch.get_child(x).get_child(0).hide()
+			ch.get_child(x).get_child(2).hide()
 		x+=1
 
 func _on_back_mouse_entered():

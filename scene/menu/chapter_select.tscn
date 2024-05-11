@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://b7ddwo57x4xr0"]
+[gd_scene load_steps=14 format=3 uid="uid://b7ddwo57x4xr0"]
 
 [ext_resource type="Script" path="res://script/menu/chapter_select.gd" id="1_gwg74"]
 [ext_resource type="FontFile" uid="uid://bys4fsq5x5ci6" path="res://style/BULKYPIX.TTF" id="2_h552j"]
 [ext_resource type="Texture2D" uid="uid://kv2rfxxbwein" path="res://asset/btn/btn_sheet.png" id="3_hkpve"]
 [ext_resource type="Texture2D" uid="uid://dwb2ee5f5xow6" path="res://asset/btn/select_container.png" id="4_txw3m"]
+[ext_resource type="Texture2D" uid="uid://5e1tastgl85p" path="res://asset/tiles/bintang.png" id="5_r5568"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2alo"]
 bg_color = Color(0.458824, 0.643137, 0.611765, 1)
@@ -53,6 +54,10 @@ _data = {
 [sub_resource type="AtlasTexture" id="AtlasTexture_6fn6c"]
 atlas = ExtResource("4_txw3m")
 region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6sua"]
+atlas = ExtResource("5_r5568")
+region = Rect2(0, 0, 128, 64)
 
 [node name="ChapterSelect" type="Control"]
 layout_mode = 3
@@ -123,10 +128,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -224.0
-offset_top = -48.0
-offset_right = -128.0
-offset_bottom = 48.0
+offset_left = -448.0
+offset_top = -196.0
+offset_right = -352.0
+offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -154,16 +159,45 @@ grow_horizontal = 2
 text = "CHAPTER"
 horizontal_alignment = 1
 
+[node name="need" type="Label" parent="Panel/chapter/ch1"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_right = 53.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_constants/line_spacing = 19
+theme_override_fonts/font = ExtResource("2_h552j")
+theme_override_font_sizes/font_size = 23
+text = "BUTUH
+00 x  "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="b2" type="Sprite2D" parent="Panel/chapter/ch1/need"]
+texture_filter = 1
+position = Vector2(94, 60)
+scale = Vector2(0.75, 0.75)
+texture = SubResource("AtlasTexture_c6sua")
+hframes = 2
+
 [node name="ch2" type="Button" parent="Panel/chapter"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -48.0
-offset_top = -48.0
-offset_right = 48.0
-offset_bottom = 48.0
+offset_left = -256.0
+offset_top = -196.0
+offset_right = -160.0
+offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -191,16 +225,45 @@ grow_horizontal = 2
 text = "CHAPTER"
 horizontal_alignment = 1
 
+[node name="need" type="Label" parent="Panel/chapter/ch2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_right = 53.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_constants/line_spacing = 19
+theme_override_fonts/font = ExtResource("2_h552j")
+theme_override_font_sizes/font_size = 23
+text = "BUTUH
+45 x  "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="b2" type="Sprite2D" parent="Panel/chapter/ch2/need"]
+texture_filter = 1
+position = Vector2(94, 60)
+scale = Vector2(0.75, 0.75)
+texture = SubResource("AtlasTexture_c6sua")
+hframes = 2
+
 [node name="ch3" type="Button" parent="Panel/chapter"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 128.0
-offset_top = -48.0
-offset_right = 224.0
-offset_bottom = 48.0
+offset_left = -64.0
+offset_top = -196.0
+offset_right = 32.0
+offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -227,6 +290,525 @@ offset_bottom = 23.0
 grow_horizontal = 2
 text = "CHAPTER"
 horizontal_alignment = 1
+
+[node name="need" type="Label" parent="Panel/chapter/ch3"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_right = 53.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_constants/line_spacing = 19
+theme_override_fonts/font = ExtResource("2_h552j")
+theme_override_font_sizes/font_size = 23
+text = "BUTUH
+100 x  "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="b2" type="Sprite2D" parent="Panel/chapter/ch3/need"]
+texture_filter = 1
+position = Vector2(108, 60)
+scale = Vector2(0.75, 0.75)
+texture = SubResource("AtlasTexture_c6sua")
+hframes = 2
+
+[node name="ch4" type="Button" parent="Panel/chapter"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 128.0
+offset_top = -196.0
+offset_right = 224.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("2_h552j")
+theme_override_font_sizes/font_size = 50
+text = "4"
+
+[node name="locked" type="TextureRect" parent="Panel/chapter/ch4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_6fn6c")
+
+[node name="Label" type="Label" parent="Panel/chapter/ch4"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "CHAPTER"
+horizontal_alignment = 1
+
+[node name="need" type="Label" parent="Panel/chapter/ch4"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_right = 53.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_constants/line_spacing = 19
+theme_override_fonts/font = ExtResource("2_h552j")
+theme_override_font_sizes/font_size = 23
+text = "BUTUH
+160 x  "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="b2" type="Sprite2D" parent="Panel/chapter/ch4/need"]
+texture_filter = 1
+position = Vector2(108, 60)
+scale = Vector2(0.75, 0.75)
+texture = SubResource("AtlasTexture_c6sua")
+hframes = 2
+
+[node name="ch5" type="Button" parent="Panel/chapter"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 320.0
+offset_top = -196.0
+offset_right = 416.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("2_h552j")
+theme_override_font_sizes/font_size = 50
+text = "5"
+
+[node name="locked" type="TextureRect" parent="Panel/chapter/ch5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_6fn6c")
+
+[node name="Label" type="Label" parent="Panel/chapter/ch5"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "CHAPTER"
+horizontal_alignment = 1
+
+[node name="need" type="Label" parent="Panel/chapter/ch5"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_right = 53.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_constants/line_spacing = 19
+theme_override_fonts/font = ExtResource("2_h552j")
+theme_override_font_sizes/font_size = 23
+text = "BUTUH
+220 x  "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="b2" type="Sprite2D" parent="Panel/chapter/ch5/need"]
+texture_filter = 1
+position = Vector2(108, 60)
+scale = Vector2(0.75, 0.75)
+texture = SubResource("AtlasTexture_c6sua")
+hframes = 2
+
+[node name="ch6" type="Button" parent="Panel/chapter"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -448.0
+offset_top = 28.0
+offset_right = -352.0
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("2_h552j")
+theme_override_font_sizes/font_size = 50
+text = "6"
+
+[node name="locked" type="TextureRect" parent="Panel/chapter/ch6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_6fn6c")
+
+[node name="Label" type="Label" parent="Panel/chapter/ch6"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "CHAPTER"
+horizontal_alignment = 1
+
+[node name="need" type="Label" parent="Panel/chapter/ch6"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_right = 53.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_constants/line_spacing = 19
+theme_override_fonts/font = ExtResource("2_h552j")
+theme_override_font_sizes/font_size = 23
+text = "BUTUH
+350 x  "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="b2" type="Sprite2D" parent="Panel/chapter/ch6/need"]
+texture_filter = 1
+position = Vector2(108, 60)
+scale = Vector2(0.75, 0.75)
+texture = SubResource("AtlasTexture_c6sua")
+hframes = 2
+
+[node name="ch7" type="Button" parent="Panel/chapter"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = 28.0
+offset_right = -160.0
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("2_h552j")
+theme_override_font_sizes/font_size = 50
+text = "7"
+
+[node name="locked" type="TextureRect" parent="Panel/chapter/ch7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_6fn6c")
+
+[node name="Label" type="Label" parent="Panel/chapter/ch7"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "CHAPTER"
+horizontal_alignment = 1
+
+[node name="need" type="Label" parent="Panel/chapter/ch7"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_right = 53.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_constants/line_spacing = 19
+theme_override_fonts/font = ExtResource("2_h552j")
+theme_override_font_sizes/font_size = 23
+text = "BUTUH
+410 x  "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="b2" type="Sprite2D" parent="Panel/chapter/ch7/need"]
+texture_filter = 1
+position = Vector2(108, 60)
+scale = Vector2(0.75, 0.75)
+texture = SubResource("AtlasTexture_c6sua")
+hframes = 2
+
+[node name="ch8" type="Button" parent="Panel/chapter"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -71.0
+offset_top = 28.0
+offset_right = 25.0
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("2_h552j")
+theme_override_font_sizes/font_size = 50
+text = "8"
+
+[node name="locked" type="TextureRect" parent="Panel/chapter/ch8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_6fn6c")
+
+[node name="Label" type="Label" parent="Panel/chapter/ch8"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "CHAPTER"
+horizontal_alignment = 1
+
+[node name="need" type="Label" parent="Panel/chapter/ch8"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_right = 53.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_constants/line_spacing = 19
+theme_override_fonts/font = ExtResource("2_h552j")
+theme_override_font_sizes/font_size = 23
+text = "BUTUH
+470 x  "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="b2" type="Sprite2D" parent="Panel/chapter/ch8/need"]
+texture_filter = 1
+position = Vector2(108, 60)
+scale = Vector2(0.75, 0.75)
+texture = SubResource("AtlasTexture_c6sua")
+hframes = 2
+
+[node name="ch9" type="Button" parent="Panel/chapter"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 128.0
+offset_top = 28.0
+offset_right = 224.0
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("2_h552j")
+theme_override_font_sizes/font_size = 50
+text = "9"
+
+[node name="locked" type="TextureRect" parent="Panel/chapter/ch9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_6fn6c")
+
+[node name="Label" type="Label" parent="Panel/chapter/ch9"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "CHAPTER"
+horizontal_alignment = 1
+
+[node name="need" type="Label" parent="Panel/chapter/ch9"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_right = 53.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_constants/line_spacing = 19
+theme_override_fonts/font = ExtResource("2_h552j")
+theme_override_font_sizes/font_size = 23
+text = "BUTUH
+530 x  "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="b2" type="Sprite2D" parent="Panel/chapter/ch9/need"]
+texture_filter = 1
+position = Vector2(108, 60)
+scale = Vector2(0.75, 0.75)
+texture = SubResource("AtlasTexture_c6sua")
+hframes = 2
+
+[node name="ch10" type="Button" parent="Panel/chapter"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 320.0
+offset_top = 28.0
+offset_right = 416.0
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("2_h552j")
+theme_override_font_sizes/font_size = 50
+text = "10"
+
+[node name="locked" type="TextureRect" parent="Panel/chapter/ch10"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_6fn6c")
+
+[node name="Label" type="Label" parent="Panel/chapter/ch10"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "CHAPTER"
+horizontal_alignment = 1
+
+[node name="need" type="Label" parent="Panel/chapter/ch10"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_right = 53.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_constants/line_spacing = 19
+theme_override_fonts/font = ExtResource("2_h552j")
+theme_override_font_sizes/font_size = 23
+text = "BUTUH
+590 x  "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="b2" type="Sprite2D" parent="Panel/chapter/ch10/need"]
+texture_filter = 1
+position = Vector2(108, 60)
+scale = Vector2(0.75, 0.75)
+texture = SubResource("AtlasTexture_c6sua")
+hframes = 2
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = -72.0
+offset_right = 128.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("2_h552j")
+theme_override_font_sizes/font_size = 45
+text = "03 x"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="b2" type="Sprite2D" parent="Label2"]
+texture_filter = 1
+position = Vector2(272, 16)
+scale = Vector2(1.5, 1.5)
+texture = SubResource("AtlasTexture_c6sua")
+hframes = 2
 
 [connection signal="mouse_entered" from="Panel/back" to="." method="_on_back_mouse_entered"]
 [connection signal="mouse_exited" from="Panel/back" to="." method="_on_back_mouse_exited"]
