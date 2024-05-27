@@ -1,5 +1,4 @@
 extends Control
-@onready var anim = $Panel/back/AnimationPlayer
 @onready var ch = $Panel/chapter
 var saveData = SaveData.new()
 var GAME_DATA
@@ -20,12 +19,7 @@ func unlock_check():
 			ch.get_child(x).get_child(2).hide()
 		x+=1
 
-func _on_back_mouse_entered():
-	anim.play("hover")
-func _on_back_mouse_exited():
-	anim.play("RESET")
 func _on_back_pressed():
 	get_tree().change_scene_to_file("res://scene/menu/main_menu.tscn")
-
 func _on_ch_1_pressed():
 	get_tree().change_scene_to_file("res://scene/level/chapter_1/level_select.tscn")

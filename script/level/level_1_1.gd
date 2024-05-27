@@ -140,17 +140,8 @@ func send_save(ch,lvl,clr,str):
 				saveData.edit_data_lvl_clear(ch,lvl,1,stars)
 
 # btn functions
-func _on_pause_mouse_entered():
-	anim.play("pause_hover")
-func _on_pause_mouse_exited():
-	anim.play("pause")
 func _on_pause_pressed():
 	get_tree().get_nodes_in_group("scoreboard")[0].jeda_game()
-
-func _on_reset_mouse_entered():
-	anim.play("reset_hover")
-func _on_reset_mouse_exited():
-	anim.play("reset")
 func _on_reset_pressed():
 	restart()
 func restart():

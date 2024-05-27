@@ -1,3 +1,4 @@
+Button
 Label
 TextureRect
 Panel
@@ -8,7 +9,6 @@ CanvasLayer
 CharacterBody2D
 CollisionShape2D
 Area2D
-Button
 RichTextLabel
 Node2D
 BoxContainer

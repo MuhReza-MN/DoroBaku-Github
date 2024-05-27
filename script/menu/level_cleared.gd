@@ -68,36 +68,6 @@ func bintang_3():
 	anim.play("RESET")
 	$".".show()
 
-# Back to level Selector btn Anim
-func _on_back_to_lvl_select_mouse_entered():
-	anim.play("level_hover")
-func _on_back_to_lvl_select_mouse_exited():
-	anim.play("level")
-
-# Restart level btn Anim
-func _on_restart_lvl_mouse_entered():
-	anim.play("restart_hover")
-func _on_restart_lvl_mouse_exited():
-	anim.play("restart")
-
-# Next level btn Anim
-func _on_next_lvl_mouse_entered():
-	anim.play("next_hover")
-func _on_next_lvl_mouse_exited():
-	anim.play("next")
-
-# Restart level btn Anim
-func _on_info_mouse_entered():
-	anim.play("info_hover")
-func _on_info_mouse_exited():
-	anim.play("info")
-
-# Resume level btn Anim
-func _on_resume_mouse_entered():
-	anim.play("resume_hover")
-func _on_resume_mouse_exited():
-	anim.play("resume")
-
 func _on_level_controller_is_less_than_1(val1):
 	var less1 = $Panel/VBox/cons/con3/less1
 	if val1 < 10 :

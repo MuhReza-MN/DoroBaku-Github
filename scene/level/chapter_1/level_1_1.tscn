@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://d2vrv3fs4nwmm"]
+[gd_scene load_steps=29 format=3 uid="uid://d2vrv3fs4nwmm"]
 
 [ext_resource type="Script" path="res://script/level/level_1_1.gd" id="1_pbsla"]
 [ext_resource type="Texture2D" uid="uid://b8ak6jwuanmdq" path="res://asset/tiles/floor.png" id="2_imtu5"]
@@ -52,102 +52,46 @@ sources/3 = SubResource("TileSetAtlasSource_lsy4u")
 sources/4 = SubResource("TileSetAtlasSource_o24ge")
 sources/5 = SubResource("TileSetAtlasSource_7xsv1")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5ahri"]
+texture = ExtResource("9_5xiik")
+region_rect = Rect2(0, 32, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_twnj5"]
+texture = ExtResource("9_5xiik")
+region_rect = Rect2(32, 32, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n86a1"]
+texture = ExtResource("9_5xiik")
+region_rect = Rect2(32, 32, 32, 32)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_buelf"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_t6v3m"]
-atlas = ExtResource("9_5xiik")
-region = Rect2(0, 32, 64, 32)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iun27"]
+texture = ExtResource("9_5xiik")
+region_rect = Rect2(192, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vn743"]
-atlas = ExtResource("9_5xiik")
-region = Rect2(192, 32, 64, 32)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xsf1n"]
+texture = ExtResource("9_5xiik")
+region_rect = Rect2(224, 32, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lohg0"]
+texture = ExtResource("9_5xiik")
+region_rect = Rect2(224, 32, 32, 32)
 
 [sub_resource type="Animation" id="Animation_3bhua"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("level_controller/menu/pause/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("level_controller/menu/reset/Sprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
 
 [sub_resource type="Animation" id="Animation_x8owk"]
 resource_name = "pause"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("level_controller/menu/pause/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
 
 [sub_resource type="Animation" id="Animation_oc1qn"]
 resource_name = "pause_hover"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("level_controller/menu/pause/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
 
 [sub_resource type="Animation" id="Animation_5rdi2"]
 resource_name = "reset"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("level_controller/menu/reset/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
 
 [sub_resource type="Animation" id="Animation_ikqwf"]
 resource_name = "reset_hover"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("level_controller/menu/reset/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ghkk8"]
 _data = {
@@ -229,22 +173,15 @@ theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
 theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
 theme_override_fonts/font = ExtResource("8_4llbd")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxEmpty_buelf")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_buelf")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_buelf")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5ahri")
+theme_override_styles/hover = SubResource("StyleBoxTexture_twnj5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_n86a1")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_buelf")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_buelf")
-flat = true
-
-[node name="Sprite2D" type="Sprite2D" parent="level_controller/menu/pause"]
-position = Vector2(48, 48)
-scale = Vector2(3, 3)
-texture = SubResource("AtlasTexture_t6v3m")
-hframes = 2
 
 [node name="reset" type="Button" parent="level_controller/menu"]
-offset_left = 128.0
-offset_right = 224.0
+offset_left = 96.0
+offset_right = 192.0
 offset_bottom = 93.0
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
@@ -253,18 +190,11 @@ theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
 theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
 theme_override_fonts/font = ExtResource("8_4llbd")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxEmpty_buelf")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_buelf")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_buelf")
+theme_override_styles/normal = SubResource("StyleBoxTexture_iun27")
+theme_override_styles/hover = SubResource("StyleBoxTexture_xsf1n")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lohg0")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_buelf")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_buelf")
-flat = true
-
-[node name="Sprite2D" type="Sprite2D" parent="level_controller/menu/reset"]
-position = Vector2(48, 48)
-scale = Vector2(3, 3)
-texture = SubResource("AtlasTexture_vn743")
-hframes = 2
 
 [node name="level_selesai" parent="." instance=ExtResource("10_346hh")]
 layout_mode = 1
@@ -281,9 +211,5 @@ libraries = {
 [connection signal="lvl_val" from="level_controller" to="level_selesai" method="_get_lvl_val"]
 [connection signal="star" from="level_controller" to="level_selesai" method="_get_star_val"]
 [connection signal="isMoving" from="level_controller/karakter" to="level_controller" method="_on_karakter_is_moving"]
-[connection signal="mouse_entered" from="level_controller/menu/pause" to="level_controller" method="_on_pause_mouse_entered"]
-[connection signal="mouse_exited" from="level_controller/menu/pause" to="level_controller" method="_on_pause_mouse_exited"]
 [connection signal="pressed" from="level_controller/menu/pause" to="level_controller" method="_on_pause_pressed"]
-[connection signal="mouse_entered" from="level_controller/menu/reset" to="level_controller" method="_on_reset_mouse_entered"]
-[connection signal="mouse_exited" from="level_controller/menu/reset" to="level_controller" method="_on_reset_mouse_exited"]
 [connection signal="pressed" from="level_controller/menu/reset" to="level_controller" method="_on_reset_pressed"]

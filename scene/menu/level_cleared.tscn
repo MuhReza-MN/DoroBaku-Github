@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://b5sjrqgtkjqt8"]
+[gd_scene load_steps=37 format=3 uid="uid://b5sjrqgtkjqt8"]
 
 [ext_resource type="FontFile" uid="uid://bys4fsq5x5ci6" path="res://style/BULKYPIX.TTF" id="1_ahvtj"]
 [ext_resource type="Script" path="res://script/menu/level_cleared.gd" id="1_vx2oe"]
@@ -39,70 +39,10 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("VBox/HBoxContainer/Control2/back_to_lvl_select/Sprite2D:frame")
+tracks/2/path = NodePath("VBox/cons/con1/clear/b1:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("VBox/HBoxContainer/Control/restart_lvl/Sprite2D:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("VBox/HBoxContainer/Control3/next_lvl/Sprite2D:frame")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("VBox/CenterContainer/Control/info/Sprite2D:frame")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("VBox/cons/con1/clear/b1:frame")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("VBox/HBoxContainer/Control3/resume/Sprite2D:frame")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -192,153 +132,33 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_q1h45"]
 resource_name = "info"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("VBox/CenterContainer/Control/info/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
 
 [sub_resource type="Animation" id="Animation_gtyr3"]
 resource_name = "info_hover"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("VBox/CenterContainer/Control/info/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
 
 [sub_resource type="Animation" id="Animation_cyc3d"]
 resource_name = "level"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("VBox/HBoxContainer/Control2/back_to_lvl_select/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
 
 [sub_resource type="Animation" id="Animation_pgsvb"]
 resource_name = "level_hover"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("VBox/HBoxContainer/Control2/back_to_lvl_select/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
 
 [sub_resource type="Animation" id="Animation_frsb4"]
 resource_name = "next"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("VBox/HBoxContainer/Control3/next_lvl/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
 
 [sub_resource type="Animation" id="Animation_f3qu5"]
 resource_name = "next_hover"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("VBox/HBoxContainer/Control3/next_lvl/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
 
 [sub_resource type="Animation" id="Animation_3qscy"]
 resource_name = "restart"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("VBox/HBoxContainer/Control/restart_lvl/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
 
 [sub_resource type="Animation" id="Animation_wpdrl"]
 resource_name = "restart_hover"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("VBox/HBoxContainer/Control/restart_lvl/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
 
 [sub_resource type="Animation" id="Animation_ic7i6"]
 resource_name = "resume"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("VBox/HBoxContainer/Control3/resume/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
 
 [sub_resource type="Animation" id="Animation_5utua"]
 resource_name = "resume_hover"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("VBox/HBoxContainer/Control3/resume/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_c3v5o"]
 _data = {
@@ -362,27 +182,59 @@ _data = {
 atlas = ExtResource("1_yj6u1")
 region = Rect2(0, 0, 128, 64)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bfiqw"]
+texture = ExtResource("4_fij4s")
+region_rect = Rect2(192, 32, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dsh6a"]
+texture = ExtResource("4_fij4s")
+region_rect = Rect2(224, 32, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xundp"]
+texture = ExtResource("4_fij4s")
+region_rect = Rect2(224, 32, 32, 32)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ixcg"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pkl66"]
-atlas = ExtResource("4_fij4s")
-region = Rect2(192, 32, 64, 32)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_quppt"]
+texture = ExtResource("4_fij4s")
+region_rect = Rect2(64, 96, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4set0"]
-atlas = ExtResource("4_fij4s")
-region = Rect2(64, 96, 64, 32)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ys4xk"]
+texture = ExtResource("4_fij4s")
+region_rect = Rect2(96, 96, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mn7q0"]
-atlas = ExtResource("4_fij4s")
-region = Rect2(128, 32, 64, 32)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qandg"]
+texture = ExtResource("4_fij4s")
+region_rect = Rect2(96, 96, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cibpn"]
-atlas = ExtResource("4_fij4s")
-region = Rect2(64, 32, 64, 32)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d5ync"]
+texture = ExtResource("4_fij4s")
+region_rect = Rect2(128, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8lg3w"]
-atlas = ExtResource("4_fij4s")
-region = Rect2(0, 128, 64, 32)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kwpbe"]
+texture = ExtResource("4_fij4s")
+region_rect = Rect2(160, 32, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jde4r"]
+texture = ExtResource("4_fij4s")
+region_rect = Rect2(160, 32, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2sds8"]
+texture = ExtResource("4_fij4s")
+region_rect = Rect2(64, 32, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y76y4"]
+texture = ExtResource("4_fij4s")
+region_rect = Rect2(96, 32, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sbuic"]
+texture = ExtResource("4_fij4s")
+region_rect = Rect2(96, 32, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i3vp4"]
+texture = ExtResource("4_fij4s")
+region_rect = Rect2(0, 128, 32, 32)
 
 [node name="level_selesai" type="Control" groups=["scoreboard"]]
 layout_mode = 3
@@ -602,18 +454,11 @@ theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
 theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
 theme_override_fonts/font = ExtResource("1_ahvtj")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxEmpty_5ixcg")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_5ixcg")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bfiqw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_dsh6a")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xundp")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_5ixcg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5ixcg")
-flat = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Panel/VBox/HBoxContainer/Control/restart_lvl"]
-position = Vector2(38, 38)
-scale = Vector2(2.5, 2.5)
-texture = SubResource("AtlasTexture_pkl66")
-hframes = 2
 
 [node name="Control2" type="Control" parent="Panel/VBox/HBoxContainer"]
 layout_mode = 2
@@ -641,18 +486,11 @@ theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
 theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
 theme_override_fonts/font = ExtResource("1_ahvtj")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxEmpty_5ixcg")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_5ixcg")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_quppt")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ys4xk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qandg")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_5ixcg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5ixcg")
-flat = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Panel/VBox/HBoxContainer/Control2/back_to_lvl_select"]
-position = Vector2(38, 38)
-scale = Vector2(2.5, 2.5)
-texture = SubResource("AtlasTexture_4set0")
-hframes = 2
 
 [node name="Control3" type="Control" parent="Panel/VBox/HBoxContainer"]
 custom_minimum_size = Vector2(147, 0)
@@ -680,21 +518,13 @@ theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
 theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
 theme_override_fonts/font = ExtResource("1_ahvtj")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxEmpty_5ixcg")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_5ixcg")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_d5ync")
+theme_override_styles/hover = SubResource("StyleBoxTexture_kwpbe")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jde4r")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_5ixcg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5ixcg")
-flat = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Panel/VBox/HBoxContainer/Control3/next_lvl"]
-position = Vector2(38, 38)
-scale = Vector2(2.5, 2.5)
-texture = SubResource("AtlasTexture_mn7q0")
-hframes = 2
 
 [node name="resume" type="Button" parent="Panel/VBox/HBoxContainer/Control3"]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -716,18 +546,11 @@ theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
 theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
 theme_override_fonts/font = ExtResource("1_ahvtj")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxEmpty_5ixcg")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_5ixcg")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_2sds8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_y76y4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_sbuic")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_5ixcg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5ixcg")
-flat = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Panel/VBox/HBoxContainer/Control3/resume"]
-position = Vector2(38, 38)
-scale = Vector2(2.5, 2.5)
-texture = SubResource("AtlasTexture_cibpn")
-hframes = 2
 
 [node name="CenterContainer" type="BoxContainer" parent="Panel/VBox"]
 custom_minimum_size = Vector2(449, 168)
@@ -743,11 +566,12 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -21.5
-offset_top = 4.0
-offset_right = 25.5
-offset_bottom = 78.0
+offset_left = -36.0
+offset_top = 5.0
+offset_right = 28.0
+offset_bottom = 69.0
 grow_horizontal = 2
+scale = Vector2(1.1, 1.1)
 size_flags_horizontal = 3
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
@@ -756,30 +580,13 @@ theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
 theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
 theme_override_fonts/font = ExtResource("1_ahvtj")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_i3vp4")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_5ixcg")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_5ixcg")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_5ixcg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5ixcg")
-flat = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Panel/VBox/CenterContainer/Control/info"]
-position = Vector2(23, 35)
-scale = Vector2(2.5, 2.5)
-texture = SubResource("AtlasTexture_8lg3w")
-hframes = 2
-
-[connection signal="mouse_entered" from="Panel/VBox/HBoxContainer/Control/restart_lvl" to="." method="_on_restart_lvl_mouse_entered"]
-[connection signal="mouse_exited" from="Panel/VBox/HBoxContainer/Control/restart_lvl" to="." method="_on_restart_lvl_mouse_exited"]
 [connection signal="pressed" from="Panel/VBox/HBoxContainer/Control/restart_lvl" to="." method="_on_restart_lvl_pressed"]
-[connection signal="mouse_entered" from="Panel/VBox/HBoxContainer/Control2/back_to_lvl_select" to="." method="_on_back_to_lvl_select_mouse_entered"]
-[connection signal="mouse_exited" from="Panel/VBox/HBoxContainer/Control2/back_to_lvl_select" to="." method="_on_back_to_lvl_select_mouse_exited"]
 [connection signal="pressed" from="Panel/VBox/HBoxContainer/Control2/back_to_lvl_select" to="." method="_on_back_to_lvl_select_pressed"]
-[connection signal="mouse_entered" from="Panel/VBox/HBoxContainer/Control3/next_lvl" to="." method="_on_next_lvl_mouse_entered"]
-[connection signal="mouse_exited" from="Panel/VBox/HBoxContainer/Control3/next_lvl" to="." method="_on_next_lvl_mouse_exited"]
 [connection signal="pressed" from="Panel/VBox/HBoxContainer/Control3/next_lvl" to="." method="_on_next_lvl_pressed"]
-[connection signal="mouse_entered" from="Panel/VBox/HBoxContainer/Control3/resume" to="." method="_on_resume_mouse_entered"]
-[connection signal="mouse_exited" from="Panel/VBox/HBoxContainer/Control3/resume" to="." method="_on_resume_mouse_exited"]
 [connection signal="pressed" from="Panel/VBox/HBoxContainer/Control3/resume" to="." method="_on_resume_pressed"]
-[connection signal="mouse_entered" from="Panel/VBox/CenterContainer/Control/info" to="." method="_on_info_mouse_entered"]
-[connection signal="mouse_exited" from="Panel/VBox/CenterContainer/Control/info" to="." method="_on_info_mouse_exited"]
