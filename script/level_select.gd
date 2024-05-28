@@ -1,5 +1,7 @@
 extends Control
 @onready var level = $Panel/level
+@onready var click_sfx = $btn_click
+@onready var hover_sfx = $btn_hover
 var saveData = SaveData.new()
 var GAME_DATA
 
@@ -29,7 +31,14 @@ func unlock_check():
 		x+=1
 
 func _on_back_pressed():
+	click_sfx.play()
 	get_tree().change_scene_to_file("res://scene/menu/chapter_select.tscn")
+func _on_back_mouse_entered():
+	hover_sfx.play()
 
 func _on_level_1_pressed():
+	click_sfx.play()
+	MusicPlayer.stop()
 	get_tree().change_scene_to_file("res://scene/level/chapter_1/level_1_1.tscn")
+func _on_level_1_mouse_entered():
+	hover_sfx.play()

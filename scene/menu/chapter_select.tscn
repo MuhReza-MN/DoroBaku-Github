@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b7ddwo57x4xr0"]
+[gd_scene load_steps=17 format=3 uid="uid://b7ddwo57x4xr0"]
 
 [ext_resource type="Script" path="res://script/menu/chapter_select.gd" id="1_gwg74"]
 [ext_resource type="FontFile" uid="uid://bys4fsq5x5ci6" path="res://style/BULKYPIX.TTF" id="2_h552j"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://kv2rfxxbwein" path="res://asset/btn/btn_sheet.png" id="3_hkpve"]
 [ext_resource type="Texture2D" uid="uid://dwb2ee5f5xow6" path="res://asset/btn/select_container.png" id="4_txw3m"]
 [ext_resource type="Texture2D" uid="uid://5e1tastgl85p" path="res://asset/tiles/bintang.png" id="5_r5568"]
+[ext_resource type="AudioStream" uid="uid://c2xm1t42epvhv" path="res://asset/sound/sfx/btn3.mp3" id="7_brcv2"]
+[ext_resource type="AudioStream" uid="uid://b4e158le2f2i6" path="res://asset/sound/sfx/btn8.mp3" id="8_uqumq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2alo"]
 bg_color = Color(0.458824, 0.643137, 0.611765, 1)
@@ -67,6 +69,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="back" type="Button" parent="Panel"]
+layout_mode = 0
 offset_right = 96.0
 offset_bottom = 96.0
 theme = ExtResource("3_aobyb")
@@ -772,5 +775,16 @@ scale = Vector2(1.5, 1.5)
 texture = SubResource("AtlasTexture_c6sua")
 hframes = 2
 
+[node name="btn_hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_brcv2")
+bus = &"SFX"
+
+[node name="btn_click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_uqumq")
+volume_db = -5.0
+bus = &"SFX"
+
+[connection signal="mouse_entered" from="Panel/back" to="." method="_on_back_mouse_entered"]
 [connection signal="pressed" from="Panel/back" to="." method="_on_back_pressed"]
+[connection signal="mouse_entered" from="Panel/chapter/ch1" to="." method="_on_ch_1_mouse_entered"]
 [connection signal="pressed" from="Panel/chapter/ch1" to="." method="_on_ch_1_pressed"]

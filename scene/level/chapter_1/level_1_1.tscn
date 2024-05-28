@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://d2vrv3fs4nwmm"]
+[gd_scene load_steps=32 format=3 uid="uid://d2vrv3fs4nwmm"]
 
 [ext_resource type="Script" path="res://script/level/level_1_1.gd" id="1_pbsla"]
 [ext_resource type="Texture2D" uid="uid://b8ak6jwuanmdq" path="res://asset/tiles/floor.png" id="2_imtu5"]
@@ -10,6 +10,9 @@
 [ext_resource type="FontFile" uid="uid://bys4fsq5x5ci6" path="res://style/BULKYPIX.TTF" id="8_4llbd"]
 [ext_resource type="Texture2D" uid="uid://kv2rfxxbwein" path="res://asset/btn/btn_sheet.png" id="9_5xiik"]
 [ext_resource type="PackedScene" uid="uid://b5sjrqgtkjqt8" path="res://scene/menu/level_cleared.tscn" id="10_346hh"]
+[ext_resource type="AudioStream" uid="uid://c2xm1t42epvhv" path="res://asset/sound/sfx/btn3.mp3" id="11_7bxs4"]
+[ext_resource type="AudioStream" uid="uid://beeb7o60l0iaj" path="res://asset/sound/bgm3.mp3" id="11_reooj"]
+[ext_resource type="AudioStream" uid="uid://b4e158le2f2i6" path="res://asset/sound/sfx/btn8.mp3" id="12_k1qmk"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6m0n5"]
 
@@ -199,6 +202,21 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_buelf")
 [node name="level_selesai" parent="." instance=ExtResource("10_346hh")]
 layout_mode = 1
 
+[node name="btn_hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_7bxs4")
+bus = &"SFX"
+
+[node name="btn_click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_k1qmk")
+volume_db = -5.0
+bus = &"SFX"
+
+[node name="bgm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_reooj")
+volume_db = -5.0
+autoplay = true
+bus = &"Music"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_ghkk8")
@@ -211,5 +229,7 @@ libraries = {
 [connection signal="lvl_val" from="level_controller" to="level_selesai" method="_get_lvl_val"]
 [connection signal="star" from="level_controller" to="level_selesai" method="_get_star_val"]
 [connection signal="isMoving" from="level_controller/karakter" to="level_controller" method="_on_karakter_is_moving"]
+[connection signal="mouse_entered" from="level_controller/menu/pause" to="level_controller" method="_on_pause_mouse_entered"]
 [connection signal="pressed" from="level_controller/menu/pause" to="level_controller" method="_on_pause_pressed"]
+[connection signal="mouse_entered" from="level_controller/menu/reset" to="level_controller" method="_on_reset_mouse_entered"]
 [connection signal="pressed" from="level_controller/menu/reset" to="level_controller" method="_on_reset_pressed"]

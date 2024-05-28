@@ -1,3 +1,4 @@
+AudioStreamPlayer
 Button
 Label
 TextureRect
@@ -11,4 +12,3 @@ CollisionShape2D
 Area2D
 RichTextLabel
 Node2D
-BoxContainer

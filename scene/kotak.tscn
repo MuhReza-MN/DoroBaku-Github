@@ -1,7 +1,8 @@
-[gd_scene load_steps=32 format=3 uid="uid://c80ga6hakiurs"]
+[gd_scene load_steps=33 format=3 uid="uid://c80ga6hakiurs"]
 
 [ext_resource type="Script" path="res://script/kotak.gd" id="1_obl5k"]
 [ext_resource type="Texture2D" uid="uid://b6e6clfto3gb4" path="res://asset/tiles/w_a-Sheet.png" id="1_yee3q"]
+[ext_resource type="AudioStream" uid="uid://c5q7tl1tvl7ip" path="res://asset/sound/sfx/box_push.mp3" id="3_0ju3t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_omdvq"]
 size = Vector2(32, 32)
@@ -424,3 +425,8 @@ frame = 5
 libraries = {
 "": SubResource("AnimationLibrary_o3jgr")
 }
+
+[node name="push" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_0ju3t")
+volume_db = -2.0
+bus = &"SFX"

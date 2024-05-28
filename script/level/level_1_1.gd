@@ -40,7 +40,6 @@ func _ready():
 	emit_signal("clear_val",gameData["ch_clear"][chapter][level])
 	stars = gameData["ch_stars"][chapter][level]
 	#setup stage
-	MusicPlayer.bgm3_play()
 	box_setup()
 	Engine.time_scale = 1
 
@@ -103,12 +102,14 @@ func _process(delta):
 				emit_signal("star",1)
 				await get_tree().create_timer(0.1).timeout
 				get_tree().get_nodes_in_group("scoreboard")[0].bintang_1()
+			$"../bgm".stop()
 			game_end = true
 			
 		if moveCount > maxMove :
 			$menu.hide()
 			emit_signal("star",0)
 			get_tree().get_nodes_in_group("scoreboard")[0].levelFailed()
+			$"../bgm".stop()
 			game_end = true
 
 func _on_karakter_is_moving(bool):
@@ -141,8 +142,10 @@ func send_save(ch,lvl,clr,str):
 
 # btn functions
 func _on_pause_pressed():
+	$"../btn_click".play()
 	get_tree().get_nodes_in_group("scoreboard")[0].jeda_game()
 func _on_reset_pressed():
+	$"../btn_click".play()
 	restart()
 func restart():
 	game_end = false
@@ -153,3 +156,9 @@ func next_lvl():
 	get_tree().change_scene_to_file(next_level_is)
 func back_to_select():
 	get_tree().change_scene_to_file(select_target)
+
+
+func _on_pause_mouse_entered():
+	$"../btn_hover".play()
+func _on_reset_mouse_entered():
+	$"../btn_hover".play()

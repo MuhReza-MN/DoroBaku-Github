@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://kr4qi5xryxxt"]
+[gd_scene load_steps=6 format=3 uid="uid://kr4qi5xryxxt"]
 
 [ext_resource type="Script" path="res://script/main_menu.gd" id="1_8gdgw"]
 [ext_resource type="FontFile" uid="uid://bys4fsq5x5ci6" path="res://style/BULKYPIX.TTF" id="1_v8n6y"]
+[ext_resource type="AudioStream" uid="uid://c2xm1t42epvhv" path="res://asset/sound/sfx/btn3.mp3" id="3_2eh5k"]
+[ext_resource type="AudioStream" uid="uid://b4e158le2f2i6" path="res://asset/sound/sfx/btn8.mp3" id="4_npucc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2alo"]
 bg_color = Color(0.458824, 0.643137, 0.611765, 1)
@@ -145,8 +147,22 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
+[node name="btn_hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_2eh5k")
+bus = &"SFX"
+
+[node name="btn_click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_npucc")
+volume_db = -5.0
+bus = &"SFX"
+
+[connection signal="mouse_entered" from="Panel/mulai" to="." method="_on_mulai_mouse_entered"]
 [connection signal="pressed" from="Panel/mulai" to="." method="_on_mulai_pressed"]
+[connection signal="mouse_entered" from="Panel/save" to="." method="_on_save_mouse_entered"]
 [connection signal="pressed" from="Panel/save" to="." method="_on_save_pressed"]
+[connection signal="mouse_entered" from="Panel/Load" to="." method="_on_load_mouse_entered"]
 [connection signal="pressed" from="Panel/Load" to="." method="_on_load_pressed"]
+[connection signal="mouse_entered" from="Panel/change" to="." method="_on_change_mouse_entered"]
 [connection signal="pressed" from="Panel/change" to="." method="_on_change_pressed"]
+[connection signal="mouse_entered" from="Panel/keluar" to="." method="_on_keluar_mouse_entered"]
 [connection signal="pressed" from="Panel/keluar" to="." method="_on_keluar_pressed"]

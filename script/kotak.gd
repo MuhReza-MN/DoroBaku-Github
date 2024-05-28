@@ -21,6 +21,7 @@ func move(dir):
 		tween.tween_property(self, "position",
 			position + inputs[dir] * tile_size,
 			1.0/anim_speed).set_trans(Tween.TRANS_SINE)
+		$push.play()
 		return true
 	return false
 

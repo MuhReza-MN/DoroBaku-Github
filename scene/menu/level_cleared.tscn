@@ -1,10 +1,14 @@
-[gd_scene load_steps=37 format=3 uid="uid://b5sjrqgtkjqt8"]
+[gd_scene load_steps=43 format=3 uid="uid://b5sjrqgtkjqt8"]
 
 [ext_resource type="FontFile" uid="uid://bys4fsq5x5ci6" path="res://style/BULKYPIX.TTF" id="1_ahvtj"]
 [ext_resource type="Script" path="res://script/menu/level_cleared.gd" id="1_vx2oe"]
 [ext_resource type="Texture2D" uid="uid://5e1tastgl85p" path="res://asset/tiles/bintang.png" id="1_yj6u1"]
 [ext_resource type="Shader" path="res://scene/menu/level_cleared.gdshader" id="2_t8g3d"]
 [ext_resource type="Texture2D" uid="uid://kv2rfxxbwein" path="res://asset/btn/btn_sheet.png" id="4_fij4s"]
+[ext_resource type="AudioStream" uid="uid://cq2fvqun1erjp" path="res://asset/sound/sfx/star.mp3" id="6_3kac7"]
+[ext_resource type="AudioStream" uid="uid://cdvftwqvxvrl2" path="res://asset/sound/sfx/fail.mp3" id="7_7evws"]
+[ext_resource type="AudioStream" uid="uid://c2xm1t42epvhv" path="res://asset/sound/sfx/btn3.mp3" id="8_43i8h"]
+[ext_resource type="AudioStream" uid="uid://b4e158le2f2i6" path="res://asset/sound/sfx/btn8.mp3" id="9_ni52w"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_a2brh"]
 shader = ExtResource("2_t8g3d")
@@ -235,6 +239,14 @@ region_rect = Rect2(96, 32, 32, 32)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i3vp4"]
 texture = ExtResource("4_fij4s")
 region_rect = Rect2(0, 128, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cxcy6"]
+texture = ExtResource("4_fij4s")
+region_rect = Rect2(32, 128, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mwmko"]
+texture = ExtResource("4_fij4s")
+region_rect = Rect2(32, 128, 32, 32)
 
 [node name="level_selesai" type="Control" groups=["scoreboard"]]
 layout_mode = 3
@@ -581,12 +593,37 @@ theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
 theme_override_fonts/font = ExtResource("1_ahvtj")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxTexture_i3vp4")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_5ixcg")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_5ixcg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cxcy6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mwmko")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_5ixcg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5ixcg")
 
+[node name="star" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_3kac7")
+volume_db = -13.0
+bus = &"SFX"
+
+[node name="failed" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_7evws")
+volume_db = -10.0
+bus = &"SFX"
+
+[node name="btn_hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_43i8h")
+bus = &"SFX"
+
+[node name="btn_click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_ni52w")
+volume_db = -5.0
+bus = &"SFX"
+
+[connection signal="mouse_entered" from="Panel/VBox/HBoxContainer/Control/restart_lvl" to="." method="_on_restart_lvl_mouse_entered"]
 [connection signal="pressed" from="Panel/VBox/HBoxContainer/Control/restart_lvl" to="." method="_on_restart_lvl_pressed"]
+[connection signal="mouse_entered" from="Panel/VBox/HBoxContainer/Control2/back_to_lvl_select" to="." method="_on_back_to_lvl_select_mouse_entered"]
 [connection signal="pressed" from="Panel/VBox/HBoxContainer/Control2/back_to_lvl_select" to="." method="_on_back_to_lvl_select_pressed"]
+[connection signal="mouse_entered" from="Panel/VBox/HBoxContainer/Control3/next_lvl" to="." method="_on_next_lvl_mouse_entered"]
 [connection signal="pressed" from="Panel/VBox/HBoxContainer/Control3/next_lvl" to="." method="_on_next_lvl_pressed"]
+[connection signal="mouse_entered" from="Panel/VBox/HBoxContainer/Control3/resume" to="." method="_on_resume_mouse_entered"]
 [connection signal="pressed" from="Panel/VBox/HBoxContainer/Control3/resume" to="." method="_on_resume_pressed"]
+[connection signal="mouse_entered" from="Panel/VBox/CenterContainer/Control/info" to="." method="_on_info_mouse_entered"]
+[connection signal="pressed" from="Panel/VBox/CenterContainer/Control/info" to="." method="_on_info_pressed"]

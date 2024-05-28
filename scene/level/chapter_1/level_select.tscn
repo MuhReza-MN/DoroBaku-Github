@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c8tida4meiqxu"]
+[gd_scene load_steps=17 format=3 uid="uid://c8tida4meiqxu"]
 
 [ext_resource type="Script" path="res://script/level_select.gd" id="1_srwv1"]
 [ext_resource type="FontFile" uid="uid://bys4fsq5x5ci6" path="res://style/BULKYPIX.TTF" id="2_1koq4"]
@@ -6,6 +6,8 @@
 [ext_resource type="Theme" uid="uid://c2tpsish726dv" path="res://asset/btn/btn_themes.tres" id="3_q5ugj"]
 [ext_resource type="Texture2D" uid="uid://dwb2ee5f5xow6" path="res://asset/btn/select_container.png" id="4_nj66u"]
 [ext_resource type="Texture2D" uid="uid://5e1tastgl85p" path="res://asset/tiles/bintang.png" id="5_2unxh"]
+[ext_resource type="AudioStream" uid="uid://c2xm1t42epvhv" path="res://asset/sound/sfx/btn3.mp3" id="7_ppps6"]
+[ext_resource type="AudioStream" uid="uid://b4e158le2f2i6" path="res://asset/sound/sfx/btn8.mp3" id="8_bkjdh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2alo"]
 bg_color = Color(0.458824, 0.643137, 0.611765, 1)
@@ -915,5 +917,16 @@ scale = Vector2(1.5, 1.5)
 texture = SubResource("AtlasTexture_cefy4")
 hframes = 2
 
+[node name="btn_hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_ppps6")
+bus = &"SFX"
+
+[node name="btn_click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_bkjdh")
+volume_db = -5.0
+bus = &"SFX"
+
+[connection signal="mouse_entered" from="Panel/back" to="." method="_on_back_mouse_entered"]
 [connection signal="pressed" from="Panel/back" to="." method="_on_back_pressed"]
+[connection signal="mouse_entered" from="Panel/level/level1" to="." method="_on_level_1_mouse_entered"]
 [connection signal="pressed" from="Panel/level/level1" to="." method="_on_level_1_pressed"]

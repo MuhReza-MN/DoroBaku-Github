@@ -14,6 +14,7 @@ var inputs = {
 signal isMoving(bool)
 @onready var ray = $RayCast2D
 @onready var anim = $AnimationPlayer
+@onready var sfx = $walk
 
 func _unhandled_input(event):
 	if moving:
@@ -34,8 +35,10 @@ func move(dir):
 		moving = true
 		emit_signal("isMoving",true)
 		$AnimationPlayer.play(dir)
+		sfx.play()
 		await tween.finished
 		moving = false
+		sfx.stop()
 		emit_signal("isMoving",false)
 	else:
 		var collider = ray.get_collider()
@@ -48,6 +51,9 @@ func move(dir):
 				moving = true
 				emit_signal("isMoving",true)
 				$AnimationPlayer.play(dir)
+				sfx.play()
 				await tween.finished
 				moving = false
+				sfx.stop()
 				emit_signal("isMoving",false)
+
