@@ -930,3 +930,7 @@ bus = &"SFX"
 [connection signal="pressed" from="Panel/back" to="." method="_on_back_pressed"]
 [connection signal="mouse_entered" from="Panel/level/level1" to="." method="_on_level_1_mouse_entered"]
 [connection signal="pressed" from="Panel/level/level1" to="." method="_on_level_1_pressed"]
+[connection signal="mouse_entered" from="Panel/level/level2" to="." method="_on_level_2_mouse_entered"]
+[connection signal="pressed" from="Panel/level/level2" to="." method="_on_level_2_pressed"]
+[connection signal="mouse_entered" from="Panel/level/level3" to="." method="_on_level_3_mouse_entered"]
+[connection signal="pressed" from="Panel/level/level3" to="." method="_on_level_3_pressed"]

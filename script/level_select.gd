@@ -42,3 +42,15 @@ func _on_level_1_pressed():
 	get_tree().change_scene_to_file("res://scene/level/chapter_1/level_1_1.tscn")
 func _on_level_1_mouse_entered():
 	hover_sfx.play()
+
+func _on_level_2_pressed():
+	click_sfx.play()
+	MusicPlayer.stop()
+	get_tree().change_scene_to_file("res://scene/level/chapter_1/level_1_2.tscn")
+func _on_level_2_mouse_entered():
+	hover_sfx.play()
+
+func _on_level_3_pressed():
+	get_tree().change_scene_to_file("res://scene/level/chapter_1/level_1_3.tscn")
+func _on_level_3_mouse_entered():
+	hover_sfx.play()

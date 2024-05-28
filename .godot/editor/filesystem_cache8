@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1716818576
+::res://::1716859089
 default_bus_layout.tres::AudioBusLayout::8375081228311150963::1716818504::0::1::::<><>::
 icon.svg::CompressedTexture2D::8706018896978181480::1713519746::1713519757::1::::<><>::
 README.md::TextFile::-1::1714993591::0::1::::<><>::
@@ -23,16 +23,16 @@ eyes_1.png::CompressedTexture2D::3525934643270764194::1714293530::1714293543::1:
 hat_1.png::CompressedTexture2D::5347857187614786470::1714293393::1714293543::1::::<><>::
 head_1.png::CompressedTexture2D::6213316672688567273::1714293484::1714293543::1::::<><>::
 outline_1.png::CompressedTexture2D::5040401002636060416::1714293497::1714293543::1::::<><>::
-::res://asset/btn/::1716818666
+::res://asset/btn/::1716823865
 btn_sheet.png::CompressedTexture2D::746910385711129869::1714877737::1714877746::1::::<><>::
-btn_themes.tres::Theme::6708106670477185839::1716818666::0::1::::<><>::uid://dwb2ee5f5xow6::::res://asset/btn/select_container.png<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF
+btn_themes.tres::Theme::6708106670477185839::1716823865::0::1::::<><>::uid://dwb2ee5f5xow6::::res://asset/btn/select_container.png<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF
 select_container.png::CompressedTexture2D::8707127747556110715::1716807432::1716807443::1::::<><>::
 ::res://asset/sound/::1716818576
 bgm1.mp3::AudioStreamMP3::2082291538730638418::1713766792::1713782140::1::::<><>::
 bgm2.mp3::AudioStreamMP3::8123789197841689009::1713766962::1713783503::1::::<><>::
 bgm3.mp3::AudioStreamMP3::2675552216026608897::1713766995::1713782147::1::::<><>::
 LINK SOUND.txt::TextFile::-1::1712150897::0::1::::<><>::
-::res://asset/sound/sfx/::1716820719
+::res://asset/sound/sfx/::1716820722
 box_push.mp3::AudioStreamMP3::6913514213258422055::1646912415::1716818576::1::::<><>::
 btn1.mp3::AudioStreamMP3::1377826584987106157::1704222608::1716818576::1::::<><>::
 btn2.mp3::AudioStreamMP3::674719844399520437::1704222610::1716818576::1::::<><>::
@@ -61,37 +61,58 @@ spawn_box.png::CompressedTexture2D::5254243576960420077::1713797377::1713797394:
 water.png::CompressedTexture2D::8349540469555554667::1713763777::1713766019::1::::<><>::
 w_a-Sheet.png::CompressedTexture2D::4572418732215877175::1713315392::1713767343::1::::<><>::
 ::res://resources/::1714816896
-::res://scene/::1714993645
-cek.tscn::PackedScene::5905704367947813339::1714695100::0::1::::<><>::uid://j440e2jubrrg::::res://asset/tiles/score-Sheet.png<>res://script/cek.gd
+::res://scene/::1716823369
+cek.tscn::PackedScene::5905704367947813339::1716822578::0::1::::<><>::uid://j440e2jubrrg::::res://asset/tiles/score-Sheet.png<>res://script/cek.gd
 center_viewer.tscn::PackedScene::3054065857026456680::1713797193::0::1::::<><>::
 dinding_grup.tscn::PackedScene::3083004005988935244::1713798625::0::1::::<><>::
 dinding_satu.tscn::PackedScene::5863623374613750248::1713798224::0::1::::<><>::uid://lqxph0syc7ac::::res://asset/tiles/bricks.png
-kotak.tscn::PackedScene::7141048592300550852::1714695100::0::1::::<><>::res://script/kotak.gd<>uid://b6e6clfto3gb4::::res://asset/tiles/w_a-Sheet.png
-::res://scene/chara/::1716820458
-karakter.tscn::PackedScene::7505007138695286164::1716820458::0::1::::<><>::res://script/karakter.gd<>uid://cd2uwylcicpum::::res://asset/outline_1.png<>uid://jxacjwc0kg3x::::res://asset/body_1.png<>uid://cur1ohac6jckv::::res://asset/head_1.png<>uid://bqh8vmp1r3uc5::::res://asset/eyes_1.png<>uid://cigsordb37wbm::::res://asset/hat_1.png<>uid://no0y4e14lwha::::res://asset/cloth_1.png<>uid://5wsj6ju1cw1u::::res://asset/sound/sfx/walk1.mp3
+kotak.tscn::PackedScene::7141048592300550852::1716823369::0::1::::<><>::res://script/kotak.gd<>uid://b6e6clfto3gb4::::res://asset/tiles/w_a-Sheet.png<>uid://c5q7tl1tvl7ip::::res://asset/sound/sfx/box_push.mp3
+::res://scene/chara/::1716823369
+karakter.tscn::PackedScene::7505007138695286164::1716823369::0::1::::<><>::res://script/karakter.gd<>uid://cd2uwylcicpum::::res://asset/outline_1.png<>uid://jxacjwc0kg3x::::res://asset/body_1.png<>uid://cur1ohac6jckv::::res://asset/head_1.png<>uid://bqh8vmp1r3uc5::::res://asset/eyes_1.png<>uid://cigsordb37wbm::::res://asset/hat_1.png<>uid://no0y4e14lwha::::res://asset/cloth_1.png<>uid://5wsj6ju1cw1u::::res://asset/sound/sfx/walk1.mp3
 ::res://scene/level/::1714993645
 level_not.tscn::PackedScene::7198353444123233195::1714829148::0::1::::<><>::
-::res://scene/level/chapter_1/::1716820480
-level_1_1.tscn::PackedScene::9098783931925419828::1716820480::0::1::::<><>::res://script/level/level_1_1.gd<>uid://b8ak6jwuanmdq::::res://asset/tiles/floor.png<>uid://cg4gvhn8dkh4x::::res://asset/tiles/spawn_box.png<>uid://lqxph0syc7ac::::res://asset/tiles/bricks.png<>uid://cqe1c836cwb6j::::res://scene/cek.tscn<>uid://de6qmu75j1tmq::::res://scene/chara/karakter.tscn<>uid://c80ga6hakiurs::::res://scene/kotak.tscn<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png<>uid://b5sjrqgtkjqt8::::res://scene/menu/level_cleared.tscn<>uid://beeb7o60l0iaj::::res://asset/sound/bgm3.mp3
-level_select.tscn::PackedScene::7128787523442485154::1716820458::0::1::::<><>::res://script/level_select.gd<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png<>uid://c2tpsish726dv::::res://asset/btn/btn_themes.tres<>uid://dwb2ee5f5xow6::::res://asset/btn/select_container.png<>uid://5e1tastgl85p::::res://asset/tiles/bintang.png
-::res://scene/menu/::1716820480
-chapter_select.tscn::PackedScene::4638879034973394575::1716820458::0::1::::<><>::res://script/menu/chapter_select.gd<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://c2tpsish726dv::::res://asset/btn/btn_themes.tres<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png<>uid://dwb2ee5f5xow6::::res://asset/btn/select_container.png<>uid://5e1tastgl85p::::res://asset/tiles/bintang.png
-level_cleared.gdshader::Shader::-1::1716820480::0::1::::<><>::
-level_cleared.tscn::PackedScene::4529822454357868079::1716820458::0::1::::<><>::uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>res://script/menu/level_cleared.gd<>uid://5e1tastgl85p::::res://asset/tiles/bintang.png<>res://scene/menu/level_cleared.gdshader<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png
-main_menu.tscn::PackedScene::738772691291682605::1715422605::0::1::::<><>::res://script/main_menu.gd<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF
-::res://script/::1716820397
+::res://scene/level/chapter_1/::1716863896
+level_1_1.tscn::PackedScene::9098783931925419828::1716863896::0::1::::<><>::res://script/level/level_1_1.gd<>uid://b8ak6jwuanmdq::::res://asset/tiles/floor.png<>uid://cg4gvhn8dkh4x::::res://asset/tiles/spawn_box.png<>uid://lqxph0syc7ac::::res://asset/tiles/bricks.png<>uid://cqe1c836cwb6j::::res://scene/cek.tscn<>uid://de6qmu75j1tmq::::res://scene/chara/karakter.tscn<>uid://c80ga6hakiurs::::res://scene/kotak.tscn<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png<>uid://b5sjrqgtkjqt8::::res://scene/menu/level_cleared.tscn<>uid://c2xm1t42epvhv::::res://asset/sound/sfx/btn3.mp3<>uid://beeb7o60l0iaj::::res://asset/sound/bgm3.mp3<>uid://b4e158le2f2i6::::res://asset/sound/sfx/btn8.mp3
+level_1_2.tscn::PackedScene::9098783931925419828::1716864150::0::1::::<><>::res://script/level/ch1/level_1_2.gd<>uid://b8ak6jwuanmdq::::res://asset/tiles/floor.png<>uid://cg4gvhn8dkh4x::::res://asset/tiles/spawn_box.png<>uid://lqxph0syc7ac::::res://asset/tiles/bricks.png<>uid://cqe1c836cwb6j::::res://scene/cek.tscn<>uid://de6qmu75j1tmq::::res://scene/chara/karakter.tscn<>uid://c80ga6hakiurs::::res://scene/kotak.tscn<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png<>uid://c2xm1t42epvhv::::res://asset/sound/sfx/btn3.mp3<>uid://b5sjrqgtkjqt8::::res://scene/menu/level_cleared.tscn<>uid://b4e158le2f2i6::::res://asset/sound/sfx/btn8.mp3<>uid://beeb7o60l0iaj::::res://asset/sound/bgm3.mp3
+level_2.tscn::PackedScene::7659403359793820047::1716814250::0::1::::<><>::res://script/level/level_1_1.gd<>uid://b8ak6jwuanmdq::::res://asset/tiles/floor.png<>uid://cg4gvhn8dkh4x::::res://asset/tiles/spawn_box.png<>uid://lqxph0syc7ac::::res://asset/tiles/bricks.png<>uid://cqe1c836cwb6j::::res://scene/cek.tscn<>uid://de6qmu75j1tmq::::res://scene/chara/karakter.tscn<>uid://c80ga6hakiurs::::res://scene/kotak.tscn<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png
+level_3.tscn::PackedScene::8621880385058389491::1716814251::0::1::::<><>::res://script/level/level_1_1.gd<>uid://b8ak6jwuanmdq::::res://asset/tiles/floor.png<>uid://cg4gvhn8dkh4x::::res://asset/tiles/spawn_box.png<>uid://lqxph0syc7ac::::res://asset/tiles/bricks.png<>uid://cqe1c836cwb6j::::res://scene/cek.tscn<>uid://de6qmu75j1tmq::::res://scene/chara/karakter.tscn<>uid://c80ga6hakiurs::::res://scene/kotak.tscn<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png
+level_4.tscn::PackedScene::6075978879334697600::1716814252::0::1::::<><>::res://script/level/level_1_1.gd<>uid://b8ak6jwuanmdq::::res://asset/tiles/floor.png<>uid://cg4gvhn8dkh4x::::res://asset/tiles/spawn_box.png<>uid://lqxph0syc7ac::::res://asset/tiles/bricks.png<>uid://cqe1c836cwb6j::::res://scene/cek.tscn<>uid://de6qmu75j1tmq::::res://scene/chara/karakter.tscn<>uid://c80ga6hakiurs::::res://scene/kotak.tscn<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png
+level_5.tscn::PackedScene::7374247655577318987::1716814254::0::1::::<><>::res://script/level/level_1_1.gd<>uid://b8ak6jwuanmdq::::res://asset/tiles/floor.png<>uid://cg4gvhn8dkh4x::::res://asset/tiles/spawn_box.png<>uid://lqxph0syc7ac::::res://asset/tiles/bricks.png<>uid://cqe1c836cwb6j::::res://scene/cek.tscn<>uid://de6qmu75j1tmq::::res://scene/chara/karakter.tscn<>uid://c80ga6hakiurs::::res://scene/kotak.tscn<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png
+level_6.tscn::PackedScene::4701325375407100990::1716814257::0::1::::<><>::res://script/level/level_1_1.gd<>uid://b8ak6jwuanmdq::::res://asset/tiles/floor.png<>uid://cg4gvhn8dkh4x::::res://asset/tiles/spawn_box.png<>uid://lqxph0syc7ac::::res://asset/tiles/bricks.png<>uid://cqe1c836cwb6j::::res://scene/cek.tscn<>uid://de6qmu75j1tmq::::res://scene/chara/karakter.tscn<>uid://c80ga6hakiurs::::res://scene/kotak.tscn<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png
+level_7.tscn::PackedScene::873767807868871982::1716814258::0::1::::<><>::res://script/level/level_1_1.gd<>uid://b8ak6jwuanmdq::::res://asset/tiles/floor.png<>uid://cg4gvhn8dkh4x::::res://asset/tiles/spawn_box.png<>uid://lqxph0syc7ac::::res://asset/tiles/bricks.png<>uid://cqe1c836cwb6j::::res://scene/cek.tscn<>uid://de6qmu75j1tmq::::res://scene/chara/karakter.tscn<>uid://c80ga6hakiurs::::res://scene/kotak.tscn<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png
+level_8.tscn::PackedScene::14858623522271141::1716814260::0::1::::<><>::res://script/level/level_1_1.gd<>uid://b8ak6jwuanmdq::::res://asset/tiles/floor.png<>uid://cg4gvhn8dkh4x::::res://asset/tiles/spawn_box.png<>uid://lqxph0syc7ac::::res://asset/tiles/bricks.png<>uid://cqe1c836cwb6j::::res://scene/cek.tscn<>uid://de6qmu75j1tmq::::res://scene/chara/karakter.tscn<>uid://c80ga6hakiurs::::res://scene/kotak.tscn<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png
+level_9.tscn::PackedScene::2389416902352725818::1716814261::0::1::::<><>::res://script/level/level_1_1.gd<>uid://b8ak6jwuanmdq::::res://asset/tiles/floor.png<>uid://cg4gvhn8dkh4x::::res://asset/tiles/spawn_box.png<>uid://lqxph0syc7ac::::res://asset/tiles/bricks.png<>uid://cqe1c836cwb6j::::res://scene/cek.tscn<>uid://de6qmu75j1tmq::::res://scene/chara/karakter.tscn<>uid://c80ga6hakiurs::::res://scene/kotak.tscn<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png
+level_10.tscn::PackedScene::6798825374235066473::1716814264::0::1::::<><>::res://script/level/level_1_1.gd<>uid://b8ak6jwuanmdq::::res://asset/tiles/floor.png<>uid://cg4gvhn8dkh4x::::res://asset/tiles/spawn_box.png<>uid://lqxph0syc7ac::::res://asset/tiles/bricks.png<>uid://cqe1c836cwb6j::::res://scene/cek.tscn<>uid://de6qmu75j1tmq::::res://scene/chara/karakter.tscn<>uid://c80ga6hakiurs::::res://scene/kotak.tscn<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png
+level_12 L_132.tscn::PackedScene::278384746741879806::1716814276::0::1::::<><>::res://script/level/level_1_1.gd<>uid://b8ak6jwuanmdq::::res://asset/tiles/floor.png<>uid://cg4gvhn8dkh4x::::res://asset/tiles/spawn_box.png<>uid://lqxph0syc7ac::::res://asset/tiles/bricks.png<>uid://cqe1c836cwb6j::::res://scene/cek.tscn<>uid://de6qmu75j1tmq::::res://scene/chara/karakter.tscn<>uid://c80ga6hakiurs::::res://scene/kotak.tscn<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png
+level_13 L_149.tscn::PackedScene::1527259980100068749::1716814278::0::1::::<><>::res://script/level/level_1_1.gd<>uid://b8ak6jwuanmdq::::res://asset/tiles/floor.png<>uid://cg4gvhn8dkh4x::::res://asset/tiles/spawn_box.png<>uid://lqxph0syc7ac::::res://asset/tiles/bricks.png<>uid://cqe1c836cwb6j::::res://scene/cek.tscn<>uid://de6qmu75j1tmq::::res://scene/chara/karakter.tscn<>uid://c80ga6hakiurs::::res://scene/kotak.tscn<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png
+level_14 L_171.tscn::PackedScene::3837265969210422145::1716814279::0::1::::<><>::res://script/level/level_1_1.gd<>uid://b8ak6jwuanmdq::::res://asset/tiles/floor.png<>uid://cg4gvhn8dkh4x::::res://asset/tiles/spawn_box.png<>uid://lqxph0syc7ac::::res://asset/tiles/bricks.png<>uid://cqe1c836cwb6j::::res://scene/cek.tscn<>uid://de6qmu75j1tmq::::res://scene/chara/karakter.tscn<>uid://c80ga6hakiurs::::res://scene/kotak.tscn<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png
+level_15 L_74.tscn::PackedScene::5445376322140738019::1716814280::0::1::::<><>::res://script/level/level_1_1.gd<>uid://b8ak6jwuanmdq::::res://asset/tiles/floor.png<>uid://cg4gvhn8dkh4x::::res://asset/tiles/spawn_box.png<>uid://lqxph0syc7ac::::res://asset/tiles/bricks.png<>uid://cqe1c836cwb6j::::res://scene/cek.tscn<>uid://de6qmu75j1tmq::::res://scene/chara/karakter.tscn<>uid://c80ga6hakiurs::::res://scene/kotak.tscn<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png
+level_16 L_82.tscn::PackedScene::5637419987674896861::1716814282::0::1::::<><>::res://script/level/level_1_1.gd<>uid://b8ak6jwuanmdq::::res://asset/tiles/floor.png<>uid://cg4gvhn8dkh4x::::res://asset/tiles/spawn_box.png<>uid://lqxph0syc7ac::::res://asset/tiles/bricks.png<>uid://cqe1c836cwb6j::::res://scene/cek.tscn<>uid://de6qmu75j1tmq::::res://scene/chara/karakter.tscn<>uid://c80ga6hakiurs::::res://scene/kotak.tscn<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png
+level_17 L_103.tscn::PackedScene::7570454002187013794::1716814283::0::1::::<><>::res://script/level/level_1_1.gd<>uid://b8ak6jwuanmdq::::res://asset/tiles/floor.png<>uid://cg4gvhn8dkh4x::::res://asset/tiles/spawn_box.png<>uid://lqxph0syc7ac::::res://asset/tiles/bricks.png<>uid://cqe1c836cwb6j::::res://scene/cek.tscn<>uid://de6qmu75j1tmq::::res://scene/chara/karakter.tscn<>uid://c80ga6hakiurs::::res://scene/kotak.tscn<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png
+level_18 L_87.tscn::PackedScene::4596513069300045454::1716814289::0::1::::<><>::res://script/level/level_1_1.gd<>uid://b8ak6jwuanmdq::::res://asset/tiles/floor.png<>uid://cg4gvhn8dkh4x::::res://asset/tiles/spawn_box.png<>uid://lqxph0syc7ac::::res://asset/tiles/bricks.png<>uid://cqe1c836cwb6j::::res://scene/cek.tscn<>uid://de6qmu75j1tmq::::res://scene/chara/karakter.tscn<>uid://c80ga6hakiurs::::res://scene/kotak.tscn<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png
+level_19 L_81.tscn::PackedScene::1808198149371191233::1716814284::0::1::::<><>::res://script/level/level_1_1.gd<>uid://b8ak6jwuanmdq::::res://asset/tiles/floor.png<>uid://cg4gvhn8dkh4x::::res://asset/tiles/spawn_box.png<>uid://lqxph0syc7ac::::res://asset/tiles/bricks.png<>uid://cqe1c836cwb6j::::res://scene/cek.tscn<>uid://de6qmu75j1tmq::::res://scene/chara/karakter.tscn<>uid://c80ga6hakiurs::::res://scene/kotak.tscn<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png
+level_20 L_71.tscn::PackedScene::6070776834438331970::1716814286::0::1::::<><>::res://script/level/level_1_1.gd<>uid://b8ak6jwuanmdq::::res://asset/tiles/floor.png<>uid://cg4gvhn8dkh4x::::res://asset/tiles/spawn_box.png<>uid://lqxph0syc7ac::::res://asset/tiles/bricks.png<>uid://cqe1c836cwb6j::::res://scene/cek.tscn<>uid://de6qmu75j1tmq::::res://scene/chara/karakter.tscn<>uid://c80ga6hakiurs::::res://scene/kotak.tscn<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png
+level_select.tscn::PackedScene::7128787523442485154::1716863896::0::1::::<><>::res://script/level_select.gd<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png<>uid://c2tpsish726dv::::res://asset/btn/btn_themes.tres<>uid://dwb2ee5f5xow6::::res://asset/btn/select_container.png<>uid://5e1tastgl85p::::res://asset/tiles/bintang.png<>uid://c2xm1t42epvhv::::res://asset/sound/sfx/btn3.mp3<>uid://b4e158le2f2i6::::res://asset/sound/sfx/btn8.mp3
+::res://scene/menu/::1716863896
+chapter_select.tscn::PackedScene::4638879034973394575::1716863896::0::1::::<><>::res://script/menu/chapter_select.gd<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://c2tpsish726dv::::res://asset/btn/btn_themes.tres<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png<>uid://dwb2ee5f5xow6::::res://asset/btn/select_container.png<>uid://5e1tastgl85p::::res://asset/tiles/bintang.png<>uid://c2xm1t42epvhv::::res://asset/sound/sfx/btn3.mp3<>uid://b4e158le2f2i6::::res://asset/sound/sfx/btn8.mp3
+level_cleared.gdshader::Shader::-1::1716864151::0::1::::<><>::
+level_cleared.tscn::PackedScene::4529822454357868079::1716823369::0::1::::<><>::uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>res://script/menu/level_cleared.gd<>uid://5e1tastgl85p::::res://asset/tiles/bintang.png<>res://scene/menu/level_cleared.gdshader<>uid://kv2rfxxbwein::::res://asset/btn/btn_sheet.png<>uid://cq2fvqun1erjp::::res://asset/sound/sfx/star.mp3<>uid://cdvftwqvxvrl2::::res://asset/sound/sfx/fail.mp3<>uid://c2xm1t42epvhv::::res://asset/sound/sfx/btn3.mp3<>uid://b4e158le2f2i6::::res://asset/sound/sfx/btn8.mp3
+main_menu.tscn::PackedScene::738772691291682605::1716863896::0::1::::<><>::res://script/main_menu.gd<>uid://bys4fsq5x5ci6::::res://style/BULKYPIX.TTF<>uid://c2xm1t42epvhv::::res://asset/sound/sfx/btn3.mp3<>uid://b4e158le2f2i6::::res://asset/sound/sfx/btn8.mp3
+::res://script/::1716859952
 cek.gd::GDScript::-1::1714643415::0::1::::<>Area2D<>::
-karakter.gd::GDScript::-1::1716820085::0::1::::<>CharacterBody2D<>::
-kotak.gd::GDScript::-1::1714443291::0::1::::<>CharacterBody2D<>::
-level_select.gd::GDScript::-1::1716820397::0::1::::<>Control<>::
-main_menu.gd::GDScript::-1::1714991694::0::1::::<>Control<>::
+karakter.gd::GDScript::-1::1716823402::0::1::::<>CharacterBody2D<>::
+kotak.gd::GDScript::-1::1716822469::0::1::::<>CharacterBody2D<>::
+level_select.gd::GDScript::-1::1716859952::0::1::::<>Control<>::
+main_menu.gd::GDScript::-1::1716823549::0::1::::<>Control<>::
 music_player.gd::GDScript::-1::1713797924::0::1::::<>AudioStreamPlayer<>::
-::res://script/data/::1714993645
-data_loader.gd::GDScript::-1::1714991788::0::1::::SaveData<>Resource<>::
-::res://script/level/::1716820390
-level_1_1.gd::GDScript::-1::1716820390::0::1::::<>Node2D<>::
-::res://script/menu/::1716807760
-chapter_select.gd::GDScript::-1::1716807124::0::1::::<>Control<>::
-level_cleared.gd::GDScript::-1::1716807760::0::1::::<>Control<>::
+::res://script/data/::1716860041
+data_loader.gd::GDScript::-1::1716860041::0::1::::SaveData<>Resource<>::
+::res://script/level/::1716862802
+level_1_1.gd::GDScript::-1::1716864143::0::1::::<>Node2D<>::
+::res://script/level/ch1/::1716863872
+level_1_2.gd::GDScript::-1::1716863872::0::1::::<>Node2D<>::
+::res://script/menu/::1716863332
+chapter_select.gd::GDScript::-1::1716823762::0::1::::<>Control<>::
+level_cleared.gd::GDScript::-1::1716863332::0::1::::<>Control<>::
 ::res://style/::1714993645
 BULKYPIX.TTF::FontFile::4109882423870859607::988076862::1713754561::1::::<><>::

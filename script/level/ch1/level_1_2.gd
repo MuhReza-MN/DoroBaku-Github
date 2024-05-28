@@ -18,18 +18,19 @@ var stars
 
 # wajib disetel
 var chapter = 0 # = chapter 1
-var level = 0 # = level 1
-var next_lvl_val = 1 # = level 2
-@onready var next_level_is = "res://scene/level/chapter_1/level_1_2.tscn"
+var level = 1 # = level 2
+var next_lvl_val = 2 # = level 3
+@onready var next_level_is = "res://scene/level/chapter_1/level_1_3.tscn"
 @onready var select_target = "res://scene/level/chapter_1/level_select.tscn"
-var lessThan1 = 40
-var lessThan2 = 4
-var maxMove = 55
-# setel huruf (pastikan lowercase) , setel izin + j
-var h1 = "i"
-var h2 = "z"
-var h3 = "n"
-var h4 = "j"
+var lessThan1 = 55
+var lessThan2 = 60
+var maxMove = 65
+# setel huruf (pastikan lowercase) , setel afdal + o
+var h1 = "a"
+var h2 = "f"
+var h3 = "d"
+var h4 = "l"
+var h5 = "o"
 
 func _ready():
 	gameData = saveData.load_data()
@@ -52,14 +53,17 @@ func cek_nama(nama) :
 		info = true
 	elif h3 in nama :
 		info = true
+	elif h4 in nama :
+		info = true
 
 func box_setup() :
 	# setel huruf yg ditampilkan (sangat penting untuk sesuai semua)
-	get_tree().get_nodes_in_group("i")[0].set_block(h1)
-	get_tree().get_nodes_in_group("z")[0].set_block(h2)
-	get_tree().get_nodes_in_group("i")[1].set_block(h1)
-	get_tree().get_nodes_in_group("n")[0].set_block(h3)
-	get_tree().get_nodes_in_group("j")[0].set_block(h4)
+	get_tree().get_nodes_in_group("a")[0].set_block(h1)
+	get_tree().get_nodes_in_group("f")[0].set_block(h2)
+	get_tree().get_nodes_in_group("d")[0].set_block(h3)
+	get_tree().get_nodes_in_group("a")[1].set_block(h1)
+	get_tree().get_nodes_in_group("l")[0].set_block(h4)
+	get_tree().get_nodes_in_group("o")[0].set_block(h5)
 # sampai sini setupnya
 
 func pause_game():
@@ -136,7 +140,6 @@ func send_save(ch,lvl,clr,str):
 				saveData.edit_data_lvl_clear(ch,lvl,1,str)
 			else :
 				saveData.edit_data_lvl_clear(ch,lvl,1,stars)
-			
 	elif cek == -1 :
 		if game_end == true :
 			saveData.edit_data_lvl_clear(chapter,next_lvl_val,0,0)
@@ -144,7 +147,6 @@ func send_save(ch,lvl,clr,str):
 				saveData.edit_data_lvl_clear(ch,lvl,1,str)
 			else :
 				saveData.edit_data_lvl_clear(ch,lvl,1,stars)
-				
 
 # btn functions
 func _on_pause_pressed():

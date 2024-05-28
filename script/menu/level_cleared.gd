@@ -110,20 +110,20 @@ func send_data():
 	main.send_save(chapter,level,clear,stars)
 func _on_next_lvl_pressed():
 	click_sfx.play()
+	send_data()
 	main.next_lvl()
 func _on_resume_pressed():
 	click_sfx.play()
 	jeda_game()
 
-func _get_ch_val(val3):
+func _on_level_controller_ch_val(val3):
 	chapter = val3
-func _get_lvl_val(val4):
+func _on_level_controller_lvl_val(val4):
 	level = val4
-func _get_clear_val(val5):
+func _on_level_controller_clear_val(val5):
 	clear = val5
-func _get_star_val(x):
+func _on_level_controller_star(x):
 	stars = x
-
 
 func _on_restart_lvl_mouse_entered():
 	hover_sfx.play()

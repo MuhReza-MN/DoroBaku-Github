@@ -1,0 +1,273 @@
+[gd_scene load_steps=36 format=3 uid="uid://dhejiv7lqqq4v"]
+
+[ext_resource type="Script" path="res://script/level/ch1/level_1_3.gd" id="1_febsk"]
+[ext_resource type="Texture2D" uid="uid://b8ak6jwuanmdq" path="res://asset/tiles/floor.png" id="2_r1bm1"]
+[ext_resource type="Texture2D" uid="uid://cg4gvhn8dkh4x" path="res://asset/tiles/spawn_box.png" id="3_see4r"]
+[ext_resource type="Texture2D" uid="uid://lqxph0syc7ac" path="res://asset/tiles/bricks.png" id="4_g5cfd"]
+[ext_resource type="PackedScene" uid="uid://cqe1c836cwb6j" path="res://scene/cek.tscn" id="5_043a0"]
+[ext_resource type="PackedScene" uid="uid://de6qmu75j1tmq" path="res://scene/chara/karakter.tscn" id="6_cd8ne"]
+[ext_resource type="PackedScene" uid="uid://c80ga6hakiurs" path="res://scene/kotak.tscn" id="7_3dk2l"]
+[ext_resource type="FontFile" uid="uid://bys4fsq5x5ci6" path="res://style/BULKYPIX.TTF" id="8_4c8y2"]
+[ext_resource type="Texture2D" uid="uid://kv2rfxxbwein" path="res://asset/btn/btn_sheet.png" id="9_fredm"]
+[ext_resource type="AudioStream" uid="uid://c2xm1t42epvhv" path="res://asset/sound/sfx/btn3.mp3" id="10_7pcv7"]
+[ext_resource type="AudioStream" uid="uid://b4e158le2f2i6" path="res://asset/sound/sfx/btn8.mp3" id="11_p6o4u"]
+[ext_resource type="AudioStream" uid="uid://beeb7o60l0iaj" path="res://asset/sound/bgm3.mp3" id="12_awce5"]
+[ext_resource type="PackedScene" uid="uid://b5sjrqgtkjqt8" path="res://scene/menu/level_cleared.tscn" id="13_tf78j"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6m0n5"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lsy4u"]
+texture = ExtResource("2_r1bm1")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o24ge"]
+texture = ExtResource("3_see4r")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7xsv1"]
+texture = ExtResource("4_g5cfd")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_r5jyi"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 3
+physics_layer_0/collision_mask = 3
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_6m0n5")
+sources/3 = SubResource("TileSetAtlasSource_lsy4u")
+sources/4 = SubResource("TileSetAtlasSource_o24ge")
+sources/5 = SubResource("TileSetAtlasSource_7xsv1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6bmc4"]
+texture = ExtResource("9_fredm")
+region_rect = Rect2(0, 32, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_odeoe"]
+texture = ExtResource("9_fredm")
+region_rect = Rect2(32, 32, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wno5g"]
+texture = ExtResource("9_fredm")
+region_rect = Rect2(32, 32, 32, 32)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_43c8i"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0fupj"]
+texture = ExtResource("9_fredm")
+region_rect = Rect2(192, 32, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jr3u8"]
+texture = ExtResource("9_fredm")
+region_rect = Rect2(224, 32, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_snm40"]
+texture = ExtResource("9_fredm")
+region_rect = Rect2(224, 32, 32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57o11"]
+size = Vector2(96, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sfujc"]
+size = Vector2(128, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hftee"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_18amo"]
+size = Vector2(32, 32)
+
+[sub_resource type="Animation" id="Animation_3bhua"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_x8owk"]
+resource_name = "pause"
+
+[sub_resource type="Animation" id="Animation_oc1qn"]
+resource_name = "pause_hover"
+
+[sub_resource type="Animation" id="Animation_5rdi2"]
+resource_name = "reset"
+
+[sub_resource type="Animation" id="Animation_ikqwf"]
+resource_name = "reset_hover"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ghkk8"]
+_data = {
+"RESET": SubResource("Animation_3bhua"),
+"pause": SubResource("Animation_x8owk"),
+"pause_hover": SubResource("Animation_oc1qn"),
+"reset": SubResource("Animation_5rdi2"),
+"reset_hover": SubResource("Animation_ikqwf")
+}
+
+[node name="level-1" type="Control"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="level_controller" type="Node2D" parent="."]
+script = ExtResource("1_febsk")
+
+[node name="TileMap" type="TileMap" parent="level_controller"]
+tile_set = SubResource("TileSet_r5jyi")
+rendering_quadrant_size = 32
+format = 2
+layer_0/tile_data = PackedInt32Array(458767, 3, 0, 524303, 5, 0, 589839, 3, 0, 720911, 3, 0, 786447, 5, 0, 786449, 5, 0, 786450, 5, 0, 786451, 5, 0, 524308, 5, 0, 458772, 3, 0, 458771, 3, 0, 458770, 3, 0, 458769, 3, 0, 458768, 3, 0, 524304, 5, 0, 524307, 5, 0, 524306, 5, 0, 524305, 3, 0, 524301, 3, 0, 720909, 3, 0, 524310, 3, 0, 720918, 3, 0, 851983, 3, 0, 851984, 3, 0, 851985, 3, 0, 851986, 3, 0, 851987, 3, 0, 851988, 3, 0, 524302, 3, 0, 589838, 3, 0, 655374, 3, 0, 720910, 3, 0, 786446, 3, 0, 524309, 5, 0, 589845, 3, 0, 655381, 3, 0, 720917, 5, 0, 786453, 3, 0, 589837, 3, 0, 655373, 3, 0, 589846, 3, 0, 655382, 3, 0, 786445, 3, 0, 786454, 3, 0, 524311, 3, 0, 589847, 3, 0, 655383, 3, 0, 720919, 3, 0, 786455, 3, 0, 851989, 3, 0, 458773, 3, 0, 458766, 3, 0, 458765, 5, 0, 458764, 5, 0, 524300, 3, 0, 589836, 3, 0, 655372, 3, 0, 720908, 3, 0, 786444, 3, 0, 851980, 5, 0, 851981, 5, 0, 851982, 3, 0, 917518, 3, 0, 917519, 3, 0, 917520, 3, 0, 917521, 3, 0, 917522, 3, 0, 917523, 3, 0, 917524, 3, 0, 917525, 3, 0, 917526, 3, 0, 851990, 3, 0, 851991, 5, 0, 851992, 5, 0, 786456, 3, 0, 720920, 3, 0, 655384, 3, 0, 589848, 3, 0, 524312, 3, 0, 458774, 3, 0, 393238, 3, 0, 393237, 3, 0, 393236, 3, 0, 393235, 3, 0, 393234, 3, 0, 393233, 3, 0, 393232, 3, 0, 393231, 3, 0, 393230, 3, 0, 917517, 5, 0, 917516, 5, 0, 917527, 5, 0, 917528, 5, 0, 393240, 5, 0, 393229, 5, 0, 393228, 5, 0, 851979, 5, 0, 786443, 5, 0, 720907, 5, 0, 655371, 5, 0, 589835, 5, 0, 524299, 5, 0, 458763, 5, 0, 327693, 5, 0, 327694, 5, 0, 327695, 5, 0, 327696, 5, 0, 327697, 5, 0, 327698, 5, 0, 327699, 5, 0, 327700, 5, 0, 327701, 5, 0, 327702, 5, 0, 327703, 5, 0, 458777, 5, 0, 524313, 5, 0, 589849, 5, 0, 655385, 5, 0, 720921, 5, 0, 786457, 5, 0, 851993, 5, 0, 1376282, 5, 0, 1441818, 5, 0, 983063, 5, 0, 983062, 5, 0, 983061, 5, 0, 983060, 5, 0, 983059, 5, 0, 983058, 5, 0, 983057, 5, 0, 983056, 5, 0, 983055, 5, 0, 983054, 5, 0, 983053, 5, 0, 458775, 5, 0, 393239, 5, 0, 458776, 5, 0, 786448, 3, 0, 720912, 3, 0, 720913, 3, 0, 720914, 3, 0, 720915, 3, 0, 720916, 3, 0, 786452, 3, 0, 655380, 3, 0, 655379, 3, 0, 655378, 3, 0, 655377, 3, 0, 655376, 3, 0, 655375, 3, 0, 589840, 3, 0, 589841, 3, 0, 589842, 3, 0, 589843, 3, 0, 589844, 3, 0)
+
+[node name="grup_cek" type="Node2D" parent="level_controller"]
+
+[node name="cek a" parent="level_controller/grup_cek" instance=ExtResource("5_043a0")]
+position = Vector2(512, 320)
+
+[node name="cek t" parent="level_controller/grup_cek" instance=ExtResource("5_043a0")]
+position = Vector2(544, 320)
+
+[node name="cek l" parent="level_controller/grup_cek" instance=ExtResource("5_043a0")]
+position = Vector2(576, 320)
+
+[node name="cek e" parent="level_controller/grup_cek" instance=ExtResource("5_043a0")]
+position = Vector2(608, 320)
+
+[node name="cek t 2" parent="level_controller/grup_cek" instance=ExtResource("5_043a0")]
+position = Vector2(640, 320)
+
+[node name="karakter" parent="level_controller" instance=ExtResource("6_cd8ne")]
+position = Vector2(448, 384)
+
+[node name="grup_kotak" type="Node2D" parent="level_controller"]
+
+[node name="a" parent="level_controller/grup_kotak" groups=["a"] instance=ExtResource("7_3dk2l")]
+position = Vector2(480, 416)
+
+[node name="t" parent="level_controller/grup_kotak" groups=["t"] instance=ExtResource("7_3dk2l")]
+position = Vector2(480, 224)
+
+[node name="l" parent="level_controller/grup_kotak" groups=["l"] instance=ExtResource("7_3dk2l")]
+position = Vector2(672, 224)
+
+[node name="e" parent="level_controller/grup_kotak" groups=["e"] instance=ExtResource("7_3dk2l")]
+position = Vector2(672, 384)
+
+[node name="t 2" parent="level_controller/grup_kotak" groups=["t"] instance=ExtResource("7_3dk2l")]
+position = Vector2(640, 384)
+
+[node name="i" parent="level_controller/grup_kotak" groups=["i"] instance=ExtResource("7_3dk2l")]
+position = Vector2(576, 416)
+
+[node name="menu" type="CanvasLayer" parent="level_controller"]
+
+[node name="pause" type="Button" parent="level_controller/menu"]
+offset_right = 96.0
+offset_bottom = 96.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("8_4c8y2")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_6bmc4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_odeoe")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wno5g")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_43c8i")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_43c8i")
+
+[node name="reset" type="Button" parent="level_controller/menu"]
+offset_left = 96.0
+offset_right = 192.0
+offset_bottom = 93.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("8_4c8y2")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_0fupj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jr3u8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_snm40")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_43c8i")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_43c8i")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="level_controller"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="level_controller/StaticBody2D"]
+build_mode = 1
+polygon = PackedVector2Array(448, 192, 736, 192, 736, 256, 800, 256, 800, 416, 736, 416, 736, 480, 448, 480, 448, 416, 384, 416, 384, 256, 448, 256, 448, 160, 832, 160, 832, 416, 832, 512, 352, 512, 352, 160, 448, 160)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level_controller/StaticBody2D"]
+position = Vector2(592, 400)
+shape = SubResource("RectangleShape2D_57o11")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="level_controller/StaticBody2D"]
+position = Vector2(640, 272)
+shape = SubResource("RectangleShape2D_sfujc")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="level_controller/StaticBody2D"]
+position = Vector2(512, 272)
+shape = SubResource("RectangleShape2D_hftee")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="level_controller/StaticBody2D"]
+position = Vector2(496, 400)
+shape = SubResource("RectangleShape2D_18amo")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="level_controller/StaticBody2D"]
+position = Vector2(688, 368)
+shape = SubResource("RectangleShape2D_18amo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ghkk8")
+}
+
+[node name="level_selesai" parent="." instance=ExtResource("13_tf78j")]
+visible = false
+layout_mode = 1
+
+[node name="btn_hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_7pcv7")
+bus = &"SFX"
+
+[node name="btn_click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_p6o4u")
+volume_db = -5.0
+bus = &"SFX"
+
+[node name="bgm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_awce5")
+volume_db = -5.0
+autoplay = true
+bus = &"Music"
+
+[connection signal="ch_val" from="level_controller" to="level_selesai" method="_on_level_controller_ch_val"]
+[connection signal="clear_val" from="level_controller" to="level_selesai" method="_on_level_controller_clear_val"]
+[connection signal="isLessThan_1" from="level_controller" to="level_selesai" method="_on_level_controller_is_less_than_1"]
+[connection signal="isLessThan_2" from="level_controller" to="level_selesai" method="_on_level_controller_is_less_than_2"]
+[connection signal="lvl_val" from="level_controller" to="level_selesai" method="_on_level_controller_lvl_val"]
+[connection signal="star" from="level_controller" to="level_selesai" method="_on_level_controller_star"]
+[connection signal="isMoving" from="level_controller/karakter" to="level_controller" method="_on_karakter_is_moving"]
+[connection signal="mouse_entered" from="level_controller/menu/pause" to="level_controller" method="_on_pause_mouse_entered"]
+[connection signal="pressed" from="level_controller/menu/pause" to="level_controller" method="_on_pause_pressed"]
+[connection signal="mouse_entered" from="level_controller/menu/reset" to="level_controller" method="_on_reset_mouse_entered"]
+[connection signal="pressed" from="level_controller/menu/reset" to="level_controller" method="_on_reset_pressed"]
