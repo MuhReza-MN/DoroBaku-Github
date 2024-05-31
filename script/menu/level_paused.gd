@@ -1,8 +1,6 @@
 extends Control
 @onready var anim = $Panel/AnimationPlayer
 @onready var main = $"../level_controller"
-@onready var star_sfx = $star
-@onready var fail_sfx = $failed
 @onready var click_sfx = $btn_click
 @onready var hover_sfx = $btn_hover
 
@@ -49,18 +47,15 @@ func jeda_game() :
 func bintang_1():
 	anim.play("RESET")
 	anim.play("b1")
-	star_sfx.play()
 	$".".show()
 
 func bintang_2():
 	anim.play("RESET")
 	anim.play("b2")
-	star_sfx.play()
 	$".".show()
 
 func bintang_3():
 	anim.play("RESET")
-	star_sfx.play()
 	$".".show()
 
 func _on_level_controller_is_less_than_1(val1):

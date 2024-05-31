@@ -1,10 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://f2qtgdkaw1xa"]
+[gd_scene load_steps=14 format=3 uid="uid://f2qtgdkaw1xa"]
 
 [ext_resource type="Script" path="res://script/menu/start_menu.gd" id="1_r6r2d"]
 [ext_resource type="Texture2D" uid="uid://jw3ms0hyllhj" path="res://asset/menu/main_menu_bg.png" id="2_rix1n"]
-[ext_resource type="Texture2D" uid="uid://c8c2707wpgrto" path="res://asset/menu/JUDUL.png" id="3_a721h"]
+[ext_resource type="Texture2D" uid="uid://dy8emje5ajwrw" path="res://asset/menu/papan.png" id="3_3hx2p"]
 [ext_resource type="FontFile" uid="uid://bys4fsq5x5ci6" path="res://style/BULKYPIX.TTF" id="4_xl2do"]
-[ext_resource type="Texture2D" uid="uid://l1algu41p1lw" path="res://asset/menu/menubutton.png" id="5_vuyhg"]
 [ext_resource type="Texture2D" uid="uid://gm8i5b57gb5b" path="res://asset/menu/baku.png" id="6_3hjqa"]
 [ext_resource type="AudioStream" uid="uid://c2xm1t42epvhv" path="res://asset/sound/sfx/btn3.mp3" id="7_23o6e"]
 [ext_resource type="AudioStream" uid="uid://b4e158le2f2i6" path="res://asset/sound/sfx/btn8.mp3" id="8_tq5v2"]
@@ -12,21 +11,15 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ifdh2"]
 texture = ExtResource("2_rix1n")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rb3c7"]
-texture = ExtResource("5_vuyhg")
-region_rect = Rect2(1498, 0, 192, 77)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_po0lr"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d1fqf"]
-texture = ExtResource("5_vuyhg")
-region_rect = Rect2(257, 0, 192, 77)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yu4b0"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ej1e1"]
-texture = ExtResource("5_vuyhg")
-region_rect = Rect2(257, 0, 192, 77)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xmqtc"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cgyl1"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hsm4w"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mmgog"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2me57"]
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3
@@ -46,73 +39,23 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ifdh2")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
-custom_minimum_size = Vector2(0, 149)
-layout_mode = 1
-anchors_preset = 15
+[node name="Title" type="TextureRect" parent="Panel"]
+layout_mode = 2
 anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
-custom_minimum_size = Vector2(0, 160)
-layout_mode = 2
-
-[node name="BoxContainer2" type="BoxContainer" parent="Panel/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(64, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="BoxContainer" type="BoxContainer" parent="Panel/VBoxContainer/HBoxContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(965, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Title" type="Sprite2D" parent="Panel/VBoxContainer/HBoxContainer/BoxContainer"]
-texture = ExtResource("3_a721h")
-centered = false
-offset = Vector2(0, 23)
-
-[node name="BoxContainer3" type="BoxContainer" parent="Panel/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(64, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="mulai" type="Button" parent="Panel"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -288.0
-offset_top = -67.0
-offset_right = 32.0
-offset_bottom = 29.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_type_variation = &"FlatButton"
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
-theme_override_constants/outline_size = 27
-theme_override_fonts/font = ExtResource("4_xl2do")
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxTexture_rb3c7")
-theme_override_styles/hover = SubResource("StyleBoxTexture_d1fqf")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_ej1e1")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_cgyl1")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_mmgog")
+anchor_bottom = 0.256
+offset_bottom = 0.112
+texture = ExtResource("3_3hx2p")
 
 [node name="save" type="Button" parent="Panel"]
+visible = false
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -96.0
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -100.0
 offset_right = 224.0
-grow_vertical = 0
+offset_bottom = -4.0
+grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_constants/outline_size = 27
@@ -121,14 +64,15 @@ theme_override_font_sizes/font_size = 50
 text = "SAVE"
 
 [node name="Load" type="Button" parent="Panel"]
+visible = false
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 224.0
-offset_top = -96.0
-offset_right = 448.0
-grow_vertical = 0
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -4.0
+offset_right = 224.0
+offset_bottom = 92.0
+grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_constants/outline_size = 27
@@ -137,14 +81,15 @@ theme_override_font_sizes/font_size = 50
 text = "LOAD"
 
 [node name="change" type="Button" parent="Panel"]
+visible = false
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 448.0
-offset_top = -96.0
-offset_right = 672.0
-grow_vertical = 0
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = 92.0
+offset_right = 224.0
+offset_bottom = 188.0
+grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_constants/outline_size = 27
@@ -159,17 +104,35 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Panel/Control"]
-position = Vector2(207, 116)
+position = Vector2(0, 89)
 scale = Vector2(7, 7)
 texture = ExtResource("6_3hjqa")
+
+[node name="mulai" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -88.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("4_xl2do")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_po0lr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yu4b0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xmqtc")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hsm4w")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2me57")
+text = "- PRESS ANY KEY TO START -"
+flat = true
 
 [node name="btn_hover" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_23o6e")
@@ -180,11 +143,11 @@ stream = ExtResource("8_tq5v2")
 volume_db = -5.0
 bus = &"SFX"
 
-[connection signal="mouse_entered" from="Panel/mulai" to="." method="_on_mulai_mouse_entered"]
-[connection signal="pressed" from="Panel/mulai" to="." method="_on_mulai_pressed"]
 [connection signal="mouse_entered" from="Panel/save" to="." method="_on_save_mouse_entered"]
 [connection signal="pressed" from="Panel/save" to="." method="_on_save_pressed"]
 [connection signal="mouse_entered" from="Panel/Load" to="." method="_on_load_mouse_entered"]
 [connection signal="pressed" from="Panel/Load" to="." method="_on_load_pressed"]
 [connection signal="mouse_entered" from="Panel/change" to="." method="_on_change_mouse_entered"]
 [connection signal="pressed" from="Panel/change" to="." method="_on_change_pressed"]
+[connection signal="mouse_entered" from="Panel/mulai" to="." method="_on_mulai_mouse_entered"]
+[connection signal="pressed" from="Panel/mulai" to="." method="_on_mulai_pressed"]

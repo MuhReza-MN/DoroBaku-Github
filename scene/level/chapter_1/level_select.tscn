@@ -1,16 +1,20 @@
-[gd_scene load_steps=17 format=3 uid="uid://c8tida4meiqxu"]
+[gd_scene load_steps=38 format=3 uid="uid://c8tida4meiqxu"]
 
 [ext_resource type="Script" path="res://script/level_select.gd" id="1_srwv1"]
 [ext_resource type="FontFile" uid="uid://bys4fsq5x5ci6" path="res://style/BULKYPIX.TTF" id="2_1koq4"]
+[ext_resource type="Texture2D" uid="uid://dolag55st8on8" path="res://asset/menu/menu_bg.png" id="2_2atsr"]
+[ext_resource type="Texture2D" uid="uid://2018e8wtmtk1" path="res://asset/menu/ch_num/1.png" id="3_3mxtt"]
 [ext_resource type="Texture2D" uid="uid://kv2rfxxbwein" path="res://asset/btn/btn_sheet.png" id="3_it27q"]
 [ext_resource type="Theme" uid="uid://c2tpsish726dv" path="res://asset/btn/btn_themes.tres" id="3_q5ugj"]
-[ext_resource type="Texture2D" uid="uid://dwb2ee5f5xow6" path="res://asset/btn/select_container.png" id="4_nj66u"]
-[ext_resource type="Texture2D" uid="uid://5e1tastgl85p" path="res://asset/tiles/bintang.png" id="5_2unxh"]
+[ext_resource type="Texture2D" uid="uid://dv0cw7yfoth1u" path="res://asset/menu/ch_num/2.png" id="4_4ub7o"]
+[ext_resource type="Theme" uid="uid://b8jylvhfl0bq4" path="res://asset/btn/lvl_btn_theme.tres" id="6_hls4f"]
+[ext_resource type="Texture2D" uid="uid://ct1rgnnvmvmh4" path="res://asset/btn/lvl_btn_num.png" id="7_7bbl2"]
+[ext_resource type="Texture2D" uid="uid://dvnw4e8uuoqnj" path="res://asset/btn/star_lvl_btn.png" id="7_nk50g"]
 [ext_resource type="AudioStream" uid="uid://c2xm1t42epvhv" path="res://asset/sound/sfx/btn3.mp3" id="7_ppps6"]
 [ext_resource type="AudioStream" uid="uid://b4e158le2f2i6" path="res://asset/sound/sfx/btn8.mp3" id="8_bkjdh"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2alo"]
-bg_color = Color(0.458824, 0.643137, 0.611765, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ficn7"]
+texture = ExtResource("2_2atsr")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gg5kl"]
 texture = ExtResource("3_it27q")
@@ -28,13 +32,93 @@ region_rect = Rect2(32, 0, 32, 32)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c00vq"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ddrl0"]
+texture = ExtResource("3_it27q")
+expand_margin_left = 36.0
+expand_margin_top = 6.0
+expand_margin_right = 36.0
+expand_margin_bottom = 6.0
+region_rect = Rect2(0, 160, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nfovk"]
+texture = ExtResource("3_it27q")
+expand_margin_left = 36.0
+expand_margin_top = 6.0
+expand_margin_right = 36.0
+expand_margin_bottom = 6.0
+region_rect = Rect2(32, 160, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n21w2"]
+texture = ExtResource("3_it27q")
+expand_margin_left = 36.0
+expand_margin_top = 6.0
+expand_margin_right = 36.0
+expand_margin_bottom = 6.0
+region_rect = Rect2(32, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ro2o"]
+atlas = ExtResource("7_7bbl2")
+region = Rect2(0, 0, 64, 64)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_s2ejv"]
-atlas = ExtResource("4_nj66u")
+atlas = ExtResource("7_nk50g")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1b383"]
+atlas = ExtResource("7_nk50g")
 region = Rect2(64, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cefy4"]
-atlas = ExtResource("5_2unxh")
-region = Rect2(0, 0, 128, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_58ojc"]
+atlas = ExtResource("7_nk50g")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85rhc"]
+atlas = ExtResource("7_nk50g")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4pid"]
+atlas = ExtResource("7_7bbl2")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7nyd"]
+atlas = ExtResource("7_7bbl2")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lw8sm"]
+atlas = ExtResource("7_7bbl2")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yucoq"]
+atlas = ExtResource("7_7bbl2")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfw8b"]
+atlas = ExtResource("7_7bbl2")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k15ls"]
+atlas = ExtResource("7_7bbl2")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hxx5"]
+atlas = ExtResource("7_7bbl2")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbmga"]
+atlas = ExtResource("7_7bbl2")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6xpxd"]
+atlas = ExtResource("7_7bbl2")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0wiq"]
+atlas = ExtResource("7_7bbl2")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ytxq"]
+atlas = ExtResource("7_7bbl2")
+region = Rect2(704, 0, 64, 64)
 
 [node name="LevelSelect" type="Control"]
 layout_mode = 3
@@ -52,26 +136,47 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_j2alo")
+theme_override_styles/panel = SubResource("StyleBoxTexture_ficn7")
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="chapter1" type="TextureRect" parent="Panel"]
 layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 96.0
+anchors_preset = -1
+anchor_left = 0.206
+anchor_top = 0.125
+anchor_right = 0.404
+anchor_bottom = 0.187
+offset_left = -0.312012
+offset_right = -0.40802
+offset_bottom = -0.176003
 grow_horizontal = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 18
-theme_override_fonts/font = ExtResource("2_1koq4")
-theme_override_font_sizes/font_size = 45
-text = "- Level Selection -"
-horizontal_alignment = 1
-vertical_alignment = 1
+grow_vertical = 2
+texture = ExtResource("3_3mxtt")
+
+[node name="chapter2" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.594
+anchor_top = 0.125
+anchor_right = 0.802
+anchor_bottom = 0.187
+offset_left = 0.211975
+offset_right = -0.404053
+offset_bottom = -0.176003
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_4ub7o")
 
 [node name="back" type="Button" parent="Panel"]
 layout_mode = 1
-offset_right = 96.0
-offset_bottom = 96.0
+anchors_preset = -1
+anchor_left = 0.106
+anchor_top = 0.148
+anchor_right = 0.189
+anchor_bottom = 0.296
+offset_left = -0.112007
+offset_top = 0.0960007
+offset_right = 0.271988
+offset_bottom = 0.192001
 theme = ExtResource("3_q5ugj")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
 theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
@@ -85,28 +190,64 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_ubpcl")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_1fms7")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_c00vq")
 
-[node name="level" type="Node" parent="Panel"]
+[node name="next_page" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.819
+anchor_top = 0.346
+anchor_right = 0.903
+anchor_bottom = 0.494
+offset_left = 0.511902
+offset_top = -0.208008
+offset_right = -0.256104
+offset_bottom = -0.112
+theme = ExtResource("3_q5ugj")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("2_1koq4")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_ddrl0")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nfovk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_n21w2")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1fms7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_c00vq")
 
-[node name="level1" type="Button" parent="Panel/level"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -512.0
-offset_top = -196.0
-offset_right = -416.0
-offset_bottom = -100.0
+[node name="ch1" type="Node" parent="Panel"]
+
+[node name="level1" type="Button" parent="Panel/ch1"]
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.198
+anchor_right = 0.262
+anchor_bottom = 0.309
+offset_left = -0.400009
+offset_top = -0.304016
+offset_right = 24.176
+offset_bottom = 23.768
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("6_hls4f")
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_constants/outline_size = 27
 theme_override_fonts/font = ExtResource("2_1koq4")
 theme_override_font_sizes/font_size = 50
-text = "1"
 
-[node name="locked" type="TextureRect" parent="Panel/level/level1"]
+[node name="lvl_num" type="TextureRect" parent="Panel/ch1/level1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_6ro2o")
+
+[node name="star0" type="TextureRect" parent="Panel/ch1/level1"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -116,39 +257,71 @@ grow_vertical = 2
 texture = SubResource("AtlasTexture_s2ejv")
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="Panel/level/level1"]
+[node name="star1" type="TextureRect" parent="Panel/ch1/level1"]
+visible = false
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -23.0
 grow_horizontal = 2
-grow_vertical = 0
-text = "PLAYED"
-horizontal_alignment = 1
+grow_vertical = 2
+texture = SubResource("AtlasTexture_1b383")
 metadata/_edit_use_anchors_ = true
 
-[node name="level2" type="Button" parent="Panel/level"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -384.0
-offset_top = -196.0
-offset_right = -288.0
-offset_bottom = -100.0
+[node name="star2" type="TextureRect" parent="Panel/ch1/level1"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = SubResource("AtlasTexture_58ojc")
+metadata/_edit_use_anchors_ = true
+
+[node name="star3" type="TextureRect" parent="Panel/ch1/level1"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_85rhc")
+metadata/_edit_use_anchors_ = true
+
+[node name="level2" type="Button" parent="Panel/ch1"]
+anchors_preset = -1
+anchor_left = 0.269
+anchor_top = 0.198
+anchor_right = 0.332
+anchor_bottom = 0.309
+offset_left = 0.111969
+offset_top = -0.304016
+offset_right = 23.536
+offset_bottom = 23.768
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("6_hls4f")
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_constants/outline_size = 27
 theme_override_fonts/font = ExtResource("2_1koq4")
 theme_override_font_sizes/font_size = 50
-text = "2"
 
-[node name="locked" type="TextureRect" parent="Panel/level/level2"]
+[node name="lvl_num" type="TextureRect" parent="Panel/ch1/level2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_f4pid")
+
+[node name="star0" type="TextureRect" parent="Panel/ch1/level2"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -156,39 +329,73 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_s2ejv")
+metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="Panel/level/level2"]
+[node name="star1" type="TextureRect" parent="Panel/ch1/level2"]
+visible = false
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -23.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "PLAYED"
-horizontal_alignment = 1
-
-[node name="level3" type="Button" parent="Panel/level"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -256.0
-offset_top = -196.0
-offset_right = -160.0
-offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = SubResource("AtlasTexture_1b383")
+metadata/_edit_use_anchors_ = true
+
+[node name="star2" type="TextureRect" parent="Panel/ch1/level2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_58ojc")
+metadata/_edit_use_anchors_ = true
+
+[node name="star3" type="TextureRect" parent="Panel/ch1/level2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_85rhc")
+metadata/_edit_use_anchors_ = true
+
+[node name="level3" type="Button" parent="Panel/ch1"]
+anchors_preset = -1
+anchor_left = 0.339
+anchor_top = 0.198
+anchor_right = 0.401
+anchor_bottom = 0.309
+offset_left = -0.528015
+offset_top = -0.304016
+offset_right = 24.048
+offset_bottom = 23.768
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("6_hls4f")
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_constants/outline_size = 27
 theme_override_fonts/font = ExtResource("2_1koq4")
 theme_override_font_sizes/font_size = 50
-text = "3"
 
-[node name="locked" type="TextureRect" parent="Panel/level/level3"]
+[node name="lvl_num" type="TextureRect" parent="Panel/ch1/level3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_m7nyd")
+
+[node name="star0" type="TextureRect" parent="Panel/ch1/level3"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -196,39 +403,73 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_s2ejv")
+metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="Panel/level/level3"]
+[node name="star1" type="TextureRect" parent="Panel/ch1/level3"]
+visible = false
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -23.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "PLAYED"
-horizontal_alignment = 1
-
-[node name="level4" type="Button" parent="Panel/level"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -128.0
-offset_top = -196.0
-offset_right = -32.0
-offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = SubResource("AtlasTexture_1b383")
+metadata/_edit_use_anchors_ = true
+
+[node name="star2" type="TextureRect" parent="Panel/ch1/level3"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_58ojc")
+metadata/_edit_use_anchors_ = true
+
+[node name="star3" type="TextureRect" parent="Panel/ch1/level3"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_85rhc")
+metadata/_edit_use_anchors_ = true
+
+[node name="level4" type="Button" parent="Panel/ch1"]
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.316
+anchor_right = 0.262
+anchor_bottom = 0.427
+offset_left = -0.400009
+offset_top = 0.231995
+offset_right = 24.176
+offset_bottom = 24.304
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("6_hls4f")
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_constants/outline_size = 27
 theme_override_fonts/font = ExtResource("2_1koq4")
 theme_override_font_sizes/font_size = 50
-text = "4"
 
-[node name="locked" type="TextureRect" parent="Panel/level/level4"]
+[node name="lvl_num" type="TextureRect" parent="Panel/ch1/level4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_lw8sm")
+
+[node name="star0" type="TextureRect" parent="Panel/ch1/level4"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -236,39 +477,73 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_s2ejv")
+metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="Panel/level/level4"]
+[node name="star1" type="TextureRect" parent="Panel/ch1/level4"]
+visible = false
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -23.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "PLAYED"
-horizontal_alignment = 1
-
-[node name="level5" type="Button" parent="Panel/level"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 32.0
-offset_top = -196.0
-offset_right = 128.0
-offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = SubResource("AtlasTexture_1b383")
+metadata/_edit_use_anchors_ = true
+
+[node name="star2" type="TextureRect" parent="Panel/ch1/level4"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_58ojc")
+metadata/_edit_use_anchors_ = true
+
+[node name="star3" type="TextureRect" parent="Panel/ch1/level4"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_85rhc")
+metadata/_edit_use_anchors_ = true
+
+[node name="level5" type="Button" parent="Panel/ch1"]
+anchors_preset = -1
+anchor_left = 0.269
+anchor_top = 0.316
+anchor_right = 0.332
+anchor_bottom = 0.427
+offset_left = 0.111969
+offset_top = 0.231995
+offset_right = 23.536
+offset_bottom = 24.304
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("6_hls4f")
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_constants/outline_size = 27
 theme_override_fonts/font = ExtResource("2_1koq4")
 theme_override_font_sizes/font_size = 50
-text = "5"
 
-[node name="locked" type="TextureRect" parent="Panel/level/level5"]
+[node name="lvl_num" type="TextureRect" parent="Panel/ch1/level5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_yucoq")
+
+[node name="star0" type="TextureRect" parent="Panel/ch1/level5"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -276,39 +551,73 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_s2ejv")
+metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="Panel/level/level5"]
+[node name="star1" type="TextureRect" parent="Panel/ch1/level5"]
+visible = false
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -23.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "PLAYED"
-horizontal_alignment = 1
-
-[node name="level6" type="Button" parent="Panel/level"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 160.0
-offset_top = -196.0
-offset_right = 256.0
-offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = SubResource("AtlasTexture_1b383")
+metadata/_edit_use_anchors_ = true
+
+[node name="star2" type="TextureRect" parent="Panel/ch1/level5"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_58ojc")
+metadata/_edit_use_anchors_ = true
+
+[node name="star3" type="TextureRect" parent="Panel/ch1/level5"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_85rhc")
+metadata/_edit_use_anchors_ = true
+
+[node name="level6" type="Button" parent="Panel/ch1"]
+anchors_preset = -1
+anchor_left = 0.339
+anchor_top = 0.316
+anchor_right = 0.401
+anchor_bottom = 0.427
+offset_left = -0.528015
+offset_top = 0.231995
+offset_right = 24.048
+offset_bottom = 24.304
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("6_hls4f")
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_constants/outline_size = 27
 theme_override_fonts/font = ExtResource("2_1koq4")
 theme_override_font_sizes/font_size = 50
-text = "6"
 
-[node name="locked" type="TextureRect" parent="Panel/level/level6"]
+[node name="lvl_num" type="TextureRect" parent="Panel/ch1/level6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_kfw8b")
+
+[node name="star0" type="TextureRect" parent="Panel/ch1/level6"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -316,39 +625,73 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_s2ejv")
+metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="Panel/level/level6"]
+[node name="star1" type="TextureRect" parent="Panel/ch1/level6"]
+visible = false
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -23.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "PLAYED"
-horizontal_alignment = 1
-
-[node name="level7" type="Button" parent="Panel/level"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 288.0
-offset_top = -196.0
-offset_right = 384.0
-offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = SubResource("AtlasTexture_1b383")
+metadata/_edit_use_anchors_ = true
+
+[node name="star2" type="TextureRect" parent="Panel/ch1/level6"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_58ojc")
+metadata/_edit_use_anchors_ = true
+
+[node name="star3" type="TextureRect" parent="Panel/ch1/level6"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_85rhc")
+metadata/_edit_use_anchors_ = true
+
+[node name="level7" type="Button" parent="Panel/ch1"]
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.435
+anchor_right = 0.262
+anchor_bottom = 0.543
+offset_left = -0.400009
+offset_top = 0.119965
+offset_right = 24.176
+offset_bottom = 26.136
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("6_hls4f")
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_constants/outline_size = 27
 theme_override_fonts/font = ExtResource("2_1koq4")
 theme_override_font_sizes/font_size = 50
-text = "7"
 
-[node name="locked" type="TextureRect" parent="Panel/level/level7"]
+[node name="lvl_num" type="TextureRect" parent="Panel/ch1/level7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_k15ls")
+
+[node name="star0" type="TextureRect" parent="Panel/ch1/level7"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -356,39 +699,73 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_s2ejv")
+metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="Panel/level/level7"]
+[node name="star1" type="TextureRect" parent="Panel/ch1/level7"]
+visible = false
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -23.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "PLAYED"
-horizontal_alignment = 1
-
-[node name="level8" type="Button" parent="Panel/level"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 416.0
-offset_top = -196.0
-offset_right = 512.0
-offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = SubResource("AtlasTexture_1b383")
+metadata/_edit_use_anchors_ = true
+
+[node name="star2" type="TextureRect" parent="Panel/ch1/level7"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_58ojc")
+metadata/_edit_use_anchors_ = true
+
+[node name="star3" type="TextureRect" parent="Panel/ch1/level7"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_85rhc")
+metadata/_edit_use_anchors_ = true
+
+[node name="level8" type="Button" parent="Panel/ch1"]
+anchors_preset = -1
+anchor_left = 0.269
+anchor_top = 0.435
+anchor_right = 0.332
+anchor_bottom = 0.543
+offset_left = 0.111969
+offset_top = 0.119965
+offset_right = 23.536
+offset_bottom = 26.136
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("6_hls4f")
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_constants/outline_size = 27
 theme_override_fonts/font = ExtResource("2_1koq4")
 theme_override_font_sizes/font_size = 50
-text = "8"
 
-[node name="locked" type="TextureRect" parent="Panel/level/level8"]
+[node name="lvl_num" type="TextureRect" parent="Panel/ch1/level8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_6hxx5")
+
+[node name="star0" type="TextureRect" parent="Panel/ch1/level8"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -396,39 +773,73 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_s2ejv")
+metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="Panel/level/level8"]
+[node name="star1" type="TextureRect" parent="Panel/ch1/level8"]
+visible = false
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -23.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "PLAYED"
-horizontal_alignment = 1
-
-[node name="level9" type="Button" parent="Panel/level"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -512.0
-offset_top = -68.0
-offset_right = -416.0
-offset_bottom = 28.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = SubResource("AtlasTexture_1b383")
+metadata/_edit_use_anchors_ = true
+
+[node name="star2" type="TextureRect" parent="Panel/ch1/level8"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_58ojc")
+metadata/_edit_use_anchors_ = true
+
+[node name="star3" type="TextureRect" parent="Panel/ch1/level8"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_85rhc")
+metadata/_edit_use_anchors_ = true
+
+[node name="level9" type="Button" parent="Panel/ch1"]
+anchors_preset = -1
+anchor_left = 0.339
+anchor_top = 0.435
+anchor_right = 0.401
+anchor_bottom = 0.543
+offset_left = -0.528015
+offset_top = 0.119965
+offset_right = 24.048
+offset_bottom = 26.136
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("6_hls4f")
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_constants/outline_size = 27
 theme_override_fonts/font = ExtResource("2_1koq4")
 theme_override_font_sizes/font_size = 50
-text = "9"
 
-[node name="locked" type="TextureRect" parent="Panel/level/level9"]
+[node name="lvl_num" type="TextureRect" parent="Panel/ch1/level9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_jbmga")
+
+[node name="star0" type="TextureRect" parent="Panel/ch1/level9"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -436,39 +847,73 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_s2ejv")
+metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="Panel/level/level9"]
+[node name="star1" type="TextureRect" parent="Panel/ch1/level9"]
+visible = false
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -23.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "PLAYED"
-horizontal_alignment = 1
-
-[node name="level10" type="Button" parent="Panel/level"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -384.0
-offset_top = -68.0
-offset_right = -288.0
-offset_bottom = 28.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = SubResource("AtlasTexture_1b383")
+metadata/_edit_use_anchors_ = true
+
+[node name="star2" type="TextureRect" parent="Panel/ch1/level9"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_58ojc")
+metadata/_edit_use_anchors_ = true
+
+[node name="star3" type="TextureRect" parent="Panel/ch1/level9"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_85rhc")
+metadata/_edit_use_anchors_ = true
+
+[node name="level10" type="Button" parent="Panel/ch1"]
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.554
+anchor_right = 0.262
+anchor_bottom = 0.665
+offset_left = -0.400009
+offset_top = 0.00799561
+offset_right = 24.176
+offset_bottom = 24.08
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("6_hls4f")
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_constants/outline_size = 27
 theme_override_fonts/font = ExtResource("2_1koq4")
 theme_override_font_sizes/font_size = 50
-text = "10"
 
-[node name="locked" type="TextureRect" parent="Panel/level/level10"]
+[node name="lvl_num" type="TextureRect" parent="Panel/ch1/level10"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_6xpxd")
+
+[node name="star0" type="TextureRect" parent="Panel/ch1/level10"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -476,39 +921,73 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_s2ejv")
+metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="Panel/level/level10"]
+[node name="star1" type="TextureRect" parent="Panel/ch1/level10"]
+visible = false
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -23.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "PLAYED"
-horizontal_alignment = 1
-
-[node name="level11" type="Button" parent="Panel/level"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -256.0
-offset_top = -68.0
-offset_right = -160.0
-offset_bottom = 28.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = SubResource("AtlasTexture_1b383")
+metadata/_edit_use_anchors_ = true
+
+[node name="star2" type="TextureRect" parent="Panel/ch1/level10"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_58ojc")
+metadata/_edit_use_anchors_ = true
+
+[node name="star3" type="TextureRect" parent="Panel/ch1/level10"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_85rhc")
+metadata/_edit_use_anchors_ = true
+
+[node name="level11" type="Button" parent="Panel/ch1"]
+anchors_preset = -1
+anchor_left = 0.269
+anchor_top = 0.554
+anchor_right = 0.332
+anchor_bottom = 0.665
+offset_left = 0.111969
+offset_top = 0.00799561
+offset_right = 23.536
+offset_bottom = 24.08
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("6_hls4f")
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_constants/outline_size = 27
 theme_override_fonts/font = ExtResource("2_1koq4")
 theme_override_font_sizes/font_size = 50
-text = "11"
 
-[node name="locked" type="TextureRect" parent="Panel/level/level11"]
+[node name="lvl_num" type="TextureRect" parent="Panel/ch1/level11"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_h0wiq")
+
+[node name="star0" type="TextureRect" parent="Panel/ch1/level11"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -516,39 +995,73 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_s2ejv")
+metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="Panel/level/level11"]
+[node name="star1" type="TextureRect" parent="Panel/ch1/level11"]
+visible = false
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -23.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "PLAYED"
-horizontal_alignment = 1
-
-[node name="level12" type="Button" parent="Panel/level"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -128.0
-offset_top = -68.0
-offset_right = -32.0
-offset_bottom = 28.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = SubResource("AtlasTexture_1b383")
+metadata/_edit_use_anchors_ = true
+
+[node name="star2" type="TextureRect" parent="Panel/ch1/level11"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_58ojc")
+metadata/_edit_use_anchors_ = true
+
+[node name="star3" type="TextureRect" parent="Panel/ch1/level11"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_85rhc")
+metadata/_edit_use_anchors_ = true
+
+[node name="level12" type="Button" parent="Panel/ch1"]
+anchors_preset = -1
+anchor_left = 0.339
+anchor_top = 0.554
+anchor_right = 0.401
+anchor_bottom = 0.665
+offset_left = -0.528015
+offset_top = 0.00799561
+offset_right = 24.048
+offset_bottom = 24.08
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("6_hls4f")
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_constants/outline_size = 27
 theme_override_fonts/font = ExtResource("2_1koq4")
 theme_override_font_sizes/font_size = 50
-text = "12"
 
-[node name="locked" type="TextureRect" parent="Panel/level/level12"]
+[node name="lvl_num" type="TextureRect" parent="Panel/ch1/level12"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_3ytxq")
+
+[node name="star0" type="TextureRect" parent="Panel/ch1/level12"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -556,39 +1069,76 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_s2ejv")
+metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="Panel/level/level12"]
+[node name="star1" type="TextureRect" parent="Panel/ch1/level12"]
+visible = false
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -23.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "PLAYED"
-horizontal_alignment = 1
-
-[node name="level13" type="Button" parent="Panel/level"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 32.0
-offset_top = -68.0
-offset_right = 128.0
-offset_bottom = 28.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = SubResource("AtlasTexture_1b383")
+metadata/_edit_use_anchors_ = true
+
+[node name="star2" type="TextureRect" parent="Panel/ch1/level12"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_58ojc")
+metadata/_edit_use_anchors_ = true
+
+[node name="star3" type="TextureRect" parent="Panel/ch1/level12"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_85rhc")
+metadata/_edit_use_anchors_ = true
+
+[node name="ch2" type="Node" parent="Panel"]
+
+[node name="level1_2" type="Button" parent="Panel/ch2"]
+anchors_preset = -1
+anchor_left = 0.595
+anchor_top = 0.198
+anchor_right = 0.657
+anchor_bottom = 0.309
+offset_left = -0.440063
+offset_top = -0.304016
+offset_right = 24.136
+offset_bottom = 23.768
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("6_hls4f")
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_constants/outline_size = 27
 theme_override_fonts/font = ExtResource("2_1koq4")
 theme_override_font_sizes/font_size = 50
-text = "13"
+metadata/_edit_use_anchors_ = true
 
-[node name="locked" type="TextureRect" parent="Panel/level/level13"]
+[node name="lvl_num" type="TextureRect" parent="Panel/ch2/level1_2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_6ro2o")
+
+[node name="star0" type="TextureRect" parent="Panel/ch2/level1_2"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -596,49 +1146,869 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_s2ejv")
+metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="Panel/level/level13"]
+[node name="star1" type="TextureRect" parent="Panel/ch2/level1_2"]
+visible = false
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -23.0
 grow_horizontal = 2
-grow_vertical = 0
-text = "PLAYED"
-horizontal_alignment = 1
+grow_vertical = 2
+texture = SubResource("AtlasTexture_1b383")
+metadata/_edit_use_anchors_ = true
 
-[node name="Label2" type="Label" parent="Panel"]
+[node name="star2" type="TextureRect" parent="Panel/ch2/level1_2"]
+visible = false
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -192.0
-offset_top = -104.0
-offset_right = 128.0
-offset_bottom = -27.0
 grow_horizontal = 2
-grow_vertical = 0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 18
-theme_override_fonts/font = ExtResource("2_1koq4")
-theme_override_font_sizes/font_size = 45
-text = "03 x"
-horizontal_alignment = 1
-vertical_alignment = 1
+grow_vertical = 2
+texture = SubResource("AtlasTexture_58ojc")
+metadata/_edit_use_anchors_ = true
 
-[node name="b2" type="Sprite2D" parent="Panel/Label2"]
-texture_filter = 1
-position = Vector2(272, 16)
-scale = Vector2(1.5, 1.5)
-texture = SubResource("AtlasTexture_cefy4")
-hframes = 2
+[node name="star3" type="TextureRect" parent="Panel/ch2/level1_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_85rhc")
+metadata/_edit_use_anchors_ = true
+
+[node name="level2_2" type="Button" parent="Panel/ch2"]
+anchors_preset = -1
+anchor_left = 0.664
+anchor_top = 0.198
+anchor_right = 0.727
+anchor_bottom = 0.309
+offset_left = 0.0719604
+offset_top = -0.304016
+offset_right = 23.4959
+offset_bottom = 23.768
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("6_hls4f")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("2_1koq4")
+theme_override_font_sizes/font_size = 50
+metadata/_edit_use_anchors_ = true
+
+[node name="lvl_num" type="TextureRect" parent="Panel/ch2/level2_2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_f4pid")
+
+[node name="star0" type="TextureRect" parent="Panel/ch2/level2_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_s2ejv")
+metadata/_edit_use_anchors_ = true
+
+[node name="star1" type="TextureRect" parent="Panel/ch2/level2_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_1b383")
+metadata/_edit_use_anchors_ = true
+
+[node name="star2" type="TextureRect" parent="Panel/ch2/level2_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_58ojc")
+metadata/_edit_use_anchors_ = true
+
+[node name="star3" type="TextureRect" parent="Panel/ch2/level2_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_85rhc")
+metadata/_edit_use_anchors_ = true
+
+[node name="level3_2" type="Button" parent="Panel/ch2"]
+anchors_preset = -1
+anchor_left = 0.734
+anchor_top = 0.198
+anchor_right = 0.796
+anchor_bottom = 0.309
+offset_left = -0.568054
+offset_top = -0.304016
+offset_right = 24.0079
+offset_bottom = 23.768
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("6_hls4f")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("2_1koq4")
+theme_override_font_sizes/font_size = 50
+metadata/_edit_use_anchors_ = true
+
+[node name="lvl_num" type="TextureRect" parent="Panel/ch2/level3_2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_m7nyd")
+
+[node name="star0" type="TextureRect" parent="Panel/ch2/level3_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_s2ejv")
+metadata/_edit_use_anchors_ = true
+
+[node name="star1" type="TextureRect" parent="Panel/ch2/level3_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_1b383")
+metadata/_edit_use_anchors_ = true
+
+[node name="star2" type="TextureRect" parent="Panel/ch2/level3_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_58ojc")
+metadata/_edit_use_anchors_ = true
+
+[node name="star3" type="TextureRect" parent="Panel/ch2/level3_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_85rhc")
+metadata/_edit_use_anchors_ = true
+
+[node name="level4_2" type="Button" parent="Panel/ch2"]
+anchors_preset = -1
+anchor_left = 0.595
+anchor_top = 0.316
+anchor_right = 0.657
+anchor_bottom = 0.427
+offset_left = -0.440063
+offset_top = 0.231995
+offset_right = 24.136
+offset_bottom = 24.304
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("6_hls4f")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("2_1koq4")
+theme_override_font_sizes/font_size = 50
+metadata/_edit_use_anchors_ = true
+
+[node name="lvl_num" type="TextureRect" parent="Panel/ch2/level4_2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_lw8sm")
+
+[node name="star0" type="TextureRect" parent="Panel/ch2/level4_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_s2ejv")
+metadata/_edit_use_anchors_ = true
+
+[node name="star1" type="TextureRect" parent="Panel/ch2/level4_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_1b383")
+metadata/_edit_use_anchors_ = true
+
+[node name="star2" type="TextureRect" parent="Panel/ch2/level4_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_58ojc")
+metadata/_edit_use_anchors_ = true
+
+[node name="star3" type="TextureRect" parent="Panel/ch2/level4_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_85rhc")
+metadata/_edit_use_anchors_ = true
+
+[node name="level5_2" type="Button" parent="Panel/ch2"]
+anchors_preset = -1
+anchor_left = 0.664
+anchor_top = 0.316
+anchor_right = 0.727
+anchor_bottom = 0.427
+offset_left = 0.0719604
+offset_top = 0.231995
+offset_right = 23.4959
+offset_bottom = 24.304
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("6_hls4f")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("2_1koq4")
+theme_override_font_sizes/font_size = 50
+metadata/_edit_use_anchors_ = true
+
+[node name="lvl_num" type="TextureRect" parent="Panel/ch2/level5_2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_yucoq")
+
+[node name="star0" type="TextureRect" parent="Panel/ch2/level5_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_s2ejv")
+metadata/_edit_use_anchors_ = true
+
+[node name="star1" type="TextureRect" parent="Panel/ch2/level5_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_1b383")
+metadata/_edit_use_anchors_ = true
+
+[node name="star2" type="TextureRect" parent="Panel/ch2/level5_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_58ojc")
+metadata/_edit_use_anchors_ = true
+
+[node name="star3" type="TextureRect" parent="Panel/ch2/level5_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_85rhc")
+metadata/_edit_use_anchors_ = true
+
+[node name="level6_2" type="Button" parent="Panel/ch2"]
+anchors_preset = -1
+anchor_left = 0.734
+anchor_top = 0.316
+anchor_right = 0.796
+anchor_bottom = 0.427
+offset_left = -0.568054
+offset_top = 0.231995
+offset_right = 24.0079
+offset_bottom = 24.304
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("6_hls4f")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("2_1koq4")
+theme_override_font_sizes/font_size = 50
+metadata/_edit_use_anchors_ = true
+
+[node name="lvl_num" type="TextureRect" parent="Panel/ch2/level6_2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_kfw8b")
+
+[node name="star0" type="TextureRect" parent="Panel/ch2/level6_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_s2ejv")
+metadata/_edit_use_anchors_ = true
+
+[node name="star1" type="TextureRect" parent="Panel/ch2/level6_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_1b383")
+metadata/_edit_use_anchors_ = true
+
+[node name="star2" type="TextureRect" parent="Panel/ch2/level6_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_58ojc")
+metadata/_edit_use_anchors_ = true
+
+[node name="star3" type="TextureRect" parent="Panel/ch2/level6_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_85rhc")
+metadata/_edit_use_anchors_ = true
+
+[node name="level7_2" type="Button" parent="Panel/ch2"]
+anchors_preset = -1
+anchor_left = 0.594
+anchor_top = 0.435
+anchor_right = 0.657
+anchor_bottom = 0.543
+offset_left = 0.711975
+offset_top = 0.119965
+offset_right = 24.136
+offset_bottom = 26.136
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("6_hls4f")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("2_1koq4")
+theme_override_font_sizes/font_size = 50
+metadata/_edit_use_anchors_ = true
+
+[node name="lvl_num" type="TextureRect" parent="Panel/ch2/level7_2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_k15ls")
+
+[node name="star0" type="TextureRect" parent="Panel/ch2/level7_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_s2ejv")
+metadata/_edit_use_anchors_ = true
+
+[node name="star1" type="TextureRect" parent="Panel/ch2/level7_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_1b383")
+metadata/_edit_use_anchors_ = true
+
+[node name="star2" type="TextureRect" parent="Panel/ch2/level7_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_58ojc")
+metadata/_edit_use_anchors_ = true
+
+[node name="star3" type="TextureRect" parent="Panel/ch2/level7_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_85rhc")
+metadata/_edit_use_anchors_ = true
+
+[node name="level8_2" type="Button" parent="Panel/ch2"]
+anchors_preset = -1
+anchor_left = 0.664
+anchor_top = 0.435
+anchor_right = 0.722
+anchor_bottom = 0.546
+offset_left = 0.0719604
+offset_top = 0.119965
+offset_right = 29.2559
+offset_bottom = 24.192
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("6_hls4f")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("2_1koq4")
+theme_override_font_sizes/font_size = 50
+metadata/_edit_use_anchors_ = true
+
+[node name="lvl_num" type="TextureRect" parent="Panel/ch2/level8_2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_6hxx5")
+
+[node name="star0" type="TextureRect" parent="Panel/ch2/level8_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_s2ejv")
+metadata/_edit_use_anchors_ = true
+
+[node name="star1" type="TextureRect" parent="Panel/ch2/level8_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_1b383")
+metadata/_edit_use_anchors_ = true
+
+[node name="star2" type="TextureRect" parent="Panel/ch2/level8_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_58ojc")
+metadata/_edit_use_anchors_ = true
+
+[node name="star3" type="TextureRect" parent="Panel/ch2/level8_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_85rhc")
+metadata/_edit_use_anchors_ = true
+
+[node name="level9_2" type="Button" parent="Panel/ch2"]
+anchors_preset = -1
+anchor_left = 0.734
+anchor_top = 0.435
+anchor_right = 0.796
+anchor_bottom = 0.543
+offset_left = -0.568054
+offset_top = 0.119965
+offset_right = 24.0079
+offset_bottom = 26.136
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("6_hls4f")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("2_1koq4")
+theme_override_font_sizes/font_size = 50
+metadata/_edit_use_anchors_ = true
+
+[node name="lvl_num" type="TextureRect" parent="Panel/ch2/level9_2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_jbmga")
+
+[node name="star0" type="TextureRect" parent="Panel/ch2/level9_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_s2ejv")
+metadata/_edit_use_anchors_ = true
+
+[node name="star1" type="TextureRect" parent="Panel/ch2/level9_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_1b383")
+metadata/_edit_use_anchors_ = true
+
+[node name="star2" type="TextureRect" parent="Panel/ch2/level9_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_58ojc")
+metadata/_edit_use_anchors_ = true
+
+[node name="star3" type="TextureRect" parent="Panel/ch2/level9_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_85rhc")
+metadata/_edit_use_anchors_ = true
+
+[node name="level10_2" type="Button" parent="Panel/ch2"]
+anchors_preset = -1
+anchor_left = 0.595
+anchor_top = 0.554
+anchor_right = 0.657
+anchor_bottom = 0.665
+offset_left = -0.440063
+offset_top = 0.00799561
+offset_right = 24.136
+offset_bottom = 24.08
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("6_hls4f")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("2_1koq4")
+theme_override_font_sizes/font_size = 50
+metadata/_edit_use_anchors_ = true
+
+[node name="lvl_num" type="TextureRect" parent="Panel/ch2/level10_2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_6xpxd")
+
+[node name="star0" type="TextureRect" parent="Panel/ch2/level10_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_s2ejv")
+metadata/_edit_use_anchors_ = true
+
+[node name="star1" type="TextureRect" parent="Panel/ch2/level10_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_1b383")
+metadata/_edit_use_anchors_ = true
+
+[node name="star2" type="TextureRect" parent="Panel/ch2/level10_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_58ojc")
+metadata/_edit_use_anchors_ = true
+
+[node name="star3" type="TextureRect" parent="Panel/ch2/level10_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_85rhc")
+metadata/_edit_use_anchors_ = true
+
+[node name="level11_2" type="Button" parent="Panel/ch2"]
+anchors_preset = -1
+anchor_left = 0.664
+anchor_top = 0.554
+anchor_right = 0.727
+anchor_bottom = 0.665
+offset_left = 0.0719604
+offset_top = 0.00799561
+offset_right = 23.4959
+offset_bottom = 24.08
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("6_hls4f")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("2_1koq4")
+theme_override_font_sizes/font_size = 50
+metadata/_edit_use_anchors_ = true
+
+[node name="lvl_num" type="TextureRect" parent="Panel/ch2/level11_2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_h0wiq")
+
+[node name="star0" type="TextureRect" parent="Panel/ch2/level11_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_s2ejv")
+metadata/_edit_use_anchors_ = true
+
+[node name="star1" type="TextureRect" parent="Panel/ch2/level11_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_1b383")
+metadata/_edit_use_anchors_ = true
+
+[node name="star2" type="TextureRect" parent="Panel/ch2/level11_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_58ojc")
+metadata/_edit_use_anchors_ = true
+
+[node name="star3" type="TextureRect" parent="Panel/ch2/level11_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_85rhc")
+metadata/_edit_use_anchors_ = true
+
+[node name="level12_2" type="Button" parent="Panel/ch2"]
+anchors_preset = -1
+anchor_left = 0.734
+anchor_top = 0.554
+anchor_right = 0.796
+anchor_bottom = 0.665
+offset_left = -0.568054
+offset_top = 0.00799561
+offset_right = 24.0079
+offset_bottom = 24.08
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("6_hls4f")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("2_1koq4")
+theme_override_font_sizes/font_size = 50
+metadata/_edit_use_anchors_ = true
+
+[node name="lvl_num" type="TextureRect" parent="Panel/ch2/level12_2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_3ytxq")
+
+[node name="star0" type="TextureRect" parent="Panel/ch2/level12_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_s2ejv")
+metadata/_edit_use_anchors_ = true
+
+[node name="star1" type="TextureRect" parent="Panel/ch2/level12_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_1b383")
+metadata/_edit_use_anchors_ = true
+
+[node name="star2" type="TextureRect" parent="Panel/ch2/level12_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_58ojc")
+metadata/_edit_use_anchors_ = true
+
+[node name="star3" type="TextureRect" parent="Panel/ch2/level12_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_85rhc")
+metadata/_edit_use_anchors_ = true
 
 [node name="btn_hover" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_ppps6")
+volume_db = -5.0
 bus = &"SFX"
 
 [node name="btn_click" type="AudioStreamPlayer" parent="."]
@@ -648,9 +2018,32 @@ bus = &"SFX"
 
 [connection signal="mouse_entered" from="Panel/back" to="." method="_on_back_mouse_entered"]
 [connection signal="pressed" from="Panel/back" to="." method="_on_back_pressed"]
-[connection signal="mouse_entered" from="Panel/level/level1" to="." method="_on_level_1_mouse_entered"]
-[connection signal="pressed" from="Panel/level/level1" to="." method="_on_level_1_pressed"]
-[connection signal="mouse_entered" from="Panel/level/level2" to="." method="_on_level_2_mouse_entered"]
-[connection signal="pressed" from="Panel/level/level2" to="." method="_on_level_2_pressed"]
-[connection signal="mouse_entered" from="Panel/level/level3" to="." method="_on_level_3_mouse_entered"]
-[connection signal="pressed" from="Panel/level/level3" to="." method="_on_level_3_pressed"]
+[connection signal="mouse_entered" from="Panel/next_page" to="." method="_on_back_mouse_entered"]
+[connection signal="pressed" from="Panel/next_page" to="." method="_on_next_page_pressed"]
+[connection signal="mouse_entered" from="Panel/ch1/level1" to="." method="_on_level_1_mouse_entered"]
+[connection signal="pressed" from="Panel/ch1/level1" to="." method="_on_level_1_pressed"]
+[connection signal="mouse_entered" from="Panel/ch1/level2" to="." method="_on_level_1_mouse_entered"]
+[connection signal="pressed" from="Panel/ch1/level2" to="." method="_on_level_2_pressed"]
+[connection signal="mouse_entered" from="Panel/ch1/level3" to="." method="_on_level_1_mouse_entered"]
+[connection signal="pressed" from="Panel/ch1/level3" to="." method="_on_level_3_pressed"]
+[connection signal="mouse_entered" from="Panel/ch1/level4" to="." method="_on_level_1_mouse_entered"]
+[connection signal="mouse_entered" from="Panel/ch1/level5" to="." method="_on_level_1_mouse_entered"]
+[connection signal="mouse_entered" from="Panel/ch1/level6" to="." method="_on_level_1_mouse_entered"]
+[connection signal="mouse_entered" from="Panel/ch1/level7" to="." method="_on_level_1_mouse_entered"]
+[connection signal="mouse_entered" from="Panel/ch1/level8" to="." method="_on_level_1_mouse_entered"]
+[connection signal="mouse_entered" from="Panel/ch1/level9" to="." method="_on_level_1_mouse_entered"]
+[connection signal="mouse_entered" from="Panel/ch1/level10" to="." method="_on_level_1_mouse_entered"]
+[connection signal="mouse_entered" from="Panel/ch1/level11" to="." method="_on_level_1_mouse_entered"]
+[connection signal="mouse_entered" from="Panel/ch1/level12" to="." method="_on_level_1_mouse_entered"]
+[connection signal="mouse_entered" from="Panel/ch2/level1_2" to="." method="_on_level_1_mouse_entered"]
+[connection signal="mouse_entered" from="Panel/ch2/level2_2" to="." method="_on_level_1_mouse_entered"]
+[connection signal="mouse_entered" from="Panel/ch2/level3_2" to="." method="_on_level_1_mouse_entered"]
+[connection signal="mouse_entered" from="Panel/ch2/level4_2" to="." method="_on_level_1_mouse_entered"]
+[connection signal="mouse_entered" from="Panel/ch2/level5_2" to="." method="_on_level_1_mouse_entered"]
+[connection signal="mouse_entered" from="Panel/ch2/level6_2" to="." method="_on_level_1_mouse_entered"]
+[connection signal="mouse_entered" from="Panel/ch2/level7_2" to="." method="_on_level_1_mouse_entered"]
+[connection signal="mouse_entered" from="Panel/ch2/level8_2" to="." method="_on_level_1_mouse_entered"]
+[connection signal="mouse_entered" from="Panel/ch2/level9_2" to="." method="_on_level_1_mouse_entered"]
+[connection signal="mouse_entered" from="Panel/ch2/level10_2" to="." method="_on_level_1_mouse_entered"]
+[connection signal="mouse_entered" from="Panel/ch2/level11_2" to="." method="_on_level_1_mouse_entered"]
+[connection signal="mouse_entered" from="Panel/ch2/level12_2" to="." method="_on_level_1_mouse_entered"]

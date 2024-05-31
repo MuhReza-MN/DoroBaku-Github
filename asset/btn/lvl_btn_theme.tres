@@ -1,0 +1,42 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://b8jylvhfl0bq4"]
+
+[ext_resource type="Texture2D" uid="uid://bh8eq1ppkdqu5" path="res://asset/btn/lvl_btn_bg.png" id="1_s10og"]
+[ext_resource type="FontFile" uid="uid://bys4fsq5x5ci6" path="res://style/BULKYPIX.TTF" id="1_segjl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p0quy"]
+texture = ExtResource("1_s10og")
+region_rect = Rect2(64, 0, 64, 64)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wvyh1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y46no"]
+texture = ExtResource("1_s10og")
+region_rect = Rect2(128, 0, 64, 64)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hf21a"]
+texture = ExtResource("1_s10og")
+region_rect = Rect2(0, 0, 64, 64)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xvrcf"]
+
+[resource]
+default_font = ExtResource("1_segjl")
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_disabled_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/colors/icon_disabled_color = Color(0, 0, 0, 1)
+Button/colors/icon_focus_color = Color(0, 0, 0, 1)
+Button/colors/icon_hover_color = Color(0, 0, 0, 1)
+Button/colors/icon_normal_color = Color(0, 0, 0, 1)
+Button/colors/icon_pressed_color = Color(0, 0, 0, 1)
+Button/constants/h_separation = 0
+Button/constants/outline_size = 0
+Button/styles/disabled = SubResource("StyleBoxTexture_p0quy")
+Button/styles/focus = SubResource("StyleBoxEmpty_wvyh1")
+Button/styles/hover = SubResource("StyleBoxTexture_y46no")
+Button/styles/normal = SubResource("StyleBoxTexture_hf21a")
+Button/styles/pressed = SubResource("StyleBoxEmpty_xvrcf")

@@ -4,12 +4,11 @@ var saveData = SaveData.new()
 @onready var hover_sfx = $btn_hover
 
 func _ready():
-	MusicPlayer.bgm2_play()
 	saveData.load_data()
 
 func _on_mulai_pressed():
 	click_sfx.play()
-	get_tree().change_scene_to_file("res://scene/menu/chapter_select.tscn")
+	get_tree().change_scene_to_file("res://scene/level/chapter_1/level_select.tscn")
 
 func _on_keluar_pressed():
 	click_sfx.play()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://d38f1ktc1txr0"]
+[gd_scene load_steps=31 format=3 uid="uid://d38f1ktc1txr0"]
 
 [ext_resource type="Script" path="res://script/menu/level_paused.gd" id="1_l8sue"]
 [ext_resource type="Shader" path="res://scene/menu/level_cleared.gdshader" id="2_i7qna"]
@@ -6,8 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://e86b8carofro" path="res://asset/menu/pause_bg.png" id="3_tb565"]
 [ext_resource type="Texture2D" uid="uid://5e1tastgl85p" path="res://asset/tiles/bintang.png" id="4_4a7q3"]
 [ext_resource type="Texture2D" uid="uid://kv2rfxxbwein" path="res://asset/btn/btn_sheet.png" id="5_2kqyi"]
-[ext_resource type="AudioStream" uid="uid://cq2fvqun1erjp" path="res://asset/sound/sfx/star.mp3" id="6_m6ivq"]
-[ext_resource type="AudioStream" uid="uid://cdvftwqvxvrl2" path="res://asset/sound/sfx/fail.mp3" id="7_2fr8s"]
 [ext_resource type="AudioStream" uid="uid://c2xm1t42epvhv" path="res://asset/sound/sfx/btn3.mp3" id="8_3yiuc"]
 [ext_resource type="AudioStream" uid="uid://b4e158le2f2i6" path="res://asset/sound/sfx/btn8.mp3" id="9_b7rgs"]
 
@@ -524,16 +522,6 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_ys4xk")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_qandg")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_5ixcg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5ixcg")
-
-[node name="star" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_m6ivq")
-volume_db = -13.0
-bus = &"SFX"
-
-[node name="failed" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_2fr8s")
-volume_db = -10.0
-bus = &"SFX"
 
 [node name="btn_hover" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_3yiuc")

@@ -6,6 +6,11 @@ var saveData = SaveData.new()
 func _ready():
 	MusicPlayer.bgm2_play()
 	saveData.load_data()
+	
+func _unhandled_key_input(event):
+	if event.is_pressed():
+		click_sfx.play()
+		get_tree().change_scene_to_file("res://scene/menu/main_menu.tscn")
 
 func _on_mulai_pressed():
 	click_sfx.play()
