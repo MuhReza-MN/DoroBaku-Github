@@ -23,7 +23,7 @@ var next_lvl_val = 1 # = level 2
 @onready var next_level_is = "res://scene/level/chapter_1/level_1_2.tscn"
 @onready var select_target = "res://scene/level/chapter_1/level_select.tscn"
 var lessThan1 = 40
-var lessThan2 = 4
+var lessThan2 = 50
 var maxMove = 55
 # setel huruf (pastikan lowercase) , setel izin + j
 var h1 = "i"
@@ -149,7 +149,7 @@ func send_save(ch,lvl,clr,str):
 # btn functions
 func _on_pause_pressed():
 	$"../btn_click".play()
-	get_tree().get_nodes_in_group("scoreboard")[0].jeda_game()
+	get_tree().get_nodes_in_group("pause_menu")[0].jeda_game()
 func _on_reset_pressed():
 	$"../btn_click".play()
 	restart()

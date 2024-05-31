@@ -1,12 +1,83 @@
-[gd_scene load_steps=6 format=3 uid="uid://kr4qi5xryxxt"]
+[gd_scene load_steps=28 format=3 uid="uid://kr4qi5xryxxt"]
 
 [ext_resource type="Script" path="res://script/main_menu.gd" id="1_8gdgw"]
 [ext_resource type="FontFile" uid="uid://bys4fsq5x5ci6" path="res://style/BULKYPIX.TTF" id="1_v8n6y"]
+[ext_resource type="Texture2D" uid="uid://dolag55st8on8" path="res://asset/menu/menu_bg.png" id="2_da2mw"]
 [ext_resource type="AudioStream" uid="uid://c2xm1t42epvhv" path="res://asset/sound/sfx/btn3.mp3" id="3_2eh5k"]
+[ext_resource type="Texture2D" uid="uid://4r43pgooku41" path="res://asset/menu/judul_buku.png" id="3_4nsfo"]
 [ext_resource type="AudioStream" uid="uid://b4e158le2f2i6" path="res://asset/sound/sfx/btn8.mp3" id="4_npucc"]
+[ext_resource type="Texture2D" uid="uid://l1algu41p1lw" path="res://asset/menu/menubutton.png" id="5_lr15a"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2alo"]
-bg_color = Color(0.458824, 0.643137, 0.611765, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ifdh2"]
+texture = ExtResource("2_da2mw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rb3c7"]
+texture = ExtResource("5_lr15a")
+region_rect = Rect2(1498, 0, 192, 77)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d1fqf"]
+texture = ExtResource("5_lr15a")
+region_rect = Rect2(257, 0, 192, 77)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ej1e1"]
+texture = ExtResource("5_lr15a")
+region_rect = Rect2(257, 0, 192, 77)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cgyl1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mmgog"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_obwtq"]
+texture = ExtResource("5_lr15a")
+region_rect = Rect2(1732, 0, 256, 77)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_em616"]
+texture = ExtResource("5_lr15a")
+region_rect = Rect2(0, 0, 256, 77)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gnkdb"]
+texture = ExtResource("5_lr15a")
+region_rect = Rect2(0, 0, 256, 77)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0p2a7"]
+texture = ExtResource("5_lr15a")
+region_rect = Rect2(1988, 0, 224, 77)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j2ltk"]
+texture = ExtResource("5_lr15a")
+region_rect = Rect2(503, 0, 224, 77)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kv23p"]
+texture = ExtResource("5_lr15a")
+region_rect = Rect2(503, 0, 224, 77)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3vi25"]
+texture = ExtResource("5_lr15a")
+region_rect = Rect2(2560, 0, 73, 77)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_826vk"]
+texture = ExtResource("5_lr15a")
+region_rect = Rect2(1323, 0, 73, 77)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ucml4"]
+texture = ExtResource("5_lr15a")
+region_rect = Rect2(1323, 0, 73, 77)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i0ort"]
+texture = ExtResource("5_lr15a")
+region_rect = Rect2(2240, 0, 192, 77)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3motr"]
+texture = ExtResource("5_lr15a")
+region_rect = Rect2(998, 0, 192, 77)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bhhy8"]
+texture = ExtResource("5_lr15a")
+region_rect = Rect2(998, 0, 192, 77)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jxykr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ktfsc"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -24,128 +95,163 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_j2alo")
+theme_override_styles/panel = SubResource("StyleBoxTexture_ifdh2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+custom_minimum_size = Vector2(1152, 480)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -292.0
+offset_bottom = 188.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Panel"]
+clip_contents = true
+custom_minimum_size = Vector2(198, 39)
+layout_mode = 1
+anchor_left = 0.206
+anchor_top = 0.135
+anchor_right = 0.389
+anchor_bottom = 0.198
+offset_left = -0.312012
+offset_top = -0.480003
+offset_right = -0.128021
+offset_bottom = -0.304016
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/Control"]
+position = Vector2(99, 19.5)
+texture = ExtResource("3_4nsfo")
 
 [node name="mulai" type="Button" parent="Panel"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -160.0
-offset_top = -67.5
-offset_right = 160.0
-offset_bottom = 28.5
+anchors_preset = -1
+anchor_left = 0.194
+anchor_top = 0.198
+anchor_right = 0.433
+anchor_bottom = 0.346
+offset_left = 0.511993
+offset_top = -0.304016
+offset_right = 0.18396
+offset_bottom = -0.208008
 grow_horizontal = 2
 grow_vertical = 2
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_constants/outline_size = 27
 theme_override_fonts/font = ExtResource("1_v8n6y")
 theme_override_font_sizes/font_size = 50
-text = "MULAI"
+theme_override_styles/normal = SubResource("StyleBoxTexture_rb3c7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_d1fqf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ej1e1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cgyl1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mmgog")
 
-[node name="save" type="Button" parent="Panel"]
+[node name="settings" type="Button" parent="Panel"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 192.0
-offset_top = -67.0
-offset_right = 416.0
-offset_bottom = 29.0
+anchors_preset = -1
+anchor_left = 0.194
+anchor_top = 0.309
+anchor_right = 0.433
+anchor_bottom = 0.457
+offset_left = 0.511993
+offset_top = -0.23201
+offset_right = 0.18396
+offset_bottom = -0.136017
 grow_horizontal = 2
 grow_vertical = 2
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_constants/outline_size = 27
 theme_override_fonts/font = ExtResource("1_v8n6y")
 theme_override_font_sizes/font_size = 50
-text = "SAVE"
+theme_override_styles/normal = SubResource("StyleBoxTexture_obwtq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_em616")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gnkdb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cgyl1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mmgog")
 
-[node name="Load" type="Button" parent="Panel"]
+[node name="kredit" type="Button" parent="Panel"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 192.0
-offset_top = 28.0
-offset_right = 416.0
-offset_bottom = 124.0
+anchors_preset = -1
+anchor_left = 0.194
+anchor_top = 0.42
+anchor_right = 0.433
+anchor_bottom = 0.568
+offset_left = 0.511993
+offset_top = -0.160004
+offset_right = 0.18396
+offset_bottom = -0.0640259
 grow_horizontal = 2
 grow_vertical = 2
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_constants/outline_size = 27
 theme_override_fonts/font = ExtResource("1_v8n6y")
 theme_override_font_sizes/font_size = 50
-text = "LOAD"
+theme_override_styles/normal = SubResource("StyleBoxTexture_0p2a7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_j2ltk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kv23p")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cgyl1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mmgog")
 
-[node name="change" type="Button" parent="Panel"]
+[node name="baju" type="Button" parent="Panel"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 192.0
-offset_top = 124.0
-offset_right = 416.0
-offset_bottom = 220.0
-grow_horizontal = 2
+anchors_preset = -1
+anchor_left = 0.717
+anchor_top = 0.545
+anchor_right = 0.817
+anchor_bottom = 0.693
+offset_left = 0.0159912
+offset_top = -0.160004
+offset_right = -0.184021
+offset_bottom = -0.0640259
+grow_horizontal = 0
 grow_vertical = 2
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_constants/outline_size = 27
 theme_override_fonts/font = ExtResource("1_v8n6y")
 theme_override_font_sizes/font_size = 50
-text = "EDIT"
+theme_override_styles/normal = SubResource("StyleBoxTexture_3vi25")
+theme_override_styles/hover = SubResource("StyleBoxTexture_826vk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ucml4")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cgyl1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mmgog")
 
 [node name="keluar" type="Button" parent="Panel"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -160.0
-offset_top = 92.5
-offset_right = 160.0
-offset_bottom = 188.5
+anchors_preset = -1
+anchor_left = 0.194
+anchor_top = 0.531
+anchor_right = 0.433
+anchor_bottom = 0.667
+offset_left = 0.511993
+offset_top = -0.0880127
+offset_right = 0.18396
+offset_bottom = -0.216034
 grow_horizontal = 2
 grow_vertical = 2
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_constants/outline_size = 27
 theme_override_fonts/font = ExtResource("1_v8n6y")
 theme_override_font_sizes/font_size = 50
-text = "KELUAR"
-
-[node name="title" type="Label" parent="Panel"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -256.0
-offset_right = 256.0
-offset_bottom = 257.0
-grow_horizontal = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 11
-theme_override_constants/shadow_offset_y = 11
-theme_override_constants/outline_size = 18
-theme_override_fonts/font = ExtResource("1_v8n6y")
-theme_override_font_sizes/font_size = 78
-text = "D O R O B A K U"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
+theme_override_styles/normal = SubResource("StyleBoxTexture_i0ort")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3motr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bhhy8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_jxykr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ktfsc")
 
 [node name="btn_hover" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_2eh5k")
@@ -158,11 +264,11 @@ bus = &"SFX"
 
 [connection signal="mouse_entered" from="Panel/mulai" to="." method="_on_mulai_mouse_entered"]
 [connection signal="pressed" from="Panel/mulai" to="." method="_on_mulai_pressed"]
-[connection signal="mouse_entered" from="Panel/save" to="." method="_on_save_mouse_entered"]
-[connection signal="pressed" from="Panel/save" to="." method="_on_save_pressed"]
-[connection signal="mouse_entered" from="Panel/Load" to="." method="_on_load_mouse_entered"]
-[connection signal="pressed" from="Panel/Load" to="." method="_on_load_pressed"]
-[connection signal="mouse_entered" from="Panel/change" to="." method="_on_change_mouse_entered"]
-[connection signal="pressed" from="Panel/change" to="." method="_on_change_pressed"]
+[connection signal="mouse_entered" from="Panel/settings" to="." method="_on_settings_mouse_entered"]
+[connection signal="pressed" from="Panel/settings" to="." method="_on_settings_pressed"]
+[connection signal="mouse_entered" from="Panel/kredit" to="." method="_on_kredit_mouse_entered"]
+[connection signal="pressed" from="Panel/kredit" to="." method="_on_kredit_pressed"]
+[connection signal="mouse_entered" from="Panel/baju" to="." method="_on_baju_mouse_entered"]
+[connection signal="pressed" from="Panel/baju" to="." method="_on_baju_pressed"]
 [connection signal="mouse_entered" from="Panel/keluar" to="." method="_on_keluar_mouse_entered"]
 [connection signal="pressed" from="Panel/keluar" to="." method="_on_keluar_pressed"]

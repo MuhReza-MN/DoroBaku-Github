@@ -15,29 +15,25 @@ func _on_keluar_pressed():
 	click_sfx.play()
 	get_tree().quit()
 
-
-func _on_save_pressed():
-	click_sfx.play()
-	saveData.save_game(saveData.save_data())
-func _on_load_pressed():
-	click_sfx.play()
-	var datas = saveData.load_data()
-	var x = 0
-	while x < len(datas["ch_stars"][0]) :
-		print(str(x) , ". " , datas["ch_stars"][0][x])
-		x+=1
-func _on_change_pressed():
-	click_sfx.play()
-	saveData.edit_data_lvl_clear(0,0,-1,2)
-
-
 func _on_mulai_mouse_entered():
 	hover_sfx.play()
-func _on_save_mouse_entered():
-	hover_sfx.play()
-func _on_load_mouse_entered():
-	hover_sfx.play()
-func _on_change_mouse_entered():
-	hover_sfx.play()
 func _on_keluar_mouse_entered():
+	hover_sfx.play()
+
+
+func _on_settings_pressed():
+	click_sfx.play()
+func _on_settings_mouse_entered():
+	hover_sfx.play()
+
+
+func _on_kredit_pressed():
+	click_sfx.play()
+func _on_kredit_mouse_entered():
+	hover_sfx.play()
+
+
+func _on_baju_pressed():
+	click_sfx.play()
+func _on_baju_mouse_entered():
 	hover_sfx.play()

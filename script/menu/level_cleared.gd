@@ -28,7 +28,6 @@ func _ready():
 		anim.play("b3")
 	clear = level_data["ch_clear"][chapter][level]
 	print(clear)
-	$Panel/VBox/HBoxContainer/Control3/resume.hide()
 	$".".hide()
 
 func level_failed():
@@ -39,20 +38,13 @@ func level_failed():
 
 func game_paused():
 	judul.text = "- GAME DIJEDA -"
-	$Panel/VBox/HBoxContainer/Control3/next_lvl.hide()
-	$Panel/VBox/HBoxContainer/Control3/resume.show()
 	$".".show()
 	main.pause_game()
 func game_resumed():
 	judul.text = "- LEVEL SELESAI -"
-	$Panel/VBox/HBoxContainer/Control3/next_lvl.show()
-	$Panel/VBox/HBoxContainer/Control3/resume.hide()
 	$".".hide()
 	main.pause_game()
 	
-func _process(delta):
-	if Input.is_action_just_pressed("pause") :
-		jeda_game()
 func jeda_game() :
 	if game_dijeda:
 		game_resumed()
@@ -96,8 +88,6 @@ func _on_restart_lvl_pressed():
 	click_sfx.play()
 	game_dijeda = false
 	judul.text = "- LEVEL SELESAI -"
-	$Panel/VBox/HBoxContainer/Control3/next_lvl.show()
-	$Panel/VBox/HBoxContainer/Control3/resume.hide()
 	$".".hide()
 	anim.play("RESET")
 	main.restart()
@@ -112,9 +102,6 @@ func _on_next_lvl_pressed():
 	click_sfx.play()
 	send_data()
 	main.next_lvl()
-func _on_resume_pressed():
-	click_sfx.play()
-	jeda_game()
 
 func _on_level_controller_ch_val(val3):
 	chapter = val3
@@ -130,8 +117,6 @@ func _on_restart_lvl_mouse_entered():
 func _on_back_to_lvl_select_mouse_entered():
 	hover_sfx.play()
 func _on_next_lvl_mouse_entered():
-	hover_sfx.play()
-func _on_resume_mouse_entered():
 	hover_sfx.play()
 func _on_info_mouse_entered():
 	hover_sfx.play()

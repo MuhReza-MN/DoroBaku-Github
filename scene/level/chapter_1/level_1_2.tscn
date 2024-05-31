@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://d2vrv3fs4nwmm"]
+[gd_scene load_steps=38 format=3 uid="uid://d2vrv3fs4nwmm"]
 
 [ext_resource type="Script" path="res://script/level/ch1/level_1_2.gd" id="1_i7wc8"]
 [ext_resource type="Texture2D" uid="uid://b8ak6jwuanmdq" path="res://asset/tiles/floor.png" id="2_7qnx4"]
@@ -11,8 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://kv2rfxxbwein" path="res://asset/btn/btn_sheet.png" id="9_wq33l"]
 [ext_resource type="AudioStream" uid="uid://c2xm1t42epvhv" path="res://asset/sound/sfx/btn3.mp3" id="10_u2qs6"]
 [ext_resource type="PackedScene" uid="uid://b5sjrqgtkjqt8" path="res://scene/menu/level_cleared.tscn" id="10_yuaej"]
+[ext_resource type="PackedScene" uid="uid://d38f1ktc1txr0" path="res://scene/menu/level_paused.tscn" id="11_cw14o"]
 [ext_resource type="AudioStream" uid="uid://b4e158le2f2i6" path="res://asset/sound/sfx/btn8.mp3" id="11_ig87b"]
 [ext_resource type="AudioStream" uid="uid://beeb7o60l0iaj" path="res://asset/sound/bgm3.mp3" id="12_nwks1"]
+[ext_resource type="Texture2D" uid="uid://cr55xci750yw1" path="res://asset/menu/all_num.png" id="15_ur5qr"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6m0n5"]
 
@@ -86,6 +88,14 @@ region_rect = Rect2(224, 32, 32, 32)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k126i"]
 texture = ExtResource("9_wq33l")
 region_rect = Rect2(224, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdwax"]
+atlas = ExtResource("15_ur5qr")
+region = Rect2(0, 0, 640, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r18po"]
+atlas = ExtResource("15_ur5qr")
+region = Rect2(640, 0, 64, 64)
 
 [sub_resource type="Animation" id="Animation_3bhua"]
 length = 0.001
@@ -231,8 +241,49 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_aeys5")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_aeys5")
 
 [node name="level_selesai" parent="." instance=ExtResource("10_yuaej")]
-visible = false
 layout_mode = 1
+
+[node name="level_paused" parent="." instance=ExtResource("11_cw14o")]
+layout_mode = 1
+
+[node name="numbers_con" type="HBoxContainer" parent="level_paused"]
+custom_minimum_size = Vector2(449, 163)
+layout_mode = 0
+
+[node name="space" type="BoxContainer" parent="level_paused/numbers_con"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+
+[node name="ch" type="BoxContainer" parent="level_paused/numbers_con"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+
+[node name="ch_num" type="Sprite2D" parent="level_paused/numbers_con/ch"]
+position = Vector2(32, 32)
+texture = SubResource("AtlasTexture_pdwax")
+offset = Vector2(0, 101)
+hframes = 10
+frame = 1
+
+[node name="strip" type="BoxContainer" parent="level_paused/numbers_con"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+
+[node name="strip" type="Sprite2D" parent="level_paused/numbers_con/strip"]
+position = Vector2(28, 32)
+texture = SubResource("AtlasTexture_r18po")
+offset = Vector2(0, 101)
+
+[node name="lvl" type="BoxContainer" parent="level_paused/numbers_con"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+
+[node name="lvl_num" type="Sprite2D" parent="level_paused/numbers_con/lvl"]
+position = Vector2(32, 32)
+texture = SubResource("AtlasTexture_pdwax")
+offset = Vector2(0, 101)
+hframes = 10
+frame = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -255,11 +306,17 @@ autoplay = true
 bus = &"Music"
 
 [connection signal="ch_val" from="level_controller" to="level_selesai" method="_on_level_controller_ch_val"]
+[connection signal="ch_val" from="level_controller" to="level_paused" method="_on_level_controller_ch_val"]
 [connection signal="clear_val" from="level_controller" to="level_selesai" method="_on_level_controller_clear_val"]
+[connection signal="clear_val" from="level_controller" to="level_paused" method="_on_level_controller_clear_val"]
 [connection signal="isLessThan_1" from="level_controller" to="level_selesai" method="_on_level_controller_is_less_than_1"]
+[connection signal="isLessThan_1" from="level_controller" to="level_paused" method="_on_level_controller_is_less_than_1"]
 [connection signal="isLessThan_2" from="level_controller" to="level_selesai" method="_on_level_controller_is_less_than_2"]
+[connection signal="isLessThan_2" from="level_controller" to="level_paused" method="_on_level_controller_is_less_than_2"]
 [connection signal="lvl_val" from="level_controller" to="level_selesai" method="_on_level_controller_lvl_val"]
+[connection signal="lvl_val" from="level_controller" to="level_paused" method="_on_level_controller_lvl_val"]
 [connection signal="star" from="level_controller" to="level_selesai" method="_on_level_controller_star"]
+[connection signal="star" from="level_controller" to="level_paused" method="_on_level_controller_star"]
 [connection signal="isMoving" from="level_controller/karakter" to="level_controller" method="_on_karakter_is_moving"]
 [connection signal="mouse_entered" from="level_controller/menu/pause" to="level_controller" method="_on_pause_mouse_entered"]
 [connection signal="pressed" from="level_controller/menu/pause" to="level_controller" method="_on_pause_pressed"]

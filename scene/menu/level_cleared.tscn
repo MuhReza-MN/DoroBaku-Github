@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://b5sjrqgtkjqt8"]
+[gd_scene load_steps=40 format=3 uid="uid://b5sjrqgtkjqt8"]
 
 [ext_resource type="FontFile" uid="uid://bys4fsq5x5ci6" path="res://style/BULKYPIX.TTF" id="1_ahvtj"]
 [ext_resource type="Script" path="res://script/menu/level_cleared.gd" id="1_vx2oe"]
@@ -223,18 +223,6 @@ region_rect = Rect2(160, 32, 32, 32)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jde4r"]
 texture = ExtResource("4_fij4s")
 region_rect = Rect2(160, 32, 32, 32)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2sds8"]
-texture = ExtResource("4_fij4s")
-region_rect = Rect2(64, 32, 32, 32)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y76y4"]
-texture = ExtResource("4_fij4s")
-region_rect = Rect2(96, 32, 32, 32)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sbuic"]
-texture = ExtResource("4_fij4s")
-region_rect = Rect2(96, 32, 32, 32)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i3vp4"]
 texture = ExtResource("4_fij4s")
@@ -536,34 +524,6 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_jde4r")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_5ixcg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5ixcg")
 
-[node name="resume" type="Button" parent="Panel/VBox/HBoxContainer/Control3"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -58.5
-offset_top = -38.0
-offset_right = 17.5
-offset_bottom = 38.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_type_variation = &"FlatButton"
-theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
-theme_override_fonts/font = ExtResource("1_ahvtj")
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxTexture_2sds8")
-theme_override_styles/hover = SubResource("StyleBoxTexture_y76y4")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_sbuic")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_5ixcg")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_5ixcg")
-
 [node name="CenterContainer" type="BoxContainer" parent="Panel/VBox"]
 custom_minimum_size = Vector2(449, 168)
 layout_mode = 2
@@ -623,7 +583,5 @@ bus = &"SFX"
 [connection signal="pressed" from="Panel/VBox/HBoxContainer/Control2/back_to_lvl_select" to="." method="_on_back_to_lvl_select_pressed"]
 [connection signal="mouse_entered" from="Panel/VBox/HBoxContainer/Control3/next_lvl" to="." method="_on_next_lvl_mouse_entered"]
 [connection signal="pressed" from="Panel/VBox/HBoxContainer/Control3/next_lvl" to="." method="_on_next_lvl_pressed"]
-[connection signal="mouse_entered" from="Panel/VBox/HBoxContainer/Control3/resume" to="." method="_on_resume_mouse_entered"]
-[connection signal="pressed" from="Panel/VBox/HBoxContainer/Control3/resume" to="." method="_on_resume_pressed"]
 [connection signal="mouse_entered" from="Panel/VBox/CenterContainer/Control/info" to="." method="_on_info_mouse_entered"]
 [connection signal="pressed" from="Panel/VBox/CenterContainer/Control/info" to="." method="_on_info_pressed"]
