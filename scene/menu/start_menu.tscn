@@ -114,24 +114,25 @@ texture = ExtResource("6_3hjqa")
 
 [node name="mulai" type="Button" parent="Panel"]
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = -1
+anchor_top = 0.864
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -88.0
+anchor_bottom = 0.938
+offset_top = 0.127991
+offset_bottom = 40.176
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_constants/outline_size = 27
 theme_override_fonts/font = ExtResource("4_xl2do")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 34
 theme_override_styles/normal = SubResource("StyleBoxEmpty_po0lr")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_yu4b0")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_xmqtc")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_hsm4w")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2me57")
-text = "- PRESS ANY KEY TO START -"
+text = "- PENCET TOMBOL MANAPUN UNTUK MEMULAI -"
 flat = true
 
 [node name="btn_hover" type="AudioStreamPlayer" parent="."]

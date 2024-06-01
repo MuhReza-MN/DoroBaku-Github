@@ -210,10 +210,10 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_buelf")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_buelf")
 
 [node name="level_selesai" parent="." instance=ExtResource("10_346hh")]
-visible = false
 layout_mode = 1
 
 [node name="level_paused" parent="." instance=ExtResource("11_rrtyp")]
+visible = false
 layout_mode = 1
 
 [node name="numbers_con" type="HBoxContainer" parent="level_paused"]

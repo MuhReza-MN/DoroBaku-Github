@@ -1,8 +1,10 @@
+Label
+Panel
+BoxContainer
+VBoxContainer
 TextureRect
 Sprite2D
 Control
-VBoxContainer
-BoxContainer
 HBoxContainer
 Button
 Container
@@ -10,5 +12,3 @@ CollisionPolygon2D
 StaticBody2D
 CollisionShape2D
 AudioStreamPlayer
-Label
-Panel

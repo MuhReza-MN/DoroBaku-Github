@@ -4,6 +4,7 @@ var saveData = SaveData.new()
 @onready var hover_sfx = $btn_hover
 
 func _ready():
+	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	MusicPlayer.bgm2_play()
 	saveData.load_data()
 	

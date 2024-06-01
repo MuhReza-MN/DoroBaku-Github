@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://b5sjrqgtkjqt8"]
+[gd_scene load_steps=41 format=3 uid="uid://b5sjrqgtkjqt8"]
 
 [ext_resource type="FontFile" uid="uid://bys4fsq5x5ci6" path="res://style/BULKYPIX.TTF" id="1_ahvtj"]
 [ext_resource type="Script" path="res://script/menu/level_cleared.gd" id="1_vx2oe"]
@@ -235,6 +235,13 @@ region_rect = Rect2(32, 128, 32, 32)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mwmko"]
 texture = ExtResource("4_fij4s")
 region_rect = Rect2(32, 128, 32, 32)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0mbrp"]
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
 
 [node name="level_selesai" type="Control" groups=["scoreboard"]]
 layout_mode = 3
@@ -524,12 +531,14 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_jde4r")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_5ixcg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5ixcg")
 
-[node name="CenterContainer" type="BoxContainer" parent="Panel/VBox"]
+[node name="CenterContainer" type="VBoxContainer" parent="Panel/VBox"]
 custom_minimum_size = Vector2(449, 168)
 layout_mode = 2
 size_flags_vertical = 3
 
 [node name="Control" type="Control" parent="Panel/VBox/CenterContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 76)
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -557,6 +566,66 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_cxcy6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_mwmko")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_5ixcg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5ixcg")
+
+[node name="info_box" type="BoxContainer" parent="Panel/VBox/CenterContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 177)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Panel/VBox/CenterContainer/info_box"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_0mbrp")
+
+[node name="kata" type="Label" parent="Panel/VBox/CenterContainer/info_box/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.068
+anchor_right = 1.0
+anchor_bottom = 0.249
+offset_top = -0.0360003
+offset_bottom = -0.0730019
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.309804, 0.309804, 0.309804, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 13
+theme_override_fonts/font = ExtResource("1_ahvtj")
+theme_override_font_sizes/font_size = 30
+text = "- IZIN -"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="kbbi" type="Label" parent="Panel/VBox/CenterContainer/info_box/Panel"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 1.0
+offset_top = -31.5
+offset_bottom = 83.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.309804, 0.309804, 0.309804, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 7
+theme_override_fonts/font = ExtResource("1_ahvtj")
+theme_override_font_sizes/font_size = 18
+text = "pernyataan mengabulkan 
+( tidak melarang 
+dan sebagainya ); 
+persetujuan membolehkan."
+horizontal_alignment = 1
+uppercase = true
 
 [node name="star" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_3kac7")

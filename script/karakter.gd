@@ -56,4 +56,7 @@ func move(dir):
 				moving = false
 				sfx.stop()
 				emit_signal("isMoving",false)
+			else :
+				$AnimationPlayer.play("face_"+dir)
+				
 

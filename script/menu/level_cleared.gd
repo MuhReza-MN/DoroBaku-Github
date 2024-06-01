@@ -14,6 +14,7 @@ var level
 var clear
 var level_data
 var stars
+var show = 0
 
 func _ready():
 	level_data = saveData.load_data()
@@ -28,6 +29,7 @@ func _ready():
 		anim.play("b3")
 	clear = level_data["ch_clear"][chapter][level]
 	print(clear)
+	$Panel/VBox/CenterContainer/info_box.hide()
 	$".".hide()
 
 func level_failed():
@@ -122,3 +124,9 @@ func _on_info_mouse_entered():
 	hover_sfx.play()
 func _on_info_pressed():
 	click_sfx.play()
+	if show == 0 :
+		$Panel/VBox/CenterContainer/info_box.show()
+		show = 1
+	elif show == 1 :
+		$Panel/VBox/CenterContainer/info_box.hide()
+		show = 0
