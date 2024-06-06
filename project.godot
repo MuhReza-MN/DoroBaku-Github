@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 MusicPlayer="*res://script/music_player.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/modular_sprite_animation_factory/plugin.cfg")

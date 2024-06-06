@@ -24,12 +24,18 @@ var next_lvl_val = 1 # = level 2
 @onready var select_target = "res://scene/level/chapter_1/level_select.tscn"
 var lessThan1 = 40
 var lessThan2 = 50
-var maxMove = 55
+var maxMove = 60
 # setel huruf (pastikan lowercase) , setel izin + j
 var h1 = "i"
 var h2 = "z"
 var h3 = "n"
 var h4 = "j"
+# setel text info (enter tetap terbaca)
+var kata = "- IZIN -"
+var arti = "pernyataan mengabulkan
+			( tidak melarang
+			dan sebagainya );
+			persetujuan membolehkan."
 
 func _ready():
 	gameData = saveData.load_data()
@@ -42,6 +48,7 @@ func _ready():
 	stars = gameData["ch_stars"][chapter][level]
 	#setup stage
 	box_setup()
+	get_tree().get_nodes_in_group("scoreboard")[0].set_info_txt(kata,arti)
 	Engine.time_scale = 1
 
 # wajib untuk disesuaikan untuk setiap level, sangat sensitif
@@ -64,10 +71,10 @@ func box_setup() :
 
 func pause_game():
 	if game_paused:
-		$menu.show()
+		$Camera2D/menu.show()
 		Engine.time_scale = 1
 	else:
-		$menu.hide()
+		$Camera2D/menu.hide()
 		Engine.time_scale = 0
 	game_paused = !game_paused
 
@@ -90,7 +97,7 @@ func _process(delta):
 						target += 1
 				info = false
 		if target == 0:
-			$menu.hide()
+			$Camera2D/menu.hide()
 			if moveCount <= lessThan1 :
 				emit_signal("star",3)
 				await get_tree().create_timer(0.1).timeout
@@ -107,7 +114,7 @@ func _process(delta):
 			game_end = true
 			
 		if moveCount > maxMove :
-			$menu.hide()
+			$Camera2D/menu.hide()
 			emit_signal("star",0)
 			get_tree().get_nodes_in_group("scoreboard")[0].levelFailed()
 			$"../bgm".stop()

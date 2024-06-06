@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://d2vrv3fs4nwmm"]
+[gd_scene load_steps=37 format=3 uid="uid://d2vrv3fs4nwmm"]
 
 [ext_resource type="Script" path="res://script/level/level_1_1.gd" id="1_pbsla"]
 [ext_resource type="Texture2D" uid="uid://b8ak6jwuanmdq" path="res://asset/tiles/floor.png" id="2_imtu5"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://de6qmu75j1tmq" path="res://scene/chara/karakter.tscn" id="6_sewmt"]
 [ext_resource type="PackedScene" uid="uid://c80ga6hakiurs" path="res://scene/kotak.tscn" id="7_bsg5p"]
 [ext_resource type="FontFile" uid="uid://bys4fsq5x5ci6" path="res://style/BULKYPIX.TTF" id="8_4llbd"]
+[ext_resource type="Script" path="res://script/menu/Camera2D.gd" id="8_brog2"]
 [ext_resource type="Texture2D" uid="uid://kv2rfxxbwein" path="res://asset/btn/btn_sheet.png" id="9_5xiik"]
 [ext_resource type="PackedScene" uid="uid://b5sjrqgtkjqt8" path="res://scene/menu/level_cleared.tscn" id="10_346hh"]
 [ext_resource type="AudioStream" uid="uid://c2xm1t42epvhv" path="res://asset/sound/sfx/btn3.mp3" id="11_7bxs4"]
@@ -123,6 +124,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="level_controller" type="Node2D" parent="."]
 script = ExtResource("1_pbsla")
@@ -174,9 +177,14 @@ position = Vector2(448, 192)
 build_mode = 1
 polygon = PackedVector2Array(0, 0, 288, 0, 288, 32, 352, 32, 352, 256, 288, 256, 288, 288, 0, 288, 0, 256, -64, 256, -64, 32, 0, 32, 32, 32, 256, 32, 256, 64, 320, 64, 320, 224, 256, 224, 256, 256, 32, 256, 32, 224, -32, 224, -32, 64, 32, 64, 32, 0, 0, 32)
 
-[node name="menu" type="CanvasLayer" parent="level_controller"]
+[node name="Camera2D" type="Camera2D" parent="level_controller" node_paths=PackedStringArray("tilemap")]
+position = Vector2(592, 336)
+script = ExtResource("8_brog2")
+tilemap = NodePath("../TileMap")
 
-[node name="pause" type="Button" parent="level_controller/menu"]
+[node name="menu" type="CanvasLayer" parent="level_controller/Camera2D"]
+
+[node name="pause" type="Button" parent="level_controller/Camera2D/menu"]
 offset_right = 96.0
 offset_bottom = 96.0
 theme_type_variation = &"FlatButton"
@@ -192,7 +200,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_n86a1")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_buelf")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_buelf")
 
-[node name="reset" type="Button" parent="level_controller/menu"]
+[node name="reset" type="Button" parent="level_controller/Camera2D/menu"]
 offset_left = 96.0
 offset_right = 192.0
 offset_bottom = 93.0
@@ -209,12 +217,11 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_lohg0")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_buelf")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_buelf")
 
-[node name="level_selesai" parent="." instance=ExtResource("10_346hh")]
-layout_mode = 1
-
 [node name="level_paused" parent="." instance=ExtResource("11_rrtyp")]
 visible = false
 layout_mode = 1
+size_flags_horizontal = 0
+size_flags_vertical = 6
 
 [node name="numbers_con" type="HBoxContainer" parent="level_paused"]
 custom_minimum_size = Vector2(449, 163)
@@ -255,6 +262,11 @@ offset = Vector2(0, 101)
 hframes = 10
 frame = 1
 
+[node name="level_selesai" parent="." instance=ExtResource("10_346hh")]
+visible = false
+layout_mode = 1
+size_flags_vertical = 3
+
 [node name="btn_hover" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_7bxs4")
 bus = &"SFX"
@@ -275,20 +287,20 @@ libraries = {
 "": SubResource("AnimationLibrary_ghkk8")
 }
 
-[connection signal="ch_val" from="level_controller" to="level_selesai" method="_on_level_controller_ch_val"]
 [connection signal="ch_val" from="level_controller" to="level_paused" method="_on_level_controller_ch_val"]
-[connection signal="clear_val" from="level_controller" to="level_selesai" method="_on_level_controller_clear_val"]
+[connection signal="ch_val" from="level_controller" to="level_selesai" method="_on_level_controller_ch_val"]
 [connection signal="clear_val" from="level_controller" to="level_paused" method="_on_level_controller_clear_val"]
-[connection signal="isLessThan_1" from="level_controller" to="level_selesai" method="_on_level_controller_is_less_than_1"]
+[connection signal="clear_val" from="level_controller" to="level_selesai" method="_on_level_controller_clear_val"]
 [connection signal="isLessThan_1" from="level_controller" to="level_paused" method="_on_level_controller_is_less_than_1"]
-[connection signal="isLessThan_2" from="level_controller" to="level_selesai" method="_on_level_controller_is_less_than_2"]
+[connection signal="isLessThan_1" from="level_controller" to="level_selesai" method="_on_level_controller_is_less_than_1"]
 [connection signal="isLessThan_2" from="level_controller" to="level_paused" method="_on_level_controller_is_less_than_2"]
-[connection signal="lvl_val" from="level_controller" to="level_selesai" method="_on_level_controller_lvl_val"]
+[connection signal="isLessThan_2" from="level_controller" to="level_selesai" method="_on_level_controller_is_less_than_2"]
 [connection signal="lvl_val" from="level_controller" to="level_paused" method="_on_level_controller_lvl_val"]
-[connection signal="star" from="level_controller" to="level_selesai" method="_on_level_controller_star"]
+[connection signal="lvl_val" from="level_controller" to="level_selesai" method="_on_level_controller_lvl_val"]
 [connection signal="star" from="level_controller" to="level_paused" method="_on_level_controller_star"]
+[connection signal="star" from="level_controller" to="level_selesai" method="_on_level_controller_star"]
 [connection signal="isMoving" from="level_controller/karakter" to="level_controller" method="_on_karakter_is_moving"]
-[connection signal="mouse_entered" from="level_controller/menu/pause" to="level_controller" method="_on_pause_mouse_entered"]
-[connection signal="pressed" from="level_controller/menu/pause" to="level_controller" method="_on_pause_pressed"]
-[connection signal="mouse_entered" from="level_controller/menu/reset" to="level_controller" method="_on_reset_mouse_entered"]
-[connection signal="pressed" from="level_controller/menu/reset" to="level_controller" method="_on_reset_pressed"]
+[connection signal="mouse_entered" from="level_controller/Camera2D/menu/pause" to="level_controller" method="_on_pause_mouse_entered"]
+[connection signal="pressed" from="level_controller/Camera2D/menu/pause" to="level_controller" method="_on_pause_pressed"]
+[connection signal="mouse_entered" from="level_controller/Camera2D/menu/reset" to="level_controller" method="_on_reset_mouse_entered"]
+[connection signal="pressed" from="level_controller/Camera2D/menu/reset" to="level_controller" method="_on_reset_pressed"]

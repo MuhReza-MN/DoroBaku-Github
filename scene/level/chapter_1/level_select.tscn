@@ -2027,6 +2027,7 @@ bus = &"SFX"
 [connection signal="mouse_entered" from="Panel/ch1/level3" to="." method="_on_level_1_mouse_entered"]
 [connection signal="pressed" from="Panel/ch1/level3" to="." method="_on_level_3_pressed"]
 [connection signal="mouse_entered" from="Panel/ch1/level4" to="." method="_on_level_1_mouse_entered"]
+[connection signal="pressed" from="Panel/ch1/level4" to="." method="_on_level_4_pressed"]
 [connection signal="mouse_entered" from="Panel/ch1/level5" to="." method="_on_level_1_mouse_entered"]
 [connection signal="mouse_entered" from="Panel/ch1/level6" to="." method="_on_level_1_mouse_entered"]
 [connection signal="mouse_entered" from="Panel/ch1/level7" to="." method="_on_level_1_mouse_entered"]

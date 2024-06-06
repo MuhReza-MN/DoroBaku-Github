@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://d2vrv3fs4nwmm"]
+[gd_scene load_steps=39 format=3 uid="uid://d2vrv3fs4nwmm"]
 
 [ext_resource type="Script" path="res://script/level/ch1/level_1_2.gd" id="1_i7wc8"]
 [ext_resource type="Texture2D" uid="uid://b8ak6jwuanmdq" path="res://asset/tiles/floor.png" id="2_7qnx4"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cqe1c836cwb6j" path="res://scene/cek.tscn" id="5_h03t7"]
 [ext_resource type="PackedScene" uid="uid://de6qmu75j1tmq" path="res://scene/chara/karakter.tscn" id="6_gqj5h"]
 [ext_resource type="PackedScene" uid="uid://c80ga6hakiurs" path="res://scene/kotak.tscn" id="7_458ey"]
+[ext_resource type="Script" path="res://script/menu/Camera2D.gd" id="8_8n6w2"]
 [ext_resource type="FontFile" uid="uid://bys4fsq5x5ci6" path="res://style/BULKYPIX.TTF" id="8_uhoaf"]
 [ext_resource type="Texture2D" uid="uid://kv2rfxxbwein" path="res://asset/btn/btn_sheet.png" id="9_wq33l"]
 [ext_resource type="AudioStream" uid="uid://c2xm1t42epvhv" path="res://asset/sound/sfx/btn3.mp3" id="10_u2qs6"]
@@ -63,29 +64,29 @@ size = Vector2(64, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gky31"]
 size = Vector2(32, 32)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a6k0n"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i13k4"]
 texture = ExtResource("9_wq33l")
 region_rect = Rect2(0, 32, 32, 32)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4l1xb"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_samie"]
 texture = ExtResource("9_wq33l")
 region_rect = Rect2(32, 32, 32, 32)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uspfi"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fgxv4"]
 texture = ExtResource("9_wq33l")
 region_rect = Rect2(32, 32, 32, 32)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aeys5"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yfis2"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_duam5"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o8pc1"]
 texture = ExtResource("9_wq33l")
 region_rect = Rect2(192, 32, 32, 32)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_scr3f"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kjgmg"]
 texture = ExtResource("9_wq33l")
 region_rect = Rect2(224, 32, 32, 32)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k126i"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nwicx"]
 texture = ExtResource("9_wq33l")
 region_rect = Rect2(224, 32, 32, 32)
 
@@ -205,9 +206,13 @@ shape = SubResource("RectangleShape2D_gky31")
 position = Vector2(656, 304)
 shape = SubResource("RectangleShape2D_gky31")
 
-[node name="menu" type="CanvasLayer" parent="level_controller"]
+[node name="Camera2D" type="Camera2D" parent="level_controller"]
+position = Vector2(592, 336)
+script = ExtResource("8_8n6w2")
 
-[node name="pause" type="Button" parent="level_controller/menu"]
+[node name="menu" type="CanvasLayer" parent="level_controller/Camera2D"]
+
+[node name="pause" type="Button" parent="level_controller/Camera2D/menu"]
 offset_right = 96.0
 offset_bottom = 96.0
 theme_type_variation = &"FlatButton"
@@ -217,13 +222,13 @@ theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
 theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
 theme_override_fonts/font = ExtResource("8_uhoaf")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxTexture_a6k0n")
-theme_override_styles/hover = SubResource("StyleBoxTexture_4l1xb")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_uspfi")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_aeys5")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_aeys5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_i13k4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_samie")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fgxv4")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_yfis2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yfis2")
 
-[node name="reset" type="Button" parent="level_controller/menu"]
+[node name="reset" type="Button" parent="level_controller/Camera2D/menu"]
 offset_left = 96.0
 offset_right = 192.0
 offset_bottom = 93.0
@@ -234,16 +239,18 @@ theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
 theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
 theme_override_fonts/font = ExtResource("8_uhoaf")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxTexture_duam5")
-theme_override_styles/hover = SubResource("StyleBoxTexture_scr3f")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_k126i")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_aeys5")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_aeys5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_o8pc1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_kjgmg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_nwicx")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_yfis2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yfis2")
 
 [node name="level_selesai" parent="." instance=ExtResource("10_yuaej")]
+visible = false
 layout_mode = 1
 
 [node name="level_paused" parent="." instance=ExtResource("11_cw14o")]
+visible = false
 layout_mode = 1
 
 [node name="numbers_con" type="HBoxContainer" parent="level_paused"]
@@ -285,11 +292,6 @@ offset = Vector2(0, 101)
 hframes = 10
 frame = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_ghkk8")
-}
-
 [node name="btn_hover" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_u2qs6")
 bus = &"SFX"
@@ -305,6 +307,11 @@ volume_db = -5.0
 autoplay = true
 bus = &"Music"
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ghkk8")
+}
+
 [connection signal="ch_val" from="level_controller" to="level_selesai" method="_on_level_controller_ch_val"]
 [connection signal="ch_val" from="level_controller" to="level_paused" method="_on_level_controller_ch_val"]
 [connection signal="clear_val" from="level_controller" to="level_selesai" method="_on_level_controller_clear_val"]
@@ -318,7 +325,7 @@ bus = &"Music"
 [connection signal="star" from="level_controller" to="level_selesai" method="_on_level_controller_star"]
 [connection signal="star" from="level_controller" to="level_paused" method="_on_level_controller_star"]
 [connection signal="isMoving" from="level_controller/karakter" to="level_controller" method="_on_karakter_is_moving"]
-[connection signal="mouse_entered" from="level_controller/menu/pause" to="level_controller" method="_on_pause_mouse_entered"]
-[connection signal="pressed" from="level_controller/menu/pause" to="level_controller" method="_on_pause_pressed"]
-[connection signal="mouse_entered" from="level_controller/menu/reset" to="level_controller" method="_on_reset_mouse_entered"]
-[connection signal="pressed" from="level_controller/menu/reset" to="level_controller" method="_on_reset_pressed"]
+[connection signal="mouse_entered" from="level_controller/Camera2D/menu/pause" to="level_controller" method="_on_pause_mouse_entered"]
+[connection signal="pressed" from="level_controller/Camera2D/menu/pause" to="level_controller" method="_on_pause_pressed"]
+[connection signal="mouse_entered" from="level_controller/Camera2D/menu/reset" to="level_controller" method="_on_reset_mouse_entered"]
+[connection signal="pressed" from="level_controller/Camera2D/menu/reset" to="level_controller" method="_on_reset_pressed"]

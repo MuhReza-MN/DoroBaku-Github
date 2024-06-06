@@ -263,12 +263,12 @@ grow_vertical = 2
 
 [node name="Panel" type="PanelContainer" parent="."]
 layout_mode = 1
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
+anchors_preset = -1
+anchor_left = 0.306
+anchor_right = 0.694
 anchor_bottom = 1.0
-offset_left = -224.5
-offset_right = 224.5
+offset_left = -0.512024
+offset_right = 1.51196
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -279,7 +279,6 @@ libraries = {
 
 [node name="VBox" type="VBoxContainer" parent="Panel"]
 layout_mode = 2
-size_flags_vertical = 3
 alignment = 1
 
 [node name="title" type="Label" parent="Panel/VBox"]
@@ -595,7 +594,7 @@ theme_override_constants/outline_size = 10
 theme_override_constants/shadow_outline_size = 13
 theme_override_fonts/font = ExtResource("1_ahvtj")
 theme_override_font_sizes/font_size = 30
-text = "- IZIN -"
+text = "- Kata -"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
@@ -620,10 +619,7 @@ theme_override_constants/outline_size = 4
 theme_override_constants/shadow_outline_size = 7
 theme_override_fonts/font = ExtResource("1_ahvtj")
 theme_override_font_sizes/font_size = 18
-text = "pernyataan mengabulkan 
-( tidak melarang 
-dan sebagainya ); 
-persetujuan membolehkan."
+text = "isi arti"
 horizontal_alignment = 1
 uppercase = true
 

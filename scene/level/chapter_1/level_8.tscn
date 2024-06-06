@@ -1,0 +1,272 @@
+[gd_scene load_steps=24 format=3 uid="uid://hgyptwyi44x"]
+
+[ext_resource type="Script" path="res://script/level/level_1_1.gd" id="1_7gi54"]
+[ext_resource type="Texture2D" uid="uid://b8ak6jwuanmdq" path="res://asset/tiles/floor.png" id="2_0n6xa"]
+[ext_resource type="Texture2D" uid="uid://cg4gvhn8dkh4x" path="res://asset/tiles/spawn_box.png" id="3_ltrft"]
+[ext_resource type="Texture2D" uid="uid://lqxph0syc7ac" path="res://asset/tiles/bricks.png" id="4_1yknh"]
+[ext_resource type="PackedScene" uid="uid://cqe1c836cwb6j" path="res://scene/cek.tscn" id="5_sfj3w"]
+[ext_resource type="PackedScene" uid="uid://de6qmu75j1tmq" path="res://scene/chara/karakter.tscn" id="6_42v6c"]
+[ext_resource type="PackedScene" uid="uid://c80ga6hakiurs" path="res://scene/kotak.tscn" id="7_a1mq8"]
+[ext_resource type="FontFile" uid="uid://bys4fsq5x5ci6" path="res://style/BULKYPIX.TTF" id="8_somn7"]
+[ext_resource type="Texture2D" uid="uid://kv2rfxxbwein" path="res://asset/btn/btn_sheet.png" id="9_l5ss6"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6m0n5"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lsy4u"]
+texture = ExtResource("2_0n6xa")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o24ge"]
+texture = ExtResource("3_ltrft")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7xsv1"]
+texture = ExtResource("4_1yknh")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_r5jyi"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 3
+physics_layer_0/collision_mask = 3
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_6m0n5")
+sources/3 = SubResource("TileSetAtlasSource_lsy4u")
+sources/4 = SubResource("TileSetAtlasSource_o24ge")
+sources/5 = SubResource("TileSetAtlasSource_7xsv1")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_buelf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6v3m"]
+atlas = ExtResource("9_l5ss6")
+region = Rect2(0, 32, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vn743"]
+atlas = ExtResource("9_l5ss6")
+region = Rect2(192, 32, 64, 32)
+
+[sub_resource type="Animation" id="Animation_3bhua"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("level_controller/menu/pause/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("level_controller/menu/reset/Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_x8owk"]
+resource_name = "pause"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("level_controller/menu/pause/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_oc1qn"]
+resource_name = "pause_hover"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("level_controller/menu/pause/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_5rdi2"]
+resource_name = "reset"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("level_controller/menu/reset/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ikqwf"]
+resource_name = "reset_hover"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("level_controller/menu/reset/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ghkk8"]
+_data = {
+"RESET": SubResource("Animation_3bhua"),
+"pause": SubResource("Animation_x8owk"),
+"pause_hover": SubResource("Animation_oc1qn"),
+"reset": SubResource("Animation_5rdi2"),
+"reset_hover": SubResource("Animation_ikqwf")
+}
+
+[node name="level-1" type="Control"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="level_controller" type="Node2D" parent="."]
+script = ExtResource("1_7gi54")
+
+[node name="TileMap" type="TileMap" parent="level_controller"]
+tile_set = SubResource("TileSet_r5jyi")
+rendering_quadrant_size = 32
+format = 2
+layer_0/tile_data = PackedInt32Array(458767, 3, 0, 524303, 5, 0, 589839, 5, 0, 655375, 3, 0, 720911, 5, 0, 786447, 5, 0, 786448, 3, 0, 786449, 5, 0, 786450, 5, 0, 786451, 5, 0, 786452, 3, 0, 458772, 3, 0, 458771, 3, 0, 458770, 3, 0, 458769, 3, 0, 458768, 3, 0, 524304, 5, 0, 720912, 3, 0, 720913, 3, 0, 720915, 3, 0, 524306, 5, 0, 524305, 5, 0, 589840, 3, 0, 524301, 3, 0, 720909, 3, 0, 524310, 3, 0, 851983, 3, 0, 851984, 3, 0, 851985, 3, 0, 851986, 3, 0, 851987, 3, 0, 851988, 3, 0, 524302, 3, 0, 589838, 3, 0, 655374, 3, 0, 720910, 3, 0, 786446, 3, 0, 524309, 5, 0, 589845, 5, 0, 655381, 5, 0, 720917, 3, 0, 786453, 5, 0, 589837, 3, 0, 655373, 3, 0, 589846, 3, 0, 655382, 3, 0, 786445, 3, 0, 786454, 3, 0, 524311, 3, 0, 589847, 3, 0, 655383, 3, 0, 720919, 3, 0, 786455, 3, 0, 851989, 3, 0, 458773, 3, 0, 655376, 3, 0, 655377, 3, 0, 655378, 3, 0, 655379, 3, 0, 458766, 3, 0, 458765, 3, 0, 458764, 3, 0, 524300, 3, 0, 655372, 3, 0, 720908, 3, 0, 786444, 3, 0, 851982, 3, 0, 917518, 3, 0, 917519, 3, 0, 917520, 3, 0, 917521, 3, 0, 917522, 3, 0, 917523, 3, 0, 917524, 3, 0, 917525, 3, 0, 917526, 3, 0, 851990, 3, 0, 851991, 3, 0, 851992, 3, 0, 720920, 3, 0, 655384, 3, 0, 589848, 3, 0, 458774, 3, 0, 393238, 3, 0, 393237, 3, 0, 393236, 3, 0, 393235, 3, 0, 393234, 3, 0, 393233, 3, 0, 393232, 3, 0, 393231, 3, 0, 393230, 3, 0, 917527, 5, 0, 917528, 5, 0, 393240, 5, 0, 393229, 5, 0, 393228, 5, 0, 851979, 5, 0, 786443, 5, 0, 720907, 5, 0, 655371, 5, 0, 589835, 5, 0, 524299, 5, 0, 458763, 5, 0, 327693, 5, 0, 327694, 5, 0, 327695, 5, 0, 327696, 5, 0, 327697, 5, 0, 327698, 5, 0, 327699, 5, 0, 327700, 5, 0, 327701, 5, 0, 327702, 5, 0, 327703, 5, 0, 458777, 5, 0, 524313, 5, 0, 589849, 5, 0, 655385, 5, 0, 720921, 5, 0, 786457, 5, 0, 851993, 5, 0, 1376282, 5, 0, 1441818, 5, 0, 983063, 5, 0, 983062, 5, 0, 983061, 5, 0, 983060, 5, 0, 983059, 5, 0, 983058, 5, 0, 983057, 5, 0, 983056, 5, 0, 983055, 5, 0, 983054, 5, 0, 983053, 5, 0, 655380, 3, 0, 458775, 3, 0, 393239, 5, 0, 458776, 3, 0, 917516, 5, 0, 917517, 5, 0, 851980, 3, 0, 851981, 3, 0, 589844, 3, 0, 589843, 3, 0, 589842, 3, 0, 917529, 5, 0, 393241, 5, 0, 917515, 5, 0, 393227, 5, 0, 589841, 3, 0, 720918, 3, 0, 589836, 3, 0, 786456, 3, 0, 524312, 3, 0, 720916, 3, 0, 720914, 3, 0, 524308, 5, 0, 524307, 3, 0)
+
+[node name="grup_cek" type="Node2D" parent="level_controller"]
+
+[node name="1" parent="level_controller/grup_cek" instance=ExtResource("5_sfj3w")]
+position = Vector2(544, 320)
+
+[node name="2" parent="level_controller/grup_cek" instance=ExtResource("5_sfj3w")]
+position = Vector2(576, 320)
+
+[node name="3" parent="level_controller/grup_cek" instance=ExtResource("5_sfj3w")]
+position = Vector2(608, 320)
+
+[node name="4" parent="level_controller/grup_cek" instance=ExtResource("5_sfj3w")]
+position = Vector2(640, 320)
+
+[node name="karakter" parent="level_controller" instance=ExtResource("6_42v6c")]
+position = Vector2(512, 320)
+
+[node name="grup_kotak" type="Node2D" parent="level_controller"]
+
+[node name="1" parent="level_controller/grup_kotak" groups=["j"] instance=ExtResource("7_a1mq8")]
+position = Vector2(480, 416)
+
+[node name="2" parent="level_controller/grup_kotak" groups=["z"] instance=ExtResource("7_a1mq8")]
+position = Vector2(480, 224)
+
+[node name="3" parent="level_controller/grup_kotak" groups=["i"] instance=ExtResource("7_a1mq8")]
+position = Vector2(672, 224)
+
+[node name="4" parent="level_controller/grup_kotak" groups=["i"] instance=ExtResource("7_a1mq8")]
+position = Vector2(704, 320)
+
+[node name="xxxxx" parent="level_controller/grup_kotak" groups=["n"] instance=ExtResource("7_a1mq8")]
+position = Vector2(608, 416)
+
+[node name="menu" type="CanvasLayer" parent="level_controller"]
+
+[node name="pause" type="Button" parent="level_controller/menu"]
+offset_right = 96.0
+offset_bottom = 96.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("8_somn7")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_buelf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_buelf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_buelf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_buelf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_buelf")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="level_controller/menu/pause"]
+position = Vector2(48, 48)
+scale = Vector2(3, 3)
+texture = SubResource("AtlasTexture_t6v3m")
+hframes = 2
+
+[node name="reset" type="Button" parent="level_controller/menu"]
+offset_left = 128.0
+offset_right = 224.0
+offset_bottom = 93.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("8_somn7")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_buelf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_buelf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_buelf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_buelf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_buelf")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="level_controller/menu/reset"]
+position = Vector2(48, 48)
+scale = Vector2(3, 3)
+texture = SubResource("AtlasTexture_vn743")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ghkk8")
+}
+
+[connection signal="isMoving" from="level_controller/karakter" to="level_controller" method="_on_karakter_is_moving"]
+[connection signal="mouse_entered" from="level_controller/menu/pause" to="level_controller" method="_on_pause_mouse_entered"]
+[connection signal="mouse_exited" from="level_controller/menu/pause" to="level_controller" method="_on_pause_mouse_exited"]
+[connection signal="pressed" from="level_controller/menu/pause" to="level_controller" method="_on_pause_pressed"]
+[connection signal="mouse_entered" from="level_controller/menu/reset" to="level_controller" method="_on_reset_mouse_entered"]
+[connection signal="mouse_exited" from="level_controller/menu/reset" to="level_controller" method="_on_reset_mouse_exited"]
+[connection signal="pressed" from="level_controller/menu/reset" to="level_controller" method="_on_reset_pressed"]

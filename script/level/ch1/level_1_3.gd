@@ -20,17 +20,23 @@ var stars
 var chapter = 0 # = chapter 1
 var level = 2 # = level 3
 var next_lvl_val = 3 # = level 4
-@onready var next_level_is = "res://scene/level/level_not.tscn"
+@onready var next_level_is = "res://scene/level/chapter_1/level_1_4.tscn"
 @onready var select_target = "res://scene/level/chapter_1/level_select.tscn"
-var lessThan1 = 70
-var lessThan2 = 75
-var maxMove = 80
+var lessThan1 = 75
+var lessThan2 = 85
+var maxMove = 95
 # setel huruf (pastikan lowercase) , setel atlet + i
 var h1 = "a"
 var h2 = "t"
 var h3 = "l"
 var h4 = "e"
 var h5 = "i"
+# setel text info (enter tetap terbaca)
+var kata = "- ATLET -"
+var arti = "olahragawan, terutama yang 
+			mengikuti perlombaan atau 
+			pertandingan (kekuatan, 
+			ketangkasan, dan kecepatan)"
 
 func _ready():
 	gameData = saveData.load_data()
@@ -43,6 +49,7 @@ func _ready():
 	stars = gameData["ch_stars"][chapter][level]
 	#setup stage
 	box_setup()
+	get_tree().get_nodes_in_group("scoreboard")[0].set_info_txt(kata,arti)
 	Engine.time_scale = 1
 
 # wajib untuk disesuaikan untuk setiap level, sangat sensitif
@@ -68,10 +75,10 @@ func box_setup() :
 
 func pause_game():
 	if game_paused:
-		$menu.show()
+		$Camera2D/menu.show()
 		Engine.time_scale = 1
 	else:
-		$menu.hide()
+		$Camera2D/menu.hide()
 		Engine.time_scale = 0
 	game_paused = !game_paused
 
@@ -94,7 +101,7 @@ func _process(delta):
 						target += 1
 				info = false
 		if target == 0:
-			$menu.hide()
+			$Camera2D/menu.hide()
 			if moveCount <= lessThan1 :
 				emit_signal("star",3)
 				await get_tree().create_timer(0.1).timeout
@@ -111,7 +118,7 @@ func _process(delta):
 			game_end = true
 			
 		if moveCount > maxMove :
-			$menu.hide()
+			$Camera2D/menu.hide()
 			emit_signal("star",0)
 			get_tree().get_nodes_in_group("scoreboard")[0].levelFailed()
 			$"../bgm".stop()
@@ -151,7 +158,7 @@ func send_save(ch,lvl,clr,str):
 # btn functions
 func _on_pause_pressed():
 	$"../btn_click".play()
-	get_tree().get_nodes_in_group("scoreboard")[0].jeda_game()
+	get_tree().get_nodes_in_group("pause_menu")[0].jeda_game()
 func _on_reset_pressed():
 	$"../btn_click".play()
 	restart()

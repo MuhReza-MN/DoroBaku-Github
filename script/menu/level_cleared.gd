@@ -85,6 +85,10 @@ func _on_level_controller_is_less_than_2(val2):
 	else :
 		less2.text = "<%d" %val2
 
+func set_info_txt(kata,arti) :
+	$Panel/VBox/CenterContainer/info_box/Panel/kata.text = kata
+	$Panel/VBox/CenterContainer/info_box/Panel/kbbi.text = arti
+
 
 func _on_restart_lvl_pressed():
 	click_sfx.play()
