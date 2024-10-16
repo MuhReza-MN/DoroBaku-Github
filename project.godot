@@ -21,6 +21,7 @@ MusicPlayer="*res://script/music_player.gd"
 
 [display]
 
+window/size/viewport_width=1200
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
